@@ -1,30 +1,30 @@
-# Public Functions
+# Публичные функции
 
 ## GET /assets/balance/{address}
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Balances for all assets that the given account ever had \(besides WAVES\).
+Балансы по всем активам, которые когда-либо имел данный аккаунт \(кроме WAVES\).
 
-```
-"address" - account's address in Base58 format
-```
-
-**Response params:**
-
-```
-"address" -  Account's address in Base58 format
-"balances" - List of balance objects for assets that the given account has ever
-"assetId" - Asset ID in Base58 format
-"balance" - Balance of that Asset on account
-"quantity" - total issued assets
-"reissuable" - is this asset reissuable?
-"issueTransaction" - transaction witch create this asset
-"minSponsoredAssetFee" - minimal tokens number to fee, optional, avaliable for sponsored assets
-"sponsorBalance" - sponsor balance in waves
+```bash
+"address" - адрес аккаунта в Base58
 ```
 
-**Response JSON example:**
+**Параметры ответа:**
+
+```
+"address" -  Адрес аккаунта в Base58
+"balances" - Список балансов для активов, которые когда-либо имел данный аккаунт
+"assetId" - ID актива в Base58
+"balance" - Баланс заданного актива на аккаунте
+"quantity" - Общее количество выпущенных активов
+"reissuable" - Является ли актив перевыпускаемым?
+"issueTransaction" - Транзакция создания данного актива
+"minSponsoredAssetFee" - Минимальная комиссия ассета, опционально, доступно для спонсорских активов
+"sponsorBalance" - Спонсорский баланс в waves
+```
+
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -60,14 +60,14 @@ Balances for all assets that the given account ever had \(besides WAVES\).
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Account's balance for the given asset.
+Баланс аккаунта для заданного ассета.
 
 ```
-  "address" - account's address in Base58 format
-  "assetId" - Asset ID in Base58 format
+  "address" - Адрес аккаунта в Base58
+  "assetId" - ID ассета в Base58
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -81,13 +81,13 @@ Account's balance for the given asset.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Asset description.
+Описание актива.
 
 ```
-  "assetId" – Asset ID in Base58 format
+  "assetId" – ID актива в Base58
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 ```js
 {
   "assetId" : "8tdULCMr598Kn2dUaKwHkvsNyFbDB1Uj5NxvVRTQRnMQ",
@@ -109,17 +109,17 @@ Asset description.
 
 ## GET /assets/details/?id={assetId1}&id={assetId2}&...
 
-Description of specified assets.
+Описание заданных активов.
 
-> :warning: This method becomes available from node version 1.2.0, after activation of the "Ride V4 and multiple attached payments for Invoke Script Transaction" (No. 16) feature. See [Activation Protocol](/en/blockchain/waves-protocol/activation-protocol). Version 1.2.x is currently available on [Stagenet](/en/blockchain/blockchain-network/stage-network) only.
+> :warning: Данный метод доступен начиная с версии ноды 1.2.0, после активации фичи "Ride V4 and multiple attached payments for Invoke Script Transaction" (No. 16). Подробнее в статье [Протокол активации](/en/blockchain/waves-protocol/activation-protocol). В данный момент доступна версия 1.2.x достуана на [Stagenet](/en/blockchain/blockchain-network/stage-network).
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-  assetIdN – Asset ID in Base58 format
+  assetIdN – ID актива в Base58
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 ```js
 [
   {
@@ -156,23 +156,23 @@ Description of specified assets.
 
 ## GET /assets/nft/{address}/limit/{limit}?after={after}
 
-Account's NFTs balance.
+NFT баланс аккаунта.
 
-After Feature 16 activation this method returns only assets that are created after Feature 13 activation as NFT assets (amount: 1, decimal places: 0, reissuable: false).
+После активации фичи 16, этот метод возвращает только активы, которые были созданы после активации фичи 13 в качестве NFT активов (amount: 1, decimal places: 0, reissuable: false).
 
-Before Feature 16 activation this method returns all the assets that are created as NFT assets (amount: 1, decimal places: 0, reissuable: false).
+Перед активацией фичи 16 данный метод будет возвращать все активы, созданные как NFT активы (amount: 1, decimal places: 0, reissuable: false).
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-  address – Account's address, Base58-encoded
-  limit — Number of tokens to be returned
-  after — Id of token to paginate after
+  address – Адрес аккаунта в Base58
+  limit — Количество токенов, которые необходимо вернуть
+  after — Id токена для нумерации следующего
 ```
 
-**Response JSON example:**
+**Привет ответа в JSON:**
 
 ```js
 [
@@ -211,23 +211,23 @@ Before Feature 16 activation this method returns all the assets that are created
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Publish signed Asset issue transaction to the network.
+Опубликовать подписанную транзакцию выпуска актива в сети.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-"name" - Asset name, can be not unique, length from 4 to 16 bytes, in plain text.
-"description" - Asset description, max length is 1000 bytes, in plain text.
-"sender" - Sender account's address that exists in the node's wallet, Base58-encoded
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Transaction fee for Asset issue, min = 100000000 (1WAVES).
-"decimals" - Number of decimals to represent a piece of asset, max = 8.
-"quantity" - Quantity of asset'lets to issue (number of indivisible pieces of assets).
-"reissuable" - Boolean flag whether it is possible to issue additional assets.
-"signature" - Signature of all transaction data, Base58-encoded
+"name" - Имя актива, не уникально, длиной от 4 до 16 байт, в plain text.
+"description" - Описание актива, максимальная длина 1000 байт, в plain text.
+"sender" - Адрес аккаунта отправителя, который существует в кошельке ноды в Base58
+"senderPublicKey" - Публичный ключ аккаунта отправителя в Base58
+"fee" - Комисся транзации за выпуск ассета, min = 100000000 (1WAVES).
+"decimals" - Количество знаков после запятой для отображения частей ассета, max = 8.
+"quantity" - Количество выпускаемых неделимых частиц ассета.
+"reissuable" - Логический параметр определяющий возможно ли выпускать дополнительные ассеты.
+"signature" - Подпись всех данных тразакции в Base58.
 ```
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -244,25 +244,25 @@ Publish signed Asset issue transaction to the network.
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-"type" - Transaction type (3 for IssueTransaction)
-"id" - Id(hash) of transaction in Base58 format
-"assetId" - Asset ID in Base58 format, effectively equals tx id
-"fee" - Transaction fee
-"timestamp" - Transaction timestamp
-"sender" - Sender account's address, Base58-encoded
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"name" - Asset name
-"description" - Asset description
-"quantity" - Quantity of asset'lets
-"decimals" - Number of decimals to represent a piece of asset
-"reissuable" - Boolean flag whether it is possible to issue additional assets.
-"signature" - Signature of all transaction data, Base58-encoded
+"type" - Тип транзакции (3 для IssueTransaction).
+"id" - Id(хэш) транзакции в Base58.
+"assetId" - ID актива в Base58, фактически равен tx id.
+"fee" - комисия транзакции.
+"timestamp" - врменная отметка транзакции.
+"sender" - адрес аккаунта отправителя в Base58.
+"senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+"name" - имя актива.
+"description" - описание актива.
+"quantity" - количество минимальных единиц актива.
+"decimals" - количество знакова после запятой для отображения частиц актива.
+"reissuable" - логический параметр определяющий возможно ли выпускать дополнительные ассеты.
+"signature" - подпись всех данных тразакции в Base58.
 ```
 
-**Response JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -285,27 +285,21 @@ Publish signed Asset issue transaction to the network.
 ## POST /assets/broadcast/reissue
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
+Перевыпустить дополнительное количество активов. Опубликовать в сети подписанную транзакцию перевыпуска актива.
 
-
-
-
-
-
-Re-issue additional quantity of the Asset. Publish signed Asset re-issue transaction to the network.
-
-**Request params:**
+**Параметры запроса:**
 
 ```
-"assetId" - Asset ID previously issued, Base58-encoded
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Transaction fee for Asset issue, min = 100000
-"quantity" - Additional quantity of asset'lets to issue (number of indivisible pieces of assets)
-"reissuable" - Boolean flag whether it is possible to issue additional assets
-"timestamp" - Transaction timestamp
-"signature" - Signature of all transaction data, Base58-encoded
+"assetId" - ID ранее выпущенного актива в Base58.
+"senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+"fee" - комисия транзакции выпуска актива, min = 100000.
+"quantity" - дополнительное количество перевыпускаемых активов (количество неделимых частиц актива).
+"reissuable" - логический параметр определяющий возможно ли выпускать дополнительные ассеты.
+"timestamp" - временная отметка транзакции.
+"signature" - подпись всех данных тразакции в Base58.
 ```
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -319,14 +313,14 @@ Re-issue additional quantity of the Asset. Publish signed Asset re-issue transac
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-"type" - Transaction type (5 for ReissueTransaction)
-Others the same as in [Broadcast Issue Assets]
+"type" - Тип транзакции (5 для ReissueTransaction)
+Остальные параметра также как у Broadcast Issue Assets
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -346,20 +340,20 @@ Others the same as in [Broadcast Issue Assets]
 ## POST /assets/broadcast/burn
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Burn quantity of the Asset. Publish signed Asset burn transaction to the network.
+Сжечь заданное количество актва. Опубликовать в сети подписанную транзакцию сжигания актива.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-"assetId" - Asset ID previously issued, Base58-encoded
-"senderPublicKey" - Sender account's public key, Base58-encoded
-"fee" - Transaction fee for Asset issue, min = 100000
-"quantity" - amount of asset'lets to burn (number of indivisible pieces of assets)
-"timestamp" - Transaction timestamp
-"signature" - Signature of all transaction data, Base58-encoded
+"assetId" - ID ранее выпущенного актива в Base58.
+"senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+"fee" - комисия транзакции сжигания актива, min = 100000.
+"quantity" - количество сжигаемого актива (количество неделимых частиц актива).
+"timestamp" - временная отметка транзакции.
+"signature" - подпись всех данных тразакции в Base58.
 ```
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -372,7 +366,7 @@ Burn quantity of the Asset. Publish signed Asset burn transaction to the network
 }
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -391,39 +385,39 @@ Burn quantity of the Asset. Publish signed Asset burn transaction to the network
 ## POST /assets/broadcast/transfer
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Publish signed Asset transfer from one address to another as a transaction to the network.
+Опубликовать в сети подписанную транзакцию перевода актива с одного адреса на другой.
 
-**Request params:**
+**Параметры запроса:**
 
-* Signed transfer request:
-
-    ```
-    "assetId" [optional] - Asset ID to transfer or omit that param when transfer WAVES, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "fee" - Transaction fee for Asset transfer, min = 100000 (WAVElets)
-    "feeAssetId" [optional] - Asset ID of transaction fee. WAVES by default, if empty or absent
-    "amount" - amount of asset'lets (or wavelets) to transfer
-    "attachment" - Arbitrary additional data included in transaction, max length is 140 bytes, Base58-encoded
-    "timestamp" - Transaction timestamp
-    "signature" - Signature of all transaction data, Base58-encoded
-    ```
-
-* Signed versioned transfer request:
+* Подписанный запрос перевода:
 
     ```
-    "assetId" [optional] - Asset ID to transfer or omit that param when transfer WAVES, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "fee" - Transaction fee for Asset transfer, min = 100000 (WAVElets)
-    "amount" - Amount of wavelets to transfer
-    "attachment" - Arbitrary additional data included in transaction, max length is 140 bytes, Base58-encoded
-    "timestamp" - Transaction timestamp
-    "verson" - Version of transaction. Always 2.
-    "proofs" - Proofs, Base58-encoded. It could be a signtature or a secret word, that could be verified in a smart contract
+    "assetId" [опионально] - ID передаваемого актива в Base58. Не указывается при передаче WAVES.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58
+    "recipient" - адрес аккаунта получателя в Base58
+    "fee" - комиссия транзакции передачи актива, min = 100000 (WAVElets).
+    "feeAssetId" [опионально] - ID актива комиссии транзакции. По умолчанию WAVES, если параметр не задан.
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - Произвольные дополнительные данные транзакции в Base58. Максимальная длина 140 байт.
+    "timestamp" - временная отметка транзакции.
+    "signature" - подпись всех данных тразакции в Base58.
     ```
 
-**Request JSON example:**
+* Подписанный запрос перевода с версией:
+
+    ```
+    "assetId" [опионально] - ID передаваемого актива в Base58. Не указывается при передаче WAVES.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58
+    "recipient" - адрес аккаунта получателя в Base58
+    "fee" - комиссия транзакции передачи актива, min = 100000 (WAVElets).
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - Произвольные дополнительные данные транзакции в Base58. Максимальная длина 140 байт.
+    "timestamp" - временная отметка транзакции.
+    "verson" - версия транзакции. Всегда 2.
+    "proofs" - Пруфы в Base58. Может быть подписью или секретным словом, которое можно верифицировать в смарт контракте.
+    ```
+
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -438,42 +432,42 @@ Publish signed Asset transfer from one address to another as a transaction to th
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
-* Signed transfer response:
-
-    ```
-    "type" - Transaction type (4 for TransferTransaction)
-    "id" - Id(hash) of transaction, Base58-encoded
-    "assetId" - Asset ID in Base58 format, effectively equals transaction id
-    "timestamp" - Transaction timestamp
-    "sender" - Sender account's address, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "feeAsset" - Asset ID of transaction fee, currently is null, i.e. WAVES
-    "fee" - Amount of transaction fee
-    "attachment" - Attachment, Base58-encoded
-    "signature" - Signature of all transaction data, Base58-encoded
-    ```
-
-* Signed versioned transfer response:
+* Подписанный запрос перевода:
 
     ```
-    "type" - Transaction type (4 for VersionedTransferTransaction)
-    "id" - Id(hash) of transaction, Base58-encoded
-    "sender" - Sender account's address, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "fee" - Amount of transaction fee
-    "timestamp" - Transaction timestamp
-    "proofs" - Array of Base58-encoded proofs
-    "version" - Version of transaction (Always 2)
-    "recipient" - Recipient account's address, Base58-encoded
-    "assetId" - Asset ID in Base58 format, effectively equals transaction id
-    "amount" - Amount of wavelets to transfer
-    "attachment" - Attachment, Base58-encoded
+    "type" - Тип транзакции (4 для TransferTransaction).
+    "id" - Id(хэш) странзакции в Base58.
+    "assetId" - ID актива в Base58, фактически равен id транзакции.
+    "timestamp" - временная отметка транзакции.
+    "sender" - адрес аккаунта отправителя в Base58.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "recipient" - адрес аккаунта получателя в Base58.
+    "feeAsset" - ID ассета комиссии транзакции, в данный момент null, i.e. WAVES
+    "fee" - сумма комиссии транзакции.
+    "attachment" - вложение в Base58.
+    "signature" - подпись всех данных тразакции в Base58.
     ```
 
-**Response JSON example:**
+* Подписанный запрос перевода с версией:
+
+    ```
+    "type" - Тип транзакции (4 для TransferTransaction).
+    "id" - Id(хэш) странзакции в Base58.
+    "sender" - адрес аккаунта отправителя в Base58.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "fee" - сумма комиссии транзакции.
+    "timestamp" - временная отметка транзакции.
+    "proofs" - массив пруфов в Base58.
+    "version" - версия транзакции (всегда 2)
+    "recipient" - адрес аккаунта получателя в Base58.
+    "assetId" - ID актива в Base58, фактически равен id транзакции.
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - вложение в Base58.
+    ```
+
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -496,41 +490,41 @@ Publish signed Asset transfer from one address to another as a transaction to th
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Publish many signed Asset transfer from one address to another as a transaction to the network. The current limit on the size of the JSON object sent is 1 megabyte.
+Опубликовать в сети несколько транзакиций перевода с одного адреса на другой. Сейчас ограничение по размеру отъекта JSON состаляет 1 мегабайт.
 
-**Request params:**
+**Параметры запроса:**
 
-Array of JSON Objects:
+Массив JSON объектов:
 
-* Signed transfer request:
-
-    ```
-    "assetId" [optional] - Asset ID to transfer or omit that param when transfer WAVES, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "fee" - Transaction fee for Asset transfer, min = 100000 (WAVElets)
-    "feeAssetId" [optional] - Asset ID of transaction fee. WAVES by default, if empty or absent
-    "amount" - amount of asset'lets (or wavelets) to transfer
-    "attachment" - Arbitrary additional data included in transaction, max length is 140 bytes, Base58-encoded
-    "timestamp" - Transaction timestamp
-    "signature" - Signature of all transaction data, Base58-encoded
-    ```
-
-* Signed versioned transfer request:
+* Подписанный запрос перевода:
 
     ```
-    "assetId" [optional] - Asset ID to transfer or omit that param when transfer WAVES, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "fee" - Transaction fee for Asset transfer, min = 100000 (WAVElets)
-    "amount" - Amount of wavelets to transfer
-    "attachment" - Arbitrary additional data included in transaction, max length is 140 bytes, Base58-encoded
-    "timestamp" - Transaction timestamp
-    "verson" - Version of transaction. Always 2.
-    "proofs" - Proofs, Base58-encoded. It could be a signtature or a secret word, that could be verified in a smart contract
+    "assetId" [optional] - ID передаваемого актива в Base58. Не указывается при передаче WAVES.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "recipient" - адрес аккаунта получателя в Base58.
+    "fee" - сумма комиссии транзакции, min = 100000 (WAVElets).
+    "feeAssetId" [опционально] - ID актива комиссии транзакции. По умолчанию WAVES, если параметр не задан.
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - Произвольные дополнительные данные транзакции в Base58. Максимальная длина 140 байт.
+    "timestamp" - временная отметка транзакции.
+    "signature" - подпись всех данных тразакции в Base58.
     ```
 
-**Request JSON example:**
+* Подписанный запрос перевода с версией:
+
+    ```
+    "assetId" [optional] - ID передаваемого актива в Base58. Не указывается при передаче WAVES.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "recipient" - адрес аккаунта получателя в Base58.
+    "fee" - сумма комиссии транзакции, min = 100000 (WAVElets).
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - Произвольные дополнительные данные транзакции в Base58. Максимальная длина 140 байт.
+    "timestamp" - временная отметка транзакции.
+    "verson" - Версия транзакции. Всегда 2.
+    "proofs" - Пруфы в Base58. Может быть подписью или секретным словом, которое можно верифицировать в смарт контракте.
+    ```
+
+**Пример запроса в JSON:**
 
 ```js
 [
@@ -561,44 +555,44 @@ Array of JSON Objects:
 ]
 ```
 
-**Response params:**
+**Параметра ответа:**
 
-Array of JSON Objects:
+Массив отбектов JSON:
 
-* Signed transfer response:
-
-    ```
-    "type" - Transaction type (4 for TransferTransaction)
-    "id" - Id(hash) of transaction, Base58-encoded
-    "assetId" - Asset ID in Base58 format, effectively equals transaction id
-    "timestamp" - Transaction timestamp
-    "sender" - Sender account's address, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "recipient" - Recipient account's address, Base58-encoded
-    "feeAsset" - Asset ID of transaction fee, currently is null, i.e. WAVES
-    "fee" - Amount of transaction fee
-    "attachment" - Attachment, Base58-encoded
-    "signature" - Signature of all transaction data, Base58-encoded
-    ```
-
-* Signed versioned transfer response:
+* Подписанный запрос перевода:
 
     ```
-    "type" - Transaction type (4 for VersionedTransferTransaction)
-    "id" - Id(hash) of transaction, Base58-encoded
-    "sender" - Sender account's address, Base58-encoded
-    "senderPublicKey" - Sender account's public key, Base58-encoded
-    "fee" - Amount of transaction fee
-    "timestamp" - Transaction timestamp
-    "proofs" - Array of Base58-encoded proofs
-    "version" - Version of transaction (Always 2)
-    "recipient" - Recipient account's address, Base58-encoded
-    "assetId" - Asset ID in Base58 format, effectively equals transaction id
-    "amount" - Amount of wavelets to transfer
-    "attachment" - Attachment, Base58-encoded
+    "type" - Тип транзакции (4 для TransferTransaction).
+    "id" - Id(хэш) транзакции в Base58.
+    "assetId" - ID актива в Base58, фактически равен id транзакции.
+    "timestamp" - временная отметка транзакции.
+    "sender" - адрес аккаунта отправителя в Base58.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "recipient" - адрес аккаунта получателя в Base58.
+    "feeAsset" - ID актива комиссии транзакции. По умолчанию WAVES, если параметр не задан.
+    "fee" - сумма комиссии транзакции.
+    "attachment" - вложение в Base58.
+    "signature" - подпись всех данных тразакции в Base58.
     ```
 
-**Response JSON example:**
+* Подписанный запрос перевода с версией:
+
+    ```
+    "type" - Тип транзакции (4 для TransferTransaction).
+    "id" - Id(хэш) транзакции в Base58.
+    "sender" - адрес аккаунта отправителя в Base58.
+    "senderPublicKey" - публичный ключ аккаунта отправителя в Base58.
+    "fee" - сумма комиссии транзакции.
+    "timestamp" - временная отметка транзакции.
+    "proofs" - массив пруфов в Base58.
+    "version" - версия транзакции (Всегда 2)
+    "recipient" - адрес аккаунта получателя в Base58.
+    "assetId" - ID актива в Base58, фактически равен id транзакции.
+    "amount" - количество передаваемого актива (количество неделимых частиц актива).
+    "attachment" - вложение в Base58.
+    ```
+
+**Пример ответа в JSON:**
 
 ```js
 [

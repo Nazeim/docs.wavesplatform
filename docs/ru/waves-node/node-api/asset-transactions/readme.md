@@ -1,10 +1,7 @@
-# Asset Transactions
+# Транзакции ассетов
 
-This Chapter Contains Public and Private Functions Details as follows:
+Эта глава описывает следующие публичные и приватные функции:
 
-1. [Public Functions](/en/waves-node/node-api/asset-transactions/public-functions)
-2. [Private Functions](/en/waves-node/node-api/asset-transactions/private-functions)
-3. [Distribution Methods](/en/waves-node/node-api/asset-transactions/distribution-methods)
-
-
-
+1. [Публичные функции](/en/waves-node/node-api/asset-transactions/public-functions)
+2. [Приватыне функции](/en/waves-node/node-api/asset-transactions/private-functions)
+3. [Методы распространения](/en/waves-node/node-api/asset-transactions/distribution-methods)

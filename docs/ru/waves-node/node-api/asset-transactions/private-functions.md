@@ -1,19 +1,19 @@
-# Private Functions
+# Приватыне функции
 
-All private functions below require API Key to be provided in every HTTP request using `X-Api-Key` header. The default value is `ridethewaves!`. Securely hashed header value is stored in `rest-api.api-key-hash` setting in the waves.conf configuration file. See [/utils/hash/secure](/en/waves-node/node-api/utils) for more information on how to obtain a secure hash.
+Все приватные функции, приведённые ниже требуют API ключ, предоставленный в каждом HTTP запросе с использованием `X-Api-Key` хедера. Значение по умолчанию `ridethewaves!`. Безопасно хэшированный хедер хранится в настройке `rest-api.api-key-hash` файла конфигураации waves.conf. Подробнее в статье [/utils/hash/secure](/en/waves-node/node-api/utils).
 
 ## POST /assets/issue
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Issue a new Asset for an address that exists in the node's wallet.
+Выпустить новый актив для адреса, который существует в кошельке ноды.
 
-**Request params:**
+**Параметры запроса:**
 
-    The same as in [Broadcast Issue Assets] besides `senderPublicKey`, `timestamp` and `signature` params.
-    "sender" - Sender account's address that exists in the node's wallet, Base58-encoded
+    Такие же как в Broadcast Issue Assets, кроме `senderPublicKey`, `timestamp` и `signature`.
+    "sender" - адрес аккаунта отправителя в Base58, который существуент в кошельке ноды.
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -27,30 +27,30 @@ Issue a new Asset for an address that exists in the node's wallet.
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-The same as in [Broadcast Issue Assets]
+Также как в Broadcast Issue Assets.
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```
-The same as in [Broadcast Issue Assets]
+Также как в Broadcast Issue Assets.
 ```
 
 ## POST /assets/reissue 
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Re-issue an additional quantity of the Asset
+Перевыпустиьь дополнителное количество актива.
 
-**Request params:**
+**Параметры запроса:**
 
-    The same as in [Broadcast Reissue Assets] besides `senderPublicKey`, `timestamp` and `signature` params.
-    "sender" - Sender account's address that exists in the node's wallet, Base58-encoded
+    Такие же как в Broadcast Issue Assets, кроме `senderPublicKey`, `timestamp` и `signature`.
+    "sender" - адрес аккаунта отправителя в Base58, который существуент в кошельке ноды
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -62,34 +62,34 @@ Re-issue an additional quantity of the Asset
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-The same as in [Broadcast Reissue Assets]
+Также как в Broadcast Issue Assets.
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```
-The same as in [Broadcast Reissue Assets]
+Также как в Broadcast Issue Assets.
 ```
 
 ## POST /assets/burn
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Burn quantity of the Asset.
+Сжечь заданное количество актива.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-"assetId" - Asset ID previously issued, Base58-encoded
-"sender" - Sender address, Base58-encoded
-"fee" - Transaction fee for Asset issue, min = 100000
-"amount" - amount of asset'lets to burn (number of indivisible pieces of assets)
+"assetId" - ID ранее выпущенного актива в Base58.
+"sender" - адрес отправителя в Base58.
+"fee" - комиссия за выпуск актива, min = 100000
+"amount" - количество сжигаемого актива (количество неделимых частиц актива).
 ```
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -100,7 +100,7 @@ Burn quantity of the Asset.
 }
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -120,14 +120,14 @@ Burn quantity of the Asset.
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Create transaction to transfer assets from one address to another.
+Создать транзакцию перевода активов с одного адреса на другой.
 
-**Request params:**
+**Параметры запроса:**
 
-    The same as in [Broadcast Transfer Assets] besides `senderPublicKey`, `timestamp` and `signature` params.
-    "sender" - Sender account's address that exists in the node's wallet, Base58-encoded
+    Такие же как в Broadcast Issue Assets, кроме `senderPublicKey`, `timestamp` и `signature`.
+    "sender" - адрес аккаунта отправителя в Base58, который существуент в кошельке ноды
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -140,37 +140,37 @@ Create transaction to transfer assets from one address to another.
 }
 ```
 
-**Response params:**
+**Параметры ответа:**
 
 ```
-The same as in [Broadcast Transfer Assets]
+Также как в Broadcast Issue Assets.
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```
-The same as in [Broadcast Transfer Assets]
+Также как в Broadcast Issue Assets.
 ```
 
 ## POST /assets/masstransfer
 
 ![master](https://img.shields.io/badge/MAINNET-available-4bc51d.svg)
 
-Create transaction to transfer an asset to several recipient addresses at once.
+СОздать транзакцию для перевода актива на несколько адресов одновременно.
 
-**Request params:**
+**Параметры запроса:**
 
 ```
-"sender" - Sender address, Base58-encoded
-"assetId" - ID of the asset to send. By default, WAVES is assumed.
-"transfers" - list of (recipient, amount) pairs where
-   "recipient" is a Base58 address, and
-   "amount" is the amount to send to that address.
-"fee" - Transaction fee, by default 100000 + 50000 * (number of transfers)
-"attachment" - Arbitrary message, Base58 encoded, 140 bytes max.
+"sender" - адрес отправителя в Base58.
+"assetId" - ID актива для отправки. По умолчанию WAVES.
+"transfers" - список пар (recipient, amount) где
+   "recipient" это адрес в Base58 и
+   "amount" это количество отправляемых активов на заданный адрес.
+"fee" - комиссия транзакции, по умолчанию 100000 + 50000 * (поличество переводов)
+"attachment" - произвольное сообщение в Base58. 140 байт max.
 ```
 
-**Request JSON example:**
+**Пример запроса в JSON:**
 
 ```js
 {
@@ -188,7 +188,7 @@ Create transaction to transfer an asset to several recipient addresses at once.
 }
 ```
 
-**Response JSON example:**
+**Пример ответа в JSON:**
 
 ```js
 {
@@ -210,8 +210,3 @@ Create transaction to transfer an asset to several recipient addresses at once.
   } ]
 }
 ```
-
-
-
-
-

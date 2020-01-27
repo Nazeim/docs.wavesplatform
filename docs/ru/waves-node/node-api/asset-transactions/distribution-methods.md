@@ -1,28 +1,28 @@
-# Assets Distribution
+# Методы распространения
 
-Applications such as rollovers, trusts, estates, insurance and other transactions require assets to be distributed between parties or between executed contracts. An address can simply represent a user, such as an account holder. But it can also represent an individual unique asset.
+Для работы с ролловерами, трастами, недвижимостью, страхованием и для других операций, необходимо, чтобы активы распределялись между сторонами или между исполняемыми контрактами. Адрес может просто представлять пользователя, например, владельца учетной записи. Но он также может представлять собой индивидуальный уникальный актив.
 
-## Methods
+## Методы
 
-The problems with getting the whole assets distribution for many holders at once are:
+С чем могут возникать сложности при распределении активов среди нескольких владельцев:
 
-* Time consuming with this heavy request _**/asset/distribution**_.
-* Vulnerability  to DDOS attacks for the nodes which is using this method without pagination.
+* Время, затрачиваемое на тяжелые запросы _**/asset/distribution**_.
+* Уязвимость к DDOS атакам на ноды, которые используют метод без нумерации.
 
-For the mentioned problems above, **GET /assets/{assetId}/distribution/{height}** provides more recommended method for getting balance distribution at a given block height \(up to 2,000 blocks down\) and it works with pagination.  
-Several addresses in one query is limited by a **limit** parameter which is by default 1000 addresses maximum and if it's your node, you can configure max limit in **Application.Conf** by modifying **distribution-address-limit**. You can include the address of the next query to get next part of asset distribution by using the optional parameter **After** .
+Рекомендуем использовать запрос **GET /assets/{assetId}/distribution/{height}** чтобы получить баланс распределения на заданной высоте блока \(до 2,000 блоков\). Это работает с нумерацией.  
+КОличество адресов в одном запросе ограничено параметром **limit**, который по умолчанию равен 1000 max. Если это ваша нода, то можно настроит max limit в файле конфигурации **Application.Conf** путём изменения параметра **distribution-address-limit**. Модно включить адрес следующего запроса для получить следующую часть распределения актива путём использования опционального параметра **After** .
 
-## Examples
+## Примеры
 
-Lets assume that we want to get distribution of asset `DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J` at height 1352994 with a limit of 10 addresses :
+Предположим, что нам нудно распределить актив `DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J` на высоте 1352994 с лимитом 10 адресов:
 
-**1. First  Request:**
+**1. Первый запрос:**
 
 ```js
 http://nodes.wavesnodes.com/assets/DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J/distribution/1352994/limit/10
 ```
 
-**2. First  Response:**
+**2. Первый ответ:**
 
 ```js
 {
@@ -43,19 +43,19 @@ http://nodes.wavesnodes.com/assets/DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J/
 }
 ```
 
-Where:
+Где:
 
-* **hasNext** is true if there is a next query.
-* **lastItem**: the address of last item\(you should use 'lastItem' parameter to get next portion\).
-* **items**: the list of distributed addresses.
+* **hasNext** = true если есть следующий запрос.
+* **lastItem**: адрес последнего элемента \(следует использовать параметр 'lastItem' чтобы получить следующую порцию\).
+* **items**: список распределяемых адресов.
 
-**1. Request to get next 10 addresses in distribution at height 1353075 and after the address of LastItem which is 3PPfAGBSZbTka5jCL3iXmQycXdgySbCj3kK :**
+**1. Запрос на получение 10 следующих адресов при распределении на высоте 1353075 и после адреса LastItem, который = 3PPfAGBSZbTka5jCL3iXmQycXdgySbCj3kK :**
 
 ```js
 http://nodes.wavesnodes.com/assets/DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J/distribution/1353075/limit/10?after=3PPfAGBSZbTka5jCL3iXmQycXdgySbCj3kK
 ```
 
-**2. Respond to get next 10 addresses in distribution:**
+**2. Ответ с 10 адресами распределения:**
 
 ```js
 {
@@ -76,7 +76,6 @@ http://nodes.wavesnodes.com/assets/DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J/
 }
 ```
 
-**3. Next requests to get whole distribution will be similar.**
+**3. Следующие запросы для получения всего распределения будут аналогичными.**
 
-`DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J` in **after** param in _**N**_ request should be substituted with **lastItem **from _**N-1**_ response and Repeat until **hasNext == false**.
-
+`DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J` в параметре **after** _**N**_ запрос следует заменить на **lastItem **from _**N-1**_  и повторять до значния **hasNext == false**.
