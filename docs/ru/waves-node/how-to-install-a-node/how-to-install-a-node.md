@@ -15,6 +15,29 @@
 
 Видеоурок [Installing Waves Node](https://www.youtube.com/watch?v=CDmMeZlzKbk&feature=youtu.be).
 
+   **Note**: Иногда происходит сбой ноды со следующей ошибкой:
+
+   ```bash
+   Caused by: org.iq80.leveldb.DBException: IO error: /var/lib/waves/data/33837022.ldb: Too many open files
+   ```
+
+   Данная ошибка вызвана ограничением операционной системы на количество одновременно открытых файлов.
+
+   Проблему можно решить, поменяв стандартные значения на `65536` для следующих параметров в файле `/etc/security/limits.conf`:
+
+   ```bash
+    * soft nofile 24000 #soft limits
+    * hard nofile 65000 #hard limits
+   ```
+
+   а также добавить следующую строку в файл `/etc/systemd/system.conf`:
+
+   ```bash
+   DefaultLimitNOFILE=65536
+   ```
+
+затем перезагрузите машину.
+
 ## Системные требования
 
 |  | CPU | RAM | SSD | Команда в Jar |
