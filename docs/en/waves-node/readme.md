@@ -1,25 +1,29 @@
 # Node Owner Guide
 
- Nodes are the critical components of Waves ecosystem. By Running a Waves node, you help processing transactions and you can increase your profit for securing the network if users [lease](/en/blockchain/leasing) their funds to your node \(You can lease any sum starting from 0.002 WAVES. The more WAVES you lease to a node, the more rewards you receive.\). For more deatails, see the article about [Waves full node](/en/waves-node/what-is-a-full-node).
+Waves uses peer-to-peer network for disseminating block and transaction information. Any computer running Waves blockchain software is considered a node.
+Nodes are the critical components of Waves ecosystem. By Running a Waves node, you help processing transactions and you can increase your profit for securing the network if users [lease](/en/blockchain/leasing) their funds to your node \(You can lease any sum starting from 0.002 WAVES. The more WAVES you lease to a node, the more rewards you receive.\).
 
 The WAVES you own \(or that have been leased to you\) reflect your mining power, the more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. The final amount will also depend on overall network activity and the level of fees generated.
 
-The Waves full node serves **two critical roles**:
+A validating node is a node that [validates](en/blockchain/transaction/transaction-validation) transactions. A mining node is a node that does [mining](/en/blockchain/mining). Each mining node is a validating node.
 
-1. To relay blocks and transactions to miners
-2. To answer queries for end users about the state of the blockchain.
+## Full Node
+
+Running full node allows to take part in the decentralized process of block creation. The job of a full node is to store the blockchain data, pass along the data to other nodes (relay blocks and transactions to miners), and ensure newly added blocks are valid. Validation entails ensuring that the format of the block is correct, all hashes in the new block were computed correctly, the new block contains the hash of the previous block, and each transaction in the block is valid and signed by the appropriate parties (answer end user queries about the state of the blockchain). Full nodes may also act as mining nodes \(i.e., generating new blocks\), The mining node checks that each transaction is self-valid since the other nodes would reject the block if it includes invalid transactions.
+
+Any node may propose new transactions, and these proposed transactions are propagated between nodes until they are eventually added to a block.
+
+**Note:** You can find the list of the existing full nodes at [dev.pywaves.org](http://dev.pywaves.org/generators/).
+
+## Waves Network Structure
+
+The structure of the peer-to-peer network impacts the security and performance of cryptocurrencies. A geographically clustered network can quickly propagate a new block to many other nodes. This makes it more difficult for a malicious miner to propagate conflicting blocks/transactions quicker than honest nodes.
+
+However, a less clustered network may mean that full nodes are being run by a wider variety of users which is also good for decentralization.
 
 ## Running a Node
 
 There are different options to run Waves full node. Review the [Node configuration](/en/waves-node/node-configuration) article to select an option that suits your needs. A running node can have zero balance, however, to create mining pool, a node must have the minimum balance of **1000 WAVES** (including Waves that are lease to the node).
-
-**Hardware requirements**
-
-Minimum requirements to run Waves Node:
-
-* 4 GB of RAM
-* Dual-core processor
-* 60 GB of SSD (HDD is not recommended)
 
 ### Installing a Node
 
