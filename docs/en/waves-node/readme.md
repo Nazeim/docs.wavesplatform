@@ -27,11 +27,7 @@ There are different options to run Waves full node. Review the [Node configurati
 
 ### Installing a Node
 
-* The easiest way to run a Waves Node is by means of [Waves Docker container](/en/waves-node/waves-node-in-docker). It requires just one command to enable everything or to change the settings of the node.
-
-* The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`. Follow the steps described in [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article for details about node installation and activation of the node features.
-
-* You can also run Waves node in Yandex.Cloud. For details, see [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
+There are different options to install Waves node. The installation methods are explained in [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
 ### Getting Actual Blockchain
 

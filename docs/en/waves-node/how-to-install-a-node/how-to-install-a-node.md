@@ -1,6 +1,25 @@
 # How to Install a Node
 
-To run the Waves node you have to go through 2 steps:
+The methods to install Waves node are explained in this article.
+
+## Docker
+
+The easiest way to run Waves node is by means of Waves Docker container. It requires just one command to enable everything or change the settings of the node. For details, see [Waves Node in Docker](/en/waves-node/waves-node-in-docker) article.
+
+## Jar Package
+
+The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`.
+
+### System Requirements
+
+|  | vCPU | RAM | SSD | Command as Jar |
+| :--- | :--- | :--- | :--- | :--- |
+| Minimal requirements for [validating node](/en/blockchain/node/validating-node) | 2 | 4Gb | 60Gb SSD | `Xmx` flag Specifies the maximum size of the memory allocation pool for a Java virtual machine (JVM), Add `-Xmx` option before `-jar` parameter, choose size depending on your host RAM. The command should be as following <br/>`java -Xmx3072M -jar`|
+| Minimal requirements for [mining node](/en/blockchain/node/mining-node) | 2+ | 4+ Gb | 60+ Gb SSD | `java -Xmx4096M -jar` |
+
+>A common use for `Xmx` flag is when you encounter a `java.lang.OutOfMemoryError`.
+
+To run the Waves node, go through 2 steps:
 
 1. Install the JRE 1.8 (64-bit version).
 2. Download [Waves package](https://github.com/wavesplatform/Waves/releases) and configure the application.
@@ -13,7 +32,7 @@ More specific steps depend on your operating system:
 * [On Windows](/en/waves-node/how-to-install-a-node/on-windows)
 * [On Ubuntu](/en/waves-node/how-to-install-a-node/on-ubuntu)
 
-Here you can find a tutorial about [Installing Waves Node](https://www.youtube.com/watch?v=CDmMeZlzKbk&feature=youtu.be).
+Here you can find a tutorial about [Installing Waves Node on Digital Ocean](https://www.youtube.com/watch?v=CDmMeZlzKbk&feature=youtu.be).
 
    **Note**: Sometimes a node crashes with the following error:
 
@@ -38,11 +57,10 @@ Here you can find a tutorial about [Installing Waves Node](https://www.youtube.c
 
 then reboot your machine.
 
-## System Requirements
+## SBT Package
 
-|  | vCPU | RAM | SSD | Command as Jar |
-| :--- | :--- | :--- | :--- | :--- |
-| Minimal requirements for [validating node](/en/blockchain/node/validating-node) | 2 | 4Gb | 60Gb SSD | `Xmx` flag Specifies the maximum size of the memory allocation pool for a Java virtual machine (JVM), Add `-Xmx` option before `-jar` parameter, choose size depending on your host RAM. The command should be as following <br/>`java -Xmx3072M -jar`|
-| Minimal requirements for [mining node](/en/blockchain/node/mining-node) | 2+ | 4+ Gb | 60+ Gb SSD | `java -Xmx4096M -jar` |
+You can also install Waves node from SBT package. For details, see [Alternative Method (Installing SBT)](/en/waves-node/how-to-build-and-test-a-node.md) article.
 
->A common use for `Xmx` flag is when you encounter a `java.lang.OutOfMemoryError`.
+## Yandex.Cloud
+
+You can also run Waves node in Yandex.Cloud. For details, see [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
