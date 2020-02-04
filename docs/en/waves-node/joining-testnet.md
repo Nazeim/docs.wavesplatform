@@ -7,7 +7,7 @@ Testnet is a fully functional Waves blockchain with one key exception that Waves
 1. The simplest way to join Waves testnet is by running the **Docker container image** as explained [here](/en/waves-node/waves-node-in-docker).
 2. The other way is by following the steps described in [How to Install Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
-**Note**: In general, the difference between a Testnet and a Mainnet node is the config file (.conf) used.
+**Note**: In general, the difference between Mainnet, Testnet and Stagenet node is the config file (.conf) used.
 
 ## How to Get Waves Tokens on Testnet
 

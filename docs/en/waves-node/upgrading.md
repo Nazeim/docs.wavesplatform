@@ -2,7 +2,7 @@
 
 Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (other operating systems). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
-## Upgrading Node from APT Reporsitory
+## Upgrading Node from APT Repository
 
 The most convenient method to install/upgrade Waves Node on Linux is probably by means of APT repository. The repository provides mainnet, testnet and stagenet packages.
 When this installation method is used, the related dependencies (namely OpenJDK 8) will also be automatically downloaded.
@@ -29,7 +29,7 @@ sudo apt upgrade
 
 To upgrade a **JAR** Node complete the following steps:
 
-1. Start your Node, if it is not currently running, by executing the following command:
+1. Run your Node, if it is not currently running, by executing the following command:
 
    ```bash
    java -jar waves.jar waves.conf
@@ -38,7 +38,7 @@ To upgrade a **JAR** Node complete the following steps:
    **Note:** For more details on running a node, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node).
 
 2. Check the current version of your node in **/var/log/waves/waves.log** or, check the version in the filename of the **JAR** file.
-3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest **Mainnet** release (**JAR** file).
+3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**JAR** file).
 4. Review the release notes and check if the new version requires rebuilding the state database.
 5. **Optional step:** If the new version of the Node requires rebuilding the state database, export the existing blocks.
 See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) and [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying) articles for detais about exporting/importing blocks.
@@ -51,17 +51,17 @@ See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockch
 
 8. **Optional step:** If the new version of the Node requires rebuilding the state database, import the binary file. See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) for details.
 
-9. Start the Node by executing the following command:
+9. Run the node by executing the following command:
 
    ```bash
    java -jar waves.jar waves.conf
    ```
 
-## Upragding DEB node
+## Upgrading DEB node
 
 To upgrade a **DEB** Node complete the following steps:
 
-1. Start your node, if it is not currently running, by executing the following command:
+1. Run your node, if it is not currently running, by executing the following command:
 
    ```bash
    # sudo systemctl start waves
@@ -75,7 +75,7 @@ To upgrade a **DEB** Node complete the following steps:
    # dpkg -l waves
    ```
 
-3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest **Mainnet** release (**DEB** file).
+3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**DEB** file).
 4. Review the release notes and check if the new version requires rebuilding the state database.
 5. **Optional step:** If the new version of the Node requires rebuilding the state database, export the existing blocks.
 See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) and [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying) articles for details about exporting/importing blocks.
@@ -96,7 +96,7 @@ See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockch
 
 8. **Optional step:** If the new version of the Node requires rebuilding the state database, import the binary file. See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) for details.
 
-9. Start the Node by executing the following command:
+9. Run the node by executing the following command:
 
    ```bash
    # sudo systemctl start waves

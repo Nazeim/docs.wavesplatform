@@ -4,7 +4,7 @@ You can **rollback** your node to a specific height to remove all blocks after t
 
 There are two options:
 
-1. The user is able to implement rollback under the following condition: **the rolling back can be implemented no more than 2000 blocks.** Node owner can implement the rollback by using `REST/debug/rollback` with the **API key** \(See [_**Waves Full Node API**_](https://nodes.wavesplatform.com/api-docs/index.html#!/debug/rollback)\). For example,
+1. You can implement rollback under the following condition: **the rolling back can be implemented no more than 2000 blocks**. Implement the rollback by using `REST/debug/rollback` with the **API key** \(See [_**Waves Full Node API**_](https://nodes.wavesplatform.com/api-docs/index.html#!/debug/rollback)\). For example,
 
    ```js
       {
@@ -20,4 +20,4 @@ You can use [**chaincmp**](https://github.com/wavesplatform/gowaves/releases/tag
 ## Common Issues While Implementing a Rollback
 
 If the user requests a **rollback** via **curl/swagger** and gets **error 503,** it doesn't mean its not processing the request \(It means that it timed out\). To make sure that the node is actually processing, check that the node state doesn't change \(with status check if the block height is not rising\) after starting to reroll. It will take some processing time to start _synchronization_ again from a desired location.  
-The node can process a **rollback** to up to **2000 blocks** without restating, so if the node is on fork for some reason then rollback as soon as possible or you will have to restate and that will probably take longer time.
+The node can process a **rollback** to up to **2000 blocks** without restating database, so if the node is on fork for some reason then rollback as soon as possible or you will have to restate and that will probably take longer time.

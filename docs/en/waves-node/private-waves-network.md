@@ -1,18 +1,22 @@
 # Private Waves Blockchain
 
+This article explains how to setup private Waves blockchain network that can be used for experimental activities.
+
+## To Setup Private Blockchain Network
+
 Follow the steps below to setup private blockchain network.
 
-## Step 1
+### Step 1
 
 Install Git, [Java 8](https://java.com/en/download/) and [sbt](http://www.scala-sbt.org/).
 
-## Step 2
+### Step 2
 
 Clone [Waves repository](https://github.com/wavesplatform/Waves/).
 
-## Step 3
+### Step 3
 
-Edit the `node/src/test/resources/genesis.example.conf` file with genesis block parameters. 
+Edit the `node/src/test/resources/genesis.example.conf` file with genesis block parameters.
 
 **Example**:
 
@@ -37,7 +41,7 @@ genesis-generator
 }
 ```
 
-## Step 4
+### Step 4
 
 Run the genesis block generator command:
 
@@ -78,7 +82,7 @@ java -cp ./node/target/waves-all-0.17.2-grpc-27-g0fab715-DIRTY.jar com.wavesplat
 
 The output will be the same.
 
-## Step 5
+### Step 5
 
 Create `*.conf` file with any name (for example `waves-custom-network.conf`) and open it in a text editor.
 
@@ -202,7 +206,7 @@ waves
 
 Pay attention to the parameters `waves.blockchain.custom.address-scheme-character` and `waves.blockchain.custom.genesis`. They were copied from the result and settings of genesis generator tool. Also, look at `waves.wallet.seed` value. This value can be copied from "Seed" value for one of the genesis addresses from the result of genesis generator tool.
 
-## Step 6
+### Step 6
 
 Start your custom network node by running:
 
@@ -217,5 +221,17 @@ You can add more nodes to your network using `waves.network.known-peers` param
 `waves.blockchain.custom.functionality` section contains parameters that allow you to enable and disable some features in your blockchain system.
 
 **Note**: The developers can add new parameters in `waves.blockchain.custom.functionality` section, which are not present in this example; as an example of a working configuration, see the [waves-devnet.conf file in root folder of repository](https://github.com/wavesplatform/Waves/blob/master/node/waves-devnet.conf).
+
+## To Setup Other Services
+
+You can setup your custom blockchain with other services such as:
+
+* [Data services](/en/building-apps/waves-api-and-sdk/waves-data-service-api), to retrieve data from the blockchain quickly and conveniently by means of Waves data services [Testnet](https://api.testnet.wavesplatform.com/v0/docs/) or [Mainnet](https://api.wavesplatform.com/v0/docs/) API.
+
+   For details, see [deploy examples](https://github.com/wavesplatform/deploy-examples) and [How to Run Data Services](https://wavestalk.ru/t/kak-zapustit-data-services-za-30-minut-iz-korobki/272) article.
+
+* [Waves explorer](/en/ecosystem/waves-explorer/about-waves-explorer)
+
+* [Matcher](https://docs.waves.exchange/en/waves-matcher/)
 
 See [Node Configuration](/en/waves-node/node-configuration) for more information.

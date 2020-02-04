@@ -1,11 +1,11 @@
-# How to work with node wallet
+# How to Work With Node Wallet
 
 Being connected to the node, the wallet enables node with
 
-* ability to mine.
+* ability to mine.
 * ability to sign transactions.
 
-The node can have a single wallet with a single seed, contained in the walleе.
+The node can have a single wallet with a single seed, contained in the wallet.
 
 In this article, we will review the following scenarios of wallet usage:
 
@@ -14,7 +14,7 @@ In this article, we will review the following scenarios of wallet usage:
 * [using existing wallet](#existing-wallet).
 * [changing node's account](#re-create).
 
-## Creating a New Wallet From Scratch <a id="new"></a>
+## Creating a New Wallet From Scratch <a id="new"></a>
 
 Node will create a wallet if the directory listed in `wallet` section of [node's configuration file](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) does not contain wallet.dat file. In this case node will also generate a random seed.
 

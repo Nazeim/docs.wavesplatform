@@ -76,7 +76,7 @@ sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i [
 
 ## Import Blocks Up to a Certain Height
 
-It is possible to set target height. If the height parameter is not set, all the blocks will be impoerted. To import, run the following command:
+It is possible to set target height. If the height parameter is not set, all the blocks will be imported. To import, run the following command:
 
 ### On Windows
 
