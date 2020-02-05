@@ -20,4 +20,8 @@ When some new feature is developed and released, it must be activated.
 
 * Every 3000 blocks on testnet (10000 blocks on mainnet) - it's an "election period". If there are not less than 2700 blocks on testnet (8000 blocks on mainnet) with support of the feature during the election period, the feature becomes "voted". After it's "voted" there is a period of "activation" - 3000 blocks for testnet (10000 blocks for mainnet). After they all passed, the feature start working. At this moment all nodes which can not supports such feature (old versions) stops.
 
-Features are getting different statuses according to the [feature activation protocol](/en/waves-node/features/feature-activation-protocol).
+## Feature Activation Protocol
+
+**Feature activation protocol** is a procedure according to which a new [feature](/en/waves-node/features/feature) gets activated, i.e. it gets the "activated" status.
+
+For more details see [Activation protocol](/en/blockchain/waves-protocol/activation-protocol) page.
