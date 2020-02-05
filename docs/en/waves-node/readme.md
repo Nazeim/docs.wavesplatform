@@ -21,6 +21,16 @@ The structure of the peer-to-peer network impacts the security and performance o
 
 However, a less clustered network may mean that full nodes are being run by a wider variety of users which is also good for decentralization.
 
+## Mainnet, Testnet, Stagenet
+
+There are three types of Waves blockchain network:
+
+* [Mainnet](/en/blockchain/blockchain-network/main-network)
+* [Testnet](/en/blockchain/blockchain-network/test-network)
+* [Stagenet](/en/blockchain/blockchain-network/stage-network)
+
+**Note**: In general, the difference between Mainnet, Testnet and Stagenet node is the config file (.conf) used.
+
 ## Running a Node
 
 There are different options to run Waves full node. Review the [Node configuration](/en/waves-node/node-configuration) article to select an option that suits your needs. A running node can have zero balance, however, to create mining pool, a node must have the minimum balance of **1000 WAVES** (including Waves that are lease to the node).
@@ -49,5 +59,3 @@ Your node can be on fork with height **less** than 2000 blocks or **more** than 
 
 * In case that your node is on fork with a height less than 2000 blocks, you can implement rollback as described in [How to Rollback Your Node](/en/waves-node/how-to-rollback-a-node).
 * Otherwise, you need to go with one of the options described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
-
-If you're interested in joining the Testnet, you will need to follow the steps described in [Joining The Testnet](/en/waves-node/joining-testnet) article.
