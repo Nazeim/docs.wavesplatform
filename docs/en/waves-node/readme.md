@@ -1,6 +1,9 @@
 # Node Owner Guide
 
-Waves uses peer-to-peer network for disseminating block and transaction information. Any computer running Waves blockchain software is considered a node.
+Waves uses peer-to-peer network for disseminating block and transaction information. Any computer running Waves blockchain software is considered a node. The structure of the peer-to-peer network impacts the security and performance of cryptocurrencies. A geographically clustered network can quickly propagate new blocks to many other nodes. This makes it more difficult for malicious miners to propagate conflicting blocks/transactions quicker than the honest nodes.
+
+However, less clustered network means that full nodes are being run by a wider variety of users which is also good for decentralization.
+
 Nodes are the critical components of Waves ecosystem. By Running a Waves node, you help processing transactions and you can increase your profit for securing the network if users [lease](/en/blockchain/leasing) their funds to your node \(You can lease any sum starting from 0.002 WAVES. The more WAVES you lease to a node, the more rewards you receive.\).
 
 The WAVES you own \(or that have been leased to you\) reflect your mining power, the more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. The final amount will also depend on overall network activity and the level of fees generated.
@@ -14,12 +17,6 @@ Running full node allows to take part in the decentralized process of block crea
 Any node may propose new transactions, and these proposed transactions are propagated between nodes until they are eventually added to a block.
 
 **Note:** You can find the list of the existing full nodes at [dev.pywaves.org](http://dev.pywaves.org/generators/).
-
-## Waves Network Structure
-
-The structure of the peer-to-peer network impacts the security and performance of cryptocurrencies. A geographically clustered network can quickly propagate a new block to many other nodes. This makes it more difficult for a malicious miner to propagate conflicting blocks/transactions quicker than honest nodes.
-
-However, a less clustered network may mean that full nodes are being run by a wider variety of users which is also good for decentralization.
 
 ## Mainnet, Testnet, Stagenet
 
@@ -41,7 +38,7 @@ There are different options to install Waves node. The installation methods are 
 
 ### Getting Actual Blockchain
 
-After installing a node, you will need to get the blockchain database, using one of the methods described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
+After installing a node, you need to get the blockchain database, using one of the methods described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
 
 ## Already a Node Owner
 
