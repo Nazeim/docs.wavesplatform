@@ -4,6 +4,25 @@
 
 Each feature has a name and a unique feature ID.
 
+Waves nodes currently support the following features:
+
+| Feature ID |                        Name                       | Description                                                                                                                                                                                              | Blockchain Height | Activation Date |
+|------------|:-------------------------------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-----------------|
+| 1          | Minimum Generating Balance of 1000 WAVES          | Min generating balance of the mining account has to be 1000 WAVES, for the accout to generate blocks                                                                                                     | 810 000           | Dec 2017        |
+| 2          | NG Protocol                                       | Transition to Waves NG protocol                                                                                                                                                                          | 805 000           | Dec 2017        |
+| 3          | Mass Transfer Transaction                         | Introduction of mass transfer transaction                                                                                                                                                                | 940 000           | Mar 2018        |
+| 4          | Smart Accounts                                    | Introduction of smart accounts                                                                                                                                                                           | 1 190 000         | Sep 2018        |
+| 5          | Data Transaction                                  | Introduction of data transactions                                                                                                                                                                        | 1 060 000         | Jun 2018        |
+| 6          | Burn Any Tokens                                   | Ability of the issuer to burn tokens                                                                                                                                                                     | 1 070 000         | Jul 2018        |
+| 7          | Fee Sponsorship                                   | Introduction of sponsor transactions                                                                                                                                                                     | 1 080 000         | Jul 2018        |
+| 8          | Fair PoS                                          | Changes in PoS protocol. The share of generated blocks must match the share of the node generating balance                                                                                               | 1 100 000         | Jul 2018        |
+| 9          | Smart Assets                                      | Introduction of smart assets                                                                                                                                                                             | 1 340 000         | Jan 2019        |
+| 10         | Smart Account Trading                             | Ability to place smart account orders. The Matched-account can be smart account or dApp                                                                                                                  | 1 340 000         | Jan 2019        |
+| 11         | RIDE 4 DAPPS                                      | Improvements of Ride language. Added [functions]. Introduced script invocation transaction                                                                                                               | 1 610 000         | Jul 2019        |
+| 12         | Order Version 3                                   | Ability to set order comission in any token                                                                                                                                                              | 1 610 000         | Jul 2019        |
+| 13         | Reduce NFT fee                                    | If the amount of token in the issuing transaction is 1, the number of decimal places is 0, and the token cannot be reissued, then the commission for such a transaction will be 0.001 WAVES instead of 1 | 1 610 000         | Jul 2019        |
+| 14         | Block Reward and Community Driven Monetary Policy | Introduction of mining reward                                                                                                                                                                            | 1 740 000         | Oct 2019        |
+
 ## Feature Status
 
 Each feature can be in one of three statuses:
