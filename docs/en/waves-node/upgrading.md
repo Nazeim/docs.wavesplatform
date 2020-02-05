@@ -1,4 +1,4 @@
-# Upgrading Waves Node
+# Upgrade Waves Node
 
 Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (other operating systems). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 

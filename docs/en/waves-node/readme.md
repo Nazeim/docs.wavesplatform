@@ -34,11 +34,11 @@ There are different options to run Waves full node. Review the [Node configurati
 
 ### Installing a Node
 
-There are different options to install Waves node. The installation methods are explained in [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
+There are different options to install Waves node. The installation methods are explained in [Install Waves Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
 ### Getting Actual Blockchain
 
-After installing a node, you need to get the blockchain database, using one of the methods described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
+After installing a node, you need to get the blockchain database, using one of the methods described in [Get Waves Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
 
 ## Already a Node Owner
 
@@ -46,7 +46,7 @@ If you already own a node, you need to check for the latest updates and then pro
 
 ### Upgrade Your Node
 
-To upgrade your node, follow the steps described in [Upgrading Waves Node](/en/waves-node/upgrading) article.
+To upgrade your node, follow the steps described in [Upgrade Waves Node](/en/waves-node/upgrading) article.
 
 ### Dealing With Forks
 
@@ -54,5 +54,5 @@ You can check the blockchain height or the last 100 signatures of blocks to unde
 
 Your node can be on fork with height **less** than 2000 blocks or **more** than 2000 blocks.
 
-* In case that your node is on fork with a height less than 2000 blocks, you can implement rollback as described in [How to Rollback Your Node](/en/waves-node/how-to-rollback-a-node).
-* Otherwise, you need to go with one of the options described in [Options for Getting Actual Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
+* In case that your node is on fork with a height less than 2000 blocks, you can implement rollback as described in [Rollback Waves Node](/en/waves-node/how-to-rollback-a-node) article.
+* Otherwise, you need to go with one of the options described in [Get Waves Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.

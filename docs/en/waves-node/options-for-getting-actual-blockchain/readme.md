@@ -1,4 +1,4 @@
-# Options for Getting Actual Blockchain
+# Get Waves Blockchain
 
 A running node requires up-to-date blockchain database for operation. One of the methods described in this article can be used to obtain actual blockchain.
 

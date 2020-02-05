@@ -1,4 +1,4 @@
-# How to Rollback Waves Node
+# Rollback Waves Node
 
 You can **rollback** your node to a specific height to remove all blocks after that given height.
 

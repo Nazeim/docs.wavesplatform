@@ -1,4 +1,4 @@
-# How to Install a Node
+# Install Waves Node
 
 The methods to install Waves node are explained in this article.
 
