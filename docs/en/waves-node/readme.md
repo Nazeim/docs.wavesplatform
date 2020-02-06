@@ -42,7 +42,7 @@ After installing a node, you need to get the blockchain database, using one of t
 
 ## Already a Node Owner
 
-If you already own a node, you need to check for the latest updates and then proceed with one of the following:
+If you already own a node, you need to check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates and, depending on the type of update, proceed with one of the following:
 
 ### Upgrade Your Node
 
