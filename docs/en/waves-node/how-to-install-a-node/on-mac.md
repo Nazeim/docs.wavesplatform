@@ -1,4 +1,4 @@
-# Installing a node on macOS
+# Install Node on macOS
 
 ## Install OpenJDK 8
 

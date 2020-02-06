@@ -551,100 +551,68 @@ module.exports = {
     {
       title: 'Node Owner Guide',
       path: nodePath,
-    },
-    {
-      title: 'Waves Full Node',
-      path: nodePath + 'what-is-a-full-node',
-    },
-    {
-      title: 'How to Install a Node',
-      path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
-      children: [
-        {
-          title: 'Waves Node in Docker',
-          path: nodePath + 'waves-node-in-docker',
-        },  
-        {
-          title: 'On Mac',
-          path: nodePath + 'how-to-install-a-node/on-mac',
-        },
-        {
-          title: 'On Windows',
-          path: nodePath + 'how-to-install-a-node/on-windows',
-        },
-        {
-          title: 'On Ubuntu',
-          path: nodePath + 'how-to-install-a-node/on-ubuntu',
-        },
-        {
-          title: 'Alternative Method (Installing SBT)',
-          path: nodePath + 'how-to-build-and-test-a-node',
-        },
+	  children: [     
 	    {
-          title: 'Running Waves Node in Yandex.Cloud',
-          path: nodePath + 'running-waves-node-in-yandex-cloud',
-        },	
-      ],
-    },
-    {
-      title: 'Options for Getting Actual Blockchain',
-      path: nodePath + 'options-for-getting-actual-blockchain',
-      children: [
-        {
-          title: 'Export/Import Blockchain',
-          path: nodePath + 'options-for-getting-actual-blockchain/import-from-the-blockchain',
-        },	  
-        {
-          title: 'Download the Latest Blockchain',
-          path: nodePath + 'options-for-getting-actual-blockchain/state-downloading-and-applying',
-        },
-      ],
-    },
-    {
-      title: 'Upgrading Waves Node',
-      path: nodePath + 'upgrading',
-    },
-    {
-      title: 'How to Rollback a Node',
-      path: nodePath + 'how-to-rollback-a-node',
-    },
-    {
-      title: 'How to work with node wallet',
-      path: nodePath + 'how-to-work-with-node-wallet',
-    },
-    {
-      title: 'Joining Testnet',
-      path: nodePath + 'joining-testnet',
-    },
-    {
-      title: 'Private Waves Blockchain',
-      path: nodePath + 'private-waves-network',
-    },
-    {
-      title: 'Extensions',
-      path: nodePath + 'extensions',
-      children: [
-        {
-          title: 'gRPC Server',
-          path: nodePath + 'extensions/grpc-server',
-          children: [
+         title: 'Install Waves Node',
+         path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
+         children: [
             {
-              title: 'gRPC Server installation',
-              path: nodePath + 'extensions/grpc-server/grpc-server-installation',
+             title: 'Waves Node in Docker',
+             path: nodePath + 'waves-node-in-docker',
+            },  
+            {
+             title: 'Install Node on macOS',
+             path: nodePath + 'how-to-install-a-node/on-mac',
+            },
+            {
+             title: 'Install Node on Windows',
+             path: nodePath + 'how-to-install-a-node/on-windows',
+            },
+            {
+             title: 'Install Node on Ubuntu',
+             path: nodePath + 'how-to-install-a-node/on-ubuntu',
+            },
+            {
+             title: 'Alternative Method (Installing SBT)',
+             path: nodePath + 'how-to-build-and-test-a-node',
+            },
+	        {
+             title: 'Run Node in Yandex.Cloud',
+             path: nodePath + 'running-waves-node-in-yandex-cloud',
+            },	
+          ],
+        },
+		{
+         title: 'Get Waves Blockchain',
+         path: nodePath + 'options-for-getting-actual-blockchain',
+         children: [
+            {
+             title: 'Export/Import Blockchain',
+             path: nodePath + 'options-for-getting-actual-blockchain/import-from-the-blockchain',
+            },	  
+            {
+             title: 'Download the Latest Blockchain',
+             path: nodePath + 'options-for-getting-actual-blockchain/state-downloading-and-applying',
             },
           ],
         },
-      ]
+        {
+         title: 'Upgrade Waves Node',
+         path: nodePath + 'upgrading',
+        },
+        {
+         title: 'Rollback Waves Node',
+         path: nodePath + 'how-to-rollback-a-node',
+        },
+	  ], 
     },
     {
-      title: 'Features',
-      path: nodePath + 'features',
-      children: [
-        {
-          title: 'Feature Activation Protocol',
-          path: nodePath + 'features/feature-activation-protocol',
-        }
-      ],
+      title: 'Node Wallet',
+      path: nodePath + 'how-to-work-with-node-wallet',
+    },
+    {
+      title: 'Private Blockchain',
+      path: nodePath + 'private-waves-network',
     },
     {
       title: 'Node Configuration',
@@ -653,6 +621,10 @@ module.exports = {
     {
       title: 'Logging Configuration',
       path: nodePath + 'logging-configuration',
+    },
+    {
+      title: 'Features',
+      path: nodePath + 'features',
     },
     {
       title: 'Node API',
@@ -717,6 +689,16 @@ module.exports = {
     {
       title: 'API limitations of the pool of public nodes',
       path: nodePath + 'api-limitations-of-the-pool-of-public-nodes',
+    },
+    {
+      title: 'Extensions',
+      path: nodePath + 'extensions',
+      children: [
+        {
+          title: 'gRPC Server',
+          path: nodePath + 'extensions/grpc-server',
+        },
+      ]
     },
   ],
 

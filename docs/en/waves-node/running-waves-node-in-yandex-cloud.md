@@ -1,4 +1,4 @@
-# Running Waves Node in Yandex.Cloud
+# Run Node in Yandex.Cloud
 
 1.&nbsp;In the Yandex.Cloud [console](https://console.cloud.yandex.com), navigate to the desired resource group.
 

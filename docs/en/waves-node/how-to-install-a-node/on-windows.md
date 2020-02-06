@@ -1,4 +1,4 @@
-# Installing a node on Windows
+# Install Node on Windows
 
 ## Install OpenJDK 8
 
