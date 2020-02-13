@@ -8,8 +8,8 @@ The node database is stored in the _/var/lib/waves/data_ folder.
 
 To download and implement the latest node blockchain database, complete the followiong steps:
 
-1. [Download](http://blockchain.wavesnodes.com) the database (blockchain_last.tar file) via the link.
-2. Run the checksum with some tool to test files from the link above (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
+1. Download the database (blockchain_last.tar file) from one of the links below.
+2. Run the checksum with some tool to test files (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
 3. Delete the data folder by running the followong command: `sudo rm -rdf /var/lib/waves/data`.
 4. Unpack the database files in the following folder: `/var/lib/waves/data`.
 5. Run the node with the following command: `sudo systemctl start waves`.

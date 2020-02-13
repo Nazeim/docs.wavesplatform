@@ -97,3 +97,5 @@ Testnet:
 ```bash
 sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i /path/to/testnet-1234688
 ```
+
+**Note**: You can speed up the import by 5-20% at your own risk. To do so, use `-no-verify` Importer option to turn off block and transaction validation. Use with caution and only if you trust your blockchain file.
