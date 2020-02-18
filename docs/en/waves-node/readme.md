@@ -59,10 +59,10 @@ To upgrade your node, follow the steps described in [Upgrade Waves Node](/en/wav
 
 ### Dealing With Forks
 
-Fork is the moment when a blockchain splits in two seperate ones. Forks can happen because of node version difference (for example, when your node is of older version). Also, forks can be caused by malicious attacks or system failure.
+Fork is the moment when a blockchain splits in two seperate ones. Forks can happen because of node version difference (for example, when your node is of older version). Also, forks can be caused by malicious attacks or system failure. A forked node continues generating blocks, but it does not communicate with other valid nodes.
 You can check the blockchain height or the last 100 signatures of blocks to understand if your node is on fork or not. Use [chaincmp](https://github.com/wavesplatform/gowaves/releases/tag/v0.1.2) utility to compare blockchains on your node and the reference nodes.
 
 Your node can be on fork with height **less** than 2000 blocks or **more** than 2000 blocks.
 
-* In case that your node is on fork with a height less than 2000 blocks, you can implement rollback as described in [Rollback Waves Node](/en/waves-node/how-to-rollback-a-node) article.
+* In case that your node is on fork with a height less than 2000 blocks, you can implement rollback as described in [Rollback Waves Node](/en/waves-node/how-to-rollback-a-node) article, after that restart the node to begin generating blocks.
 * Otherwise, you need to go with one of the options described in [Get Waves Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
