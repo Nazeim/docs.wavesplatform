@@ -18,6 +18,8 @@ sending transations from your own node
 use your node API, to be independent from trird party
 possibility to tweak your node so that you can setup extended functionality for your project
 
+For details about Waves protocol, blockchain scalability and rewards see [Waves-NG Protocol](/en/blockchain/waves-protocol/waves-ng-protocol) article.
+
 ## Full Node
 
 Running full node allows to take part in the decentralized process of block creation. The job of a full node is to store the blockchain data, pass along the data to other nodes (relay blocks and transactions to miners), and ensure newly added blocks are valid. Validation entails ensuring that the format of the block is correct, all hashes in the new block were computed correctly, the new block contains the hash of the previous block, and each transaction in the block is valid and signed by the appropriate parties (answer end user queries about the state of the blockchain). Full nodes may also act as mining nodes \(i.e., generating new blocks\), The mining node checks that each transaction is self-valid since the other nodes would reject the block if it includes invalid transactions.
