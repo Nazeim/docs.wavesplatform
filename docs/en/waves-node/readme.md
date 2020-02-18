@@ -10,6 +10,14 @@ The WAVES you own \(or that have been leased to you\) reflect your mining power,
 
 A validating node is a node that [validates](en/blockchain/transaction/transaction-validation) transactions. A mining node is a node that does [mining](/en/blockchain/mining). Each mining node is a validating node.
 
+Reasons to run node:
+
+* Mining - earn profit
+* Own project - get the latest blockchain data from your own node withou having to trust third party
+sending transations from your own node
+use your node API, to be independent from trird party
+possibility to tweak your node so that you can setup extended functionality for your project
+
 ## Full Node
 
 Running full node allows to take part in the decentralized process of block creation. The job of a full node is to store the blockchain data, pass along the data to other nodes (relay blocks and transactions to miners), and ensure newly added blocks are valid. Validation entails ensuring that the format of the block is correct, all hashes in the new block were computed correctly, the new block contains the hash of the previous block, and each transaction in the block is valid and signed by the appropriate parties (answer end user queries about the state of the blockchain). Full nodes may also act as mining nodes \(i.e., generating new blocks\), The mining node checks that each transaction is self-valid since the other nodes would reject the block if it includes invalid transactions.
@@ -26,7 +34,9 @@ There are three types of Waves blockchain network:
 * [Testnet](/en/blockchain/blockchain-network/test-network)
 * [Stagenet](/en/blockchain/blockchain-network/stage-network)
 
-**Note**: In general, the difference between Mainnet, Testnet and Stagenet node is the config file (.conf) used.
+`Mainnet` carries out real transactions within Waves blockchain network, `Testnet` is similar, but the tokens in it have no value. `Stagenet` is Waves blockchain that is used for testing experimental functionality.
+
+**Note**: In general, the difference between `Mainnet`, `Testnet` and `Stagenet` node is the config file (.conf) used.
 
 ## Running a Node
 
