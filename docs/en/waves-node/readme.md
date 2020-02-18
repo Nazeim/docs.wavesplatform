@@ -52,12 +52,9 @@ There are different options to install Waves node. The installation methods are 
 
 After installing a node, you need to get the blockchain database, using one of the methods described in [Get Waves Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article.
 
-## Already a Node Owner
-
-If you already own a node, you need to check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates and, depending on the type of update, proceed with one of the following:
-
 ### Upgrade Your Node
 
+When you own a node, you need to check the [Releases](https://github.com/wavesplatform/Waves/releases/) page on a regular basis for the latest updates. Releases of new versions of node come with release notes document describing the new features and telling the node owner what actions to take to upgrade, depending on the type of the update.
 To upgrade your node, follow the steps described in [Upgrade Waves Node](/en/waves-node/upgrading) article.
 
 ### Dealing With Forks
