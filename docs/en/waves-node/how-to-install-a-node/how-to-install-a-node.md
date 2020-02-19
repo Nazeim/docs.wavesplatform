@@ -2,15 +2,7 @@
 
 The methods to install Waves node are explained in this article.
 
-## Docker
-
-The easiest way to run Waves node is by means of Waves Docker container. It requires just one command to enable everything or change the settings of the node. For details, see [Waves Node in Docker](/en/waves-node/waves-node-in-docker) article.
-
-## Jar Package
-
-The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`.
-
-### System Requirements
+## System Requirements
 
 |  | vCPU | RAM | SSD | Command as Jar |
 | :--- | :--- | :--- | :--- | :--- |
@@ -19,12 +11,13 @@ The other way is to [download the latest version](https://github.com/wavesplatfo
 
 >A common use for `Xmx` flag is when you encounter a `java.lang.OutOfMemoryError`.
 
-To run the Waves node, go through 2 steps:
+### Docker
 
-1. Install the JRE 1.8 (64-bit version).
-2. Download [Waves package](https://github.com/wavesplatform/Waves/releases) and configure the application.
+The easiest way to run Waves node is by means of Waves Docker container. It requires just one command to enable everything or change the settings of the node. For details, see [Waves Node in Docker](/en/waves-node/waves-node-in-docker) article.
 
-Prior to the launch of your nodes, make sure you read the [configuration specification](/en/waves-node/node-configuration)! The default configuration does not contain the safest solution!
+### Jar Package
+
+The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`.
 
 More specific steps depend on your operating system:
 
@@ -32,9 +25,21 @@ More specific steps depend on your operating system:
 * [On Windows](/en/waves-node/how-to-install-a-node/on-windows)
 * [On Ubuntu](/en/waves-node/how-to-install-a-node/on-ubuntu)
 
+For details about configuration file, see [Node Configuration](/en/waves-node/node-configuration) article.
+
 Here you can find a tutorial about [Installing Waves Node on Digital Ocean](https://www.youtube.com/watch?v=CDmMeZlzKbk&feature=youtu.be).
 
-   **Note**: Sometimes a node crashes with the following error:
+### SBT Package
+
+You can also install Waves node from SBT package. For details, see [Alternative Method (Installing SBT)](/en/waves-node/how-to-build-and-test-a-node.md) article.
+
+### Yandex.Cloud
+
+You can also run Waves node in Yandex.Cloud. For details, see [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
+
+## Troubleshooting
+
+   There is a known issue when a node can crash with the following error:
 
    ```bash
    Caused by: org.iq80.leveldb.DBException: IO error: /var/lib/waves/data/33837022.ldb: Too many open files
@@ -57,10 +62,3 @@ Here you can find a tutorial about [Installing Waves Node on Digital Ocean](http
 
 then reboot your machine.
 
-## SBT Package
-
-You can also install Waves node from SBT package. For details, see [Alternative Method (Installing SBT)](/en/waves-node/how-to-build-and-test-a-node.md) article.
-
-## Yandex.Cloud
-
-You can also run Waves node in Yandex.Cloud. For details, see [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
