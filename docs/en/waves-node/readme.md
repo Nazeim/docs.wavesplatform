@@ -13,10 +13,9 @@ A validating node is a node that [validates](en/blockchain/transaction/transacti
 Reasons to run node:
 
 * Mining - earn profit
-* Own project - get the latest blockchain data from your own node withou having to trust third party
-sending transations from your own node
-use your node API, to be independent from trird party
-possibility to tweak your node so that you can setup extended functionality for your project
+* Own project - get the latest blockchain data from your own node without having to trust third party. Send transations from your own node.
+Use your node API, to be independent from trird party.
+Tweak your own node to setup extended functionality for your project.
 
 For details about Waves protocol, blockchain scalability and rewards see [Waves-NG Protocol](/en/blockchain/waves-protocol/waves-ng-protocol) article.
 
