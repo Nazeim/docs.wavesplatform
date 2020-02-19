@@ -25,7 +25,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 **Note.** Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
 
-## Installation from deb package on deb-based linux (Ubuntu, Debian)
+## Installation from Deb Package on Deb-based Linux (Ubuntu, Debian)
 
 Just [download latest waves deb](https://github.com/wavesplatform/Waves/releases) and install it with `sudo dpkg -i waves*.deb`. Now it's time to check your waves config!
 
@@ -45,15 +45,11 @@ If you want to change waves directory (for wallet, blockchain and other node fil
 
 ## Installation for Advanced Users
 
-[Download latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and required configuration file (for mainnet or testnet) to any folder, for example `/opt/waves`.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and required configuration file (for mainnet or testnet) to any folder, for example `/opt/waves`.
 
-Check out the configuration file, **it is very important**! On this depends **the safety of your wallet and money**.
+Open and edit the config file with your favorite text editor. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
-Just open it via your favorite text editor, pour a cup of tea and read [the documentation of the configuration file.](/en/waves-node/node-configuration)
-
-Then start console, navigate to the folder with the jar file with the command `cd /opt/waves` and start waves node with command `java -jar waves.jar waves-config.conf`.
-
-Now you can write a script to run every node, which you like and use it! I hope it's worth it! :\)
+Then start console, navigate to the folder with the jar file with the command `cd /opt/waves` and start the node with command `java -jar waves.jar waves-config.conf`.
 
 ## Installation from Source
 

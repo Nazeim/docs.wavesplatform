@@ -22,15 +22,17 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 ## Download Waves package and configure the application
 
-[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and the required configuration file \(for mainnet or testnet\) to any folder, for example `~/waves`.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and the required configuration file \(for mainnet, testnet or stagenet\) to you machine.
 
-Carefully edit the configuration waves .conf file, **it is very important! The safety of your wallet and money depends on this!**
+Open and carefully edit the config file with your favorite text editor. **This is very important! The safety of your wallet and money depends on this!**. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
-Just open it with your favorite text editor, pour a cup of tea and read [the documentation of the configuration file](/en/waves-node/node-configuration).
+Then open Windows Command line app `cmd.exe`, navigate to the folder with the jar file and start the node with the following command:
 
-Then start Windows Command line app `cmd.exe`, navigate to the folder with the jar file with the command `cd C:/waves` and start waves node with command `java -jar waves.jar waves.conf`.
+```
+java -jar waves.jar waves.conf.
+```
 
-## Additional security
+## Additional Security
 
 For added security, it is recommended to store your wallet and configuration applications on an encrypted partition. You can use software like [BitLocker](https://technet.microsoft.com/en-us/library/cc731549%28v=ws.10%29.aspx), [TrueCrypt](http://truecrypt.sourceforge.net/), [AxCrypt](http://www.axcrypt.net/), [FreeOTFE](https://sourceforge.net/projects/freeotfe.mirror/), [GostCrypt](https://www.gostcrypt.org/), [VeraCrypt](https://veracrypt.codeplex.com/) or else. You choose this application **at your own risk**!
 
