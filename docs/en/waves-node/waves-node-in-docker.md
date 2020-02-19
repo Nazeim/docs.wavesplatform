@@ -1,16 +1,16 @@
 # Waves Node in Docker
 
-The easiest way to **run a Waves Node** is by means of **Waves Docker container**. It requires just **one command** to enable everything or to change the settings of your node.
+The easiest way to run Waves Node is by means of **Waves Docker container**. It requires just **one command** to enable everything or to change the settings of your node.
 
 ## Prerequisites
 
 You need to install the latest version of Docker.
 
-Please, follow installation steps described on the [Docker](https://docs.docker.com/engine/installation/) website.
+Please, follow the installation steps described on the [Docker](https://docs.docker.com/engine/installation/) website.
 
 ## About the image
 
-* The Docker image contains scripts and configs to run Waves Node from **Version 0.13.0 **for Testnet, Mainnet or custom networks.
+* The Docker image contains scripts and configs to run Waves Node from **Version 0.13.0** for Testnet, Mainnet or custom networks.
 * The image is focused on fast and convenient deployment of Waves Node.
 * The container downloads and runs `.jar` file along with configuration files from the [releases section](https://github.com/wavesplatform/Waves/releases).
 
@@ -24,13 +24,13 @@ To start the container, execute the following command:
 docker run -it wavesplatform/node
 ```
 
-**Note: We recommend to start the container with the following command for MAINNET:**
+:warning: We recommend to start the container with the following command for Mainnet:
 
 ```bash
 docker run -p 6869:6869 -p 6868:6868 -e WAVES_NETWORK=MAINNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
 ```
 
-**For TESTNET:**
+For Testnet:
 
 ```bash
 docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
@@ -52,7 +52,7 @@ docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL
 |`WAVES_AUTODETECT_ADDRESS`        |Set `yes` if you want to get your public address and set value `declared-address` with it.|
 |`WAVES_AUTODETECT_ADDRESS_PORT`   |`WAVES_AUTODETECT_ADDRESS` can get only an IP address of the node, but not port number, so define your real port number with this variable.|
 
-**Note: All the variables are optional.**  
+**Note**: All the variables are optional.
 
 ## Configuration
 
