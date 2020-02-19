@@ -29,23 +29,21 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 Just [download latest waves deb](https://github.com/wavesplatform/Waves/releases) and install it with `sudo dpkg -i waves*.deb`. Now it's time to check your waves config!
 
-It's embedded into the deb package and unpacked to `/usr/share/waves/conf/waves.conf` (or `waves-testnet` folder for testnet) and symlinked to `/etc/waves/waves.conf`. [Please read this and edit waves config](/en/waves-node/node-configuration) with caution.
+It's embedded into the deb package and unpacked to `/usr/share/waves/conf/waves.conf` (or `waves-testnet` folder for testnet) and symlinked to `/etc/waves/waves.conf`. Please read the [Node Configuration](/en/waves-node/node-configuration) article and edit the config file with caution.
 
-There are two types of deb packages of waves nodes: with **upstart loader** and **systemd loader**.
+There are two types of `deb` packages of waves nodes: with **upstart loader** and **systemd loader**.
 
 ### 1. Systemd (Ubuntu &gt;= 15.04):
 
 Users can start the node with `sudo systemctl start waves.service` (`waves-testnet` for testnet) and enable autoload on start with `sudo systemctl enable waves.service`. **Systemd** users can find waves app logs in journald storage like that `journalctl -u waves.service -f`. You can read about journald tips [here](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
 
-### 2. **Upstart (Ubuntu &lt; 15.04):**
+### 2. Upstart (Ubuntu &lt; 15.04):
 
 Users can start the node with `sudo service waves start` (`waves-testnet` for testnet) and enable autoload on start with `sudo service waves enable`. You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
 
+If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`. Default waves directory is `/var/lib/waves-testnet/` is set in run systemd start script.**
 
-
-**If you want to change waves directory (for wallet, blockchain and other node files\ in ubuntu packages you should change it using **`-J-Dwaves.directory=path`** in **`/etc/waves/application.ini`**. Default waves directory is **`/var/lib/waves-testnet/`** is set in run systemd start script.**
-
-## Installation for advanced users
+## Installation for Advanced Users
 
 [Download latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and required configuration file (for mainnet or testnet) to any folder, for example `/opt/waves`.
 
@@ -57,7 +55,7 @@ Then start console, navigate to the folder with the jar file with the command `c
 
 Now you can write a script to run every node, which you like and use it! I hope it's worth it! :\)
 
-## Installation from source
+## Installation from Source
 
 * add to your ~/.bashrc for increase memory for jvm:
 
@@ -103,7 +101,7 @@ Now you can write a script to run every node, which you like and use it! I hope 
 
 * Enjoy
 
-## Additional security
+## Additional Security
 
 For added security, it is recommended to store your wallet and configuration applications on an encrypted partition. You can read about it [here](https://help.ubuntu.com/community/EncryptedFilesystems).
 
