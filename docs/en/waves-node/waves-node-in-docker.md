@@ -24,19 +24,19 @@ To start the container, execute the following command:
 docker run -it wavesplatform/node
 ```
 
-:warning: We recommend to start the container with the following command for Mainnet:
+:warning: We recommend to start the container with the following command for **Mainnet**:
 
 ```bash
 docker run -p 6869:6869 -p 6868:6868 -e WAVES_NETWORK=MAINNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
 ```
 
-For Testnet:
+For **Testnet**:
 
 ```bash
 docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL=DEBUG -e WAVES_HEAP_SIZE=2g -v YOUR_LOCAL_PATH_HERE:/waves wavesplatform/node
 ```
 
-**You can run the container with predefined environment variables:**
+**You can run the container with the following predefined environment variables:**
 
 |Env variable                 |Description   |
 |-----------------------------|--------------|
