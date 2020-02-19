@@ -2,9 +2,9 @@
 
 A running node requires up-to-date blockchain database for operation. One of the methods described in this article can be used to obtain actual blockchain.
 
-## 1. Synchronizing the State During Normal Node Operation
+## 1. Synchronizing the Blockchain During Regular Node Operation
 
-This method implicates runnig the node from scratch. For detailed description of running the node, see [How to run the node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
+This method implicates runnig the node from scratch. For detailed description of running the node, see [Install Waves Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
 After the first run, a node will start automatically receiving all the necessary data from the peer nodes as well as it will verify the blocks and validate signatures.
 
@@ -15,13 +15,13 @@ In this case the following factors affect the duration of obtaining the data via
 
 The first one depends on the internet data provider, while the second one can be set with max-outbound-connections parameter. We believe that the default value of 30 is enough. The speed of internet connection (unless, you have a dial-up connection) has little duration effect on the process, compared to the time spent on the verification of the blocks and validation of the signatures.
 
-## 2. Importing State from Binary File
+## 2. Importing Blockchain from Binary File
 
 Blockchain database (state) can be imported from a previously exported binary file. For detailed description of the export/import process, see [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain).
 
-If the node is on a fork with a height more than 2000 blocks, you sholuld get the actual blockchain manually. This can be achieved by updating the node version and reimporting the blockchain.
+If the node is on a fork with a height more than 2000 blocks, update the node version and import the blockchain.
 
-**Warning**: If your node is on a fork and you want to update it, please do not export/import your own blockchain but download the recent exported blockchains from the provided links below (the blockchain_last.tar file):
+**Warning**: If your node is on a fork, do not export/import your own blockchain but download the recent exported blockchain file (blockchain_last.tar) from one of the links below:
 
 * [Mainnet](http://blockchain.wavesnodes.com/)
 * [Testnet](http://blockchain-testnet.wavesnodes.com/)
@@ -30,9 +30,9 @@ The speed of block verification and signature verification affects the time of r
 
 When synchronizing the state, an active writing to disk exceeds the IOPS values that the HDD gives. In particular, there may be delays when the operating system doesn't have enough physical memory. We recommend keeping at least 30% of the total memory for the needs of the operating system (cache/buffers) and use SSD.
 
-## 3. Downloading the Latest Node Database
+## 3. Downloading the Latest Blockchain Database
 
-There is a way to download the latest database from the internet. For deatailed description of the process, see [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying).
+There is a way to download the latest database from the internet. For detailed description of the process, see [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying).
 
 Approxmate size of the latest database is 35 GB (**in November 2019**).
 
