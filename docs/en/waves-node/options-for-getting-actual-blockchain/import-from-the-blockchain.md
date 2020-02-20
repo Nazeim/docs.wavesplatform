@@ -2,6 +2,8 @@
 
 A running node requires up-to-date blockchain database for operation. The database can be imported from a previously exported binary file.
 
+Exported blockchain is saved in verifiable format (meaning all transactions with signatures, blocks with signatures of the block generators). When the blockchain is imported, every transaction is executed as if it would do during normal node operaion. That includes validation of signatures, balances etc.
+
 This article describes the database exporting and importing process.
 
 ## Export the Existing Blocks to Binary File
@@ -44,7 +46,7 @@ Stop the node before importing.
 If the data folder of the node contains some files, the import will continue to append new data from the blockchain's binary file.
 It is recommended to delete the existing files to avoid mixing data from different versions that can cause errors.
 
-On Windows, the folder is located here: **%HOMEPATH%\waves\data**
+On Windows, the default folder location is: **%HOMEPATH%\waves\data**
 
 On Linux: **/var/lib/waves[-testnet]/ folder:**
 
