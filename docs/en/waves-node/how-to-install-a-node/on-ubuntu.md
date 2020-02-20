@@ -25,6 +25,29 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 **Note.** Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
 
+## Installation from APT Repository
+
+The most convenient method to install/upgrade Waves Node on Linux is probably by means of APT repository. The repository provides mainnet, testnet and stagenet packages.
+When this installation method is used, the related dependencies (namely OpenJDK 8) will also be automatically downloaded.
+
+To install the latest version of a package for mainnet from the APT repository, run the following commands:
+
+```bash
+curl -sL http://apt.wavesplatform.com/apt-key.gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://apt.wavesplatform.com/ xenial mainnet"
+sudo apt update
+sudo apt install waves
+```
+
+**Note:** The Waves package is supported on Debian 8.0+, Ubuntu 16.04+ and their forks.
+
+Once the new version of Waves Node is released, you can update the package by running the following commands:
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
 ## Installation from Deb Package on Deb-based Linux (Ubuntu, Debian)
 
 Just [download latest waves deb](https://github.com/wavesplatform/Waves/releases) and install it with `sudo dpkg -i waves*.deb`. Now it's time to check your waves config!

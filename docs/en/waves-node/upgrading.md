@@ -1,31 +1,14 @@
 # Upgrade Waves Node
 
-Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (other operating systems). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
+Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (any operating system). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
 Check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates and if there is an update that contains any consensus changes, it is required to upgrade your node.
 
 ## Upgrading Node from APT Repository
 
 The most convenient method to install/upgrade Waves Node on Linux is probably by means of APT repository. The repository provides mainnet, testnet and stagenet packages.
-When this installation method is used, the related dependencies (namely OpenJDK 8) will also be automatically downloaded.
 
-To install the latest version of a package for mainnet from the APT repository, run the following commands:
-
-```bash
-curl -sL http://apt.wavesplatform.com/apt-key.gpg | sudo apt-key add -
-sudo add-apt-repository "deb https://apt.wavesplatform.com/ xenial mainnet"
-sudo apt update
-sudo apt install waves
-```
-
-**Note:** The Waves package is supported on Debian 8.0+, Ubuntu 16.04+ and their forks.
-
-Once the new version of Waves Node is released, you can update the package by running the following commands:
-
-```bash
-sudo apt update
-sudo apt upgrade
-```
+For deatails, see [Installation from APT Repository](/en/waves-node/how-to-install-a-node/on-ubuntu#Installation-from-APT-Repository) section of the node installation article.
 
 ## Upgraging JAR Node
 
@@ -39,8 +22,8 @@ To upgrade a **JAR** Node complete the following steps:
 
    **Note:** For more details on running a node, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node).
 
-2. Check the current version of your node in **/var/log/waves/waves.log** or, check the version in the filename of the **JAR** file.
-3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**JAR** file).
+2. Check the current version of your node in `waves.log` file with default location in **/var/log/waves/** or, check the version in the filename of the **JAR** file.
+3. Review the [Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**JAR** file).
 4. Review the release notes and check if the new version requires rebuilding the state database.
 5. **Optional step:** If the new version of the Node requires rebuilding the state database, export the existing blocks.
 See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) and [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying) articles for detais about exporting/importing blocks.
@@ -71,13 +54,13 @@ To upgrade a **DEB** Node complete the following steps:
 
    **Note:** For more details on running a node, see [How to Install a Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node).
 
-2. Check the current version of your node in **/var/log/waves/waves.log** or execute the following command:
+2. Check the current version of your node in **/var/log/waves/waves.log** (default location) or execute the following command:
 
    ```bash
    # dpkg -l waves
    ```
 
-3. Review the [latest Waves Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**DEB** file).
+3. Review the [Release](https://github.com/wavesplatform/Waves/releases) page and download the latest (**Mainnet**, **Testnet** or **Stagenet**, depending on the type of your node) release (**DEB** file).
 4. Review the release notes and check if the new version requires rebuilding the state database.
 5. **Optional step:** If the new version of the Node requires rebuilding the state database, export the existing blocks.
 See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) and [Download the Latest Blockchain](/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying) articles for details about exporting/importing blocks.
@@ -106,4 +89,4 @@ See [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockch
 
 ## Update Node Configuration File
 
-See [Node Configuration File](/en/waves-node/node-configuration) article for details.
+See [Node Configuration](/en/waves-node/node-configuration) article for details.
