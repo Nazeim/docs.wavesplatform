@@ -599,20 +599,18 @@ module.exports = {
         {
          title: 'Upgrade Waves Node',
          path: nodePath + 'upgrading',
-        },
-        {
-         title: 'Rollback Waves Node',
-         path: nodePath + 'how-to-rollback-a-node',
+		 children: [
+            {
+             title: 'Rollback Waves Node',
+             path: nodePath + 'how-to-rollback-a-node',
+            },
+          ]
         },
 	  ], 
     },
     {
       title: 'Node Wallet',
       path: nodePath + 'how-to-work-with-node-wallet',
-    },
-    {
-      title: 'Private Blockchain',
-      path: nodePath + 'private-waves-network',
     },
     {
       title: 'Node Configuration',
@@ -625,6 +623,10 @@ module.exports = {
     {
       title: 'Features',
       path: nodePath + 'features',
+    },
+    {
+      title: 'Private Blockchain',
+      path: nodePath + 'private-waves-network',
     },
     {
       title: 'Node API',
