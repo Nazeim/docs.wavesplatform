@@ -105,10 +105,10 @@ You can enable the following features on your node by modifying the `pre-activat
 | 13 | Reduce NFT fee | ACTIVATED |
 | 14 | Block Reward and Community Driven Monetary Policy | ACTIVATED |
 
-> If the directory parameter was not redefined, the waves folder will be created in
-<br>Linux: $XDG_DATA_HOME/waves or $HOME/.local/share/waves
-<br>Win: %APPDATA%/local/waves
-<br>macOS: $HOME/Library/Application Support/waves
+> If the directory parameter was not redefined, the waves folder will be created in:
+>| *nix | macOS | Windows |
+>| :--- | :--- | :--- |
+>| `$XDG_DATA_HOME/waves-custom-<character>*` or `$HOME/.local/share/waves-custom-<character>*` | `$HOME/Library/Application Support/waves-custom-<character>*` | `%LOCALAPPDATA%/waves-custom-<character>*` |
 
 > The `address-scheme-character` parameter value from below must be the same as the `network-type` value from the step 3.
 
