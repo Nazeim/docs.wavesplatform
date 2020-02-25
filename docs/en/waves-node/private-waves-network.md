@@ -128,7 +128,7 @@ waves
     type: CUSTOM
     custom
     {
-      address-scheme-character: "L" # this value must be the same as the `network-type` value from the step 3
+      address-scheme-character = "L" # this value must be the same as the `network-type` value from the step 3
       # various parameters of network consensus
       functionality {
         feature-check-blocks-period = 30
@@ -192,7 +192,7 @@ waves
 }
 ```
 
-**Note**: In this example the activation period will not be `30`, but `60`, however the `feature-check-blocks-period` is set to `30`. This is because the `double-features-periods-after-height` is by deafult set to `0`
+**Note**: In this example the feature activation period will not be `30`, but `60`, however the `feature-check-blocks-period` is set to `30`. This is because the `double-features-periods-after-height` is by deafult set to `0`
 
 Pay attention to the parameters `waves.blockchain.custom.address-scheme-character` and `waves.blockchain.custom.genesis`. They were copied from the result and settings of genesis generator tool. Also, look at `waves.wallet.seed` value. This value can be copied from "Seed" value for one of the genesis addresses from the result of genesis generator tool.
 
