@@ -16,7 +16,7 @@ In this article, the following use cases of wallet are reviewed:
 
 ## Creating a New Wallet From Scratch <a id="new"></a>
 
-Node will create a wallet if the directory listed in `wallet` section of [node's configuration file](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) does not already contain wallet.dat file. In this case node will also generate a random seed.
+On startup a node creates wallet if the directory listed in `wallet` section of [node's configuration file](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) does not already contain wallet.dat file. In this case the node will also generate random seed.
 
 When wallet.dat is created, the node will request in the console a password which must be set for newly created wallet.dat. This password will be used to encrypt file contents to prevent stealing seed.
 
@@ -31,7 +31,7 @@ If you already have a seed, then input the following parameters in the `wallet` 
 
 If necessary, change the path to directory where the generated wallet.dat must be placed. `wallet` section example with described settings is provided below:
 
-```
+```bash
 wallet {
     file = ${waves.directory}"/wallet/wallet.dat"
     password = "some-string-as-password"
