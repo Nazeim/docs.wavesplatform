@@ -1,4 +1,4 @@
-# Private Waves Blockchain
+# Private Blockchain
 
 This article explains how to setup private Waves blockchain network that can be used for experimental activities.
 
