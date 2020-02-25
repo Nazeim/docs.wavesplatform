@@ -100,6 +100,10 @@ You can enable the following features on your node by modifying the `pre-activat
 | 8 | Fair PoS | ACTIVATED |
 | 9 | Smart Assets | ACTIVATED |
 | 10 | Smart Account Trading | ACTIVATED |
+| 11 | RIDE 4 DAPPS | ACTIVATED |
+| 12 | Order Version 3 | ACTIVATED |
+| 13 | Reduce NFT fee | ACTIVATED |
+| 14 | Block Reward and Community Driven Monetary Policy | ACTIVATED |
 
 > If the directory parameter was not redefined, the waves folder will be created in
 <br>Linux: $XDG_DATA_HOME/waves or $HOME/.local/share/waves
@@ -129,35 +133,19 @@ waves
       functionality {
         feature-check-blocks-period = 30
         blocks-for-feature-activation = 25
-        allow-temporary-negative-until: 0
-        allow-invalid-payment-transactions-by-timestamp: 0
-        require-sorted-transactions-after: 0
-        generation-balance-depth-from-50-to-1000-after-height: 0
-        minimal-generating-balance-after: 0
-        allow-transactions-from-future-until: 0
-        allow-unissued-assets-until: 0
-        require-payment-unique-id-after: 0
-        allow-invalid-reissue-in-same-block-until-timestamp: 0
-        allow-multiple-lease-cancel-transaction-until-timestamp: 0
-        reset-effective-balances-at-height: 1
-        allow-leased-balance-transfer-until: 0
-        block-version-3-after-height: 0
         pre-activated-features = {
-          2 = 0
+        2 = 0
         }
-        double-features-periods-after-height = 1000000000
-        max-transaction-time-back-offset = 120m
-        max-transaction-time-forward-offset = 90m
       }
       genesis {
-        average-block-delay: 60000ms
-        initial-base-target: 153722867
-        timestamp: 1500635421931
-        block-timestamp: 1500635421931
-        signature: "3NELFXiQqQoYUfgLba5YAS1z8gJLc19zfzSvmYRX9eLso4zGByRGDpWdL4cooHTocyi5boFiu6H7hyW3ukVGtswP"
-        initial-balance: 10000000000000000
+        average-block-delay = 60000ms
+        initial-base-target = 153722867
+        timestamp = 1500635421931
+        block-timestamp = 1500635421931
+        signature = "3NELFXiQqQoYUfgLba5YAS1z8gJLc19zfzSvmYRX9eLso4zGByRGDpWdL4cooHTocyi5boFiu6H7hyW3ukVGtswP"
+        initial-balance = 10000000000000000
         transactions = [
-          {recipient: "3JfE6tjeT7PnpuDQKxiVNLn4TJUFhuMaaT5", amount: 10000000000000000}
+          {recipient = "3JfE6tjeT7PnpuDQKxiVNLn4TJUFhuMaaT5", amount = 10000000000000000}
         ]
       }
       # the contents of the above `genesis` section is what was generated on the step 4
@@ -203,6 +191,8 @@ waves
   }
 }
 ```
+
+**Note**: In this example the activation period will not be `30`, but `60`, however the `feature-check-blocks-period` is set to `30`. This is because the `double-features-periods-after-height` is by deafult set to `0`
 
 Pay attention to the parameters `waves.blockchain.custom.address-scheme-character` and `waves.blockchain.custom.genesis`. They were copied from the result and settings of genesis generator tool. Also, look at `waves.wallet.seed` value. This value can be copied from "Seed" value for one of the genesis addresses from the result of genesis generator tool.
 

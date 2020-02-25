@@ -1,6 +1,6 @@
 # Node Wallet
 
-Every node has a connected wallet that enables a node with:
+Every node has a connected wallet providing:
 
 * ability to mine.
 * ability to sign transactions.
