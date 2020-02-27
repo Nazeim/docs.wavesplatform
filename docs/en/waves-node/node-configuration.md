@@ -185,16 +185,17 @@ This is an example for signing a transaction that already exists in the wallet o
 ```bash
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Key: YOUR UNIQUE API KEY'
 -d '{ \
-amount: 5800000000, \
-fee: 100000, \
-type: 4, \
-version: 1, \
-attachment: "", \
-sender: "3P3pUKEAKxegWr3PZkGYNq1mzQQaQ5zxZbw", \
-feeAssetId: null, \ assetId: null, \
-recipient: "3P9p39MwZ5JjwdBSYEWC6XYri4jpovzcAbs", \
-feeAsset: null, \
-timestamp: 1568020044350 \
+"amount": 5800000000, \
+"fee": 100000, \
+"type": 4, \
+"version": 1, \
+"attachment": "", \
+"sender": "3P3pUKEAKxegWr3PZkGYNq1mzQQaQ5zxZbw", \
+"feeAssetId": null, \
+"assetId": null, \
+"recipient": "3P9p39MwZ5JjwdBSYEWC6XYri4jpovzcAbs", \
+"feeAsset": null, \
+"timestamp": 1568020044350 \
 }' 'http://nodes.wavesnodes.com/transactions/sign'
 ```
 
