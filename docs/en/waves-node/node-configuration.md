@@ -9,28 +9,7 @@ An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/re
 
 > After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used.
 
-## Configuration Format
-
 The configuration system of Waves Node uses HOCON format. HOCON stands for Human-Optimized Config Object Notation. The complete description of HOCON could be found in the [Official HOCON documentation](https://github.com/typesafehub/config/blob/master/HOCON). The advantages of HOCON are simple syntax and ability to use comments.
-
-## Sections of the Configuration File
-
-| # | Configuration section | Description |
-| :--- | :--- | :--- |
-| 1 | Blockchain | Settings of [blockchain](/en/blockchain/blockchain) |
-| 2 | Extensions | Settings of [extensions](/en/waves-node/extensions) |
-| 3 | Features | Settings of [features](/en/waves-node/features/feature) |
-| 4 | Nodes synchronization | |
-| 5 | Non-aggregated data | |
-| 6 | NTP server | |
-| 7 | Miner | |
-| 8 | Performance metrics | |
-| 9 | P2P network   | |
-| 10 | REST API | Settings of [Node API](/en/waves-node/node-api) |
-| 11 | Rewards | Settings of desired mining reward. See [Mining reward](/en/blockchain/mining/mining-reward) for more information. |
-| 12 | Unverified transactions pool | |
-| 13 | Wallet | |
-| 14 | Waves | | |
 
 ## Default Configs and Overrides
 
@@ -55,7 +34,23 @@ java -jar waves-all-0.13.3.jar waves.conf
 
 Typically this file should contain your node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from previous sections (files shipped with DEB packages).
 
-## Configuration Sections
+## Sections of the Configuration File
+
+| Section         | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| [waves](#Waves-Configuration-Section)| essential node parameters and other configuration subsections |
+| db              | blockchain database parameters                                |
+| [network](#Network-Settings)| peer to peer network parameters                               |
+| [wallet](#Wallet-Settings)| built in node wallet parameters                               |
+| [blockchain](#Blockchain-Settings)| blockchain parameters                                         |
+| [miner](#Miner-Settings)| blocks generator parameters                                   |
+| [rest-api](#REST-API-Settings)        | node API parameters                                           |
+| [synchronization](#Synchronization-Settings) | node synchronization parameters                               |
+| [utx](#UTX-Pool-Settings)| unconfirmed transactions pool parameters                      |
+| features        | features parameters                                           |
+| [rewards](#Rewards-Settings)| rewards parameters                                            |
+| kamon           | performance metrics parameters                                |
+| metrics         | blocks, transactions and other info metrics parameters        |
 
 ### Waves Configuration Section
 
@@ -156,7 +151,7 @@ Restart the node. After restarting the node will use another wallet settings.
 
 ### Blockchain Settings
 
-Here you can select the blockchain type or create your own blockchain.
+In `blockchain` section you can select the blockchain type or create your own blockchain.
 
 Use parameter `max-transactions-per-block-diff` to set the number of transactions stored in memory before storing on disk. Reducing the number could increase the number of disk operations.
 
@@ -257,6 +252,7 @@ In `micro-block-synchronizer` subsection you could tune various parameters of Wa
 `max-transaction-age` parameter allows to set the maximum age of transactions allowed to UTX.
 
 <a id="rewards"></a>
+
 ### Rewards Settings
 
 In this section, you can set the desired reward size using `desired` parameter. The setting value is specified in WAVELETs.
