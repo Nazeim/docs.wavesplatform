@@ -58,19 +58,21 @@ If you run node from jar, use [Java's options](#jar-activate-utx).
 
 ### Activate by Application.ini <a id="aini-activate-utx"></a>
 
-Add `-J-Dlogback.utx-trace.enabled=true` to `application.ini`.
+In the `application.ini` add the following:
+
+```bash
+-J-Dlogback.utx-trace.enabled=true
+```
 
 ### Activate by Logback.xml <a id="logback-activate-utx"></a>
 
-Add
+In the `logback.xml` add the following:
 
 ```xml
 <included>
     <property name="logback.utx-trace.enabled" value="true" />
 </included>
 ```
-
-to `logback.xml`.
 
 ### Activate by Command Line <a id="jar-activate-utx"></a>
 
