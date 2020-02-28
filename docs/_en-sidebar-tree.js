@@ -569,7 +569,7 @@ module.exports = {
              path: nodePath + 'how-to-install-a-node/on-ubuntu',
             },
             {
-             title: 'Alternative Method (Installing SBT)',
+             title: 'Installing from Source (Building SBT)',
              path: nodePath + 'how-to-build-and-test-a-node',
             },
 	        {
