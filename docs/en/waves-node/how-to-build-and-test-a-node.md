@@ -13,6 +13,7 @@ sudo apt-get install default-jre default-jdk
 ```
 
 ### Installing SBT
+
 Please follow the SBT installation instructions depending on your operating system ([Mac](https://www.scala-sbt.org/1.0/docs/Installing-sbt-on-Mac.html), [Windows](https://www.scala-sbt.org/1.0/docs/Installing-sbt-on-Windows.html), [Linux](https://www.scala-sbt.org/1.0/docs/Installing-sbt-on-Linux.html)).
 
 ## 2. Obtaining Source Codes
