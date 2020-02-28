@@ -1,6 +1,13 @@
 # Install Node on Ubuntu
 
-## Install OpenJDK 8
+This article explains how to install Waves node on Linux-based machines.
+You install Java first, then the node itself using one of the provided methods.
+
+The most common and convenient method to install/upgrade Waves node on Linux-based machines is described in [Installation from APT Repository](#Installation-from-APT-Repository) section.
+
+The alternative methods are described in [Installation from Deb Package on Deb-based Linux (Ubuntu, Debian)](#Installation-from-Deb-Package-on-Deb-based-Linux-(Ubuntu,-Debian)) and [Installation for Advanced Users](#Installation-for-Advanced-Users) sections.
+
+## Install Java (OpenJDK 8)
 
 Install OpenJDK 8 :
 
@@ -11,13 +18,13 @@ sudo apt-get install openjdk-8-jre
 
 Now check the JDK version using the console:
 
-```
+```bash
 java -version
 ```
 
 If you see this result, you can move to the next step:
 
-```
+```bash
 java version "1.8.0_201"
 Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
 Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
@@ -68,13 +75,13 @@ If you want to change waves directory (for wallet, blockchain and other node fil
 
 ## Installation for Advanced Users
 
-[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and required configuration file (for mainnet or testnet) to any folder, for example `/opt/waves`.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and required configuration file (for mainnet, testnet or stagenet) to any folder, for example `/opt/waves`.
 
 Open and edit the config file with your favorite text editor. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
 Then start console, navigate to the folder with the jar file with the command `cd /opt/waves` and start the node with command `java -jar waves.jar waves-config.conf`.
 
-## Installation from Source
+### Installation from Source
 
 * add to your ~/.bashrc for increase memory for jvm:
 
