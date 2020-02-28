@@ -88,19 +88,21 @@ If you run node from jar, use [Java's options](#jar-change-location).
 
 ### Change by application.ini <a id="aini-change-location"></a>
 
-Add `-J-Dlogback.file.directory=/path/to/directory/for/logs` to `application.ini`.
+In the `application.ini` add the following:
+
+```bash
+-J-Dlogback.file.directory=/path/to/directory/for/logs
+```
 
 ### Change by logback.xml <a id="logback-change-location"></a>
 
-Add
+In the `logback.xml` add the following:
 
 ```xml
 <included>
     <property name="logback.file.directory=/path/to/directory/for/logs" value="true" />
 </included>
 ```
-
-to `logback.xml`.
 
 ### Change by command line <a id="jar-change-location"></a>
 
@@ -116,19 +118,21 @@ If you run node from jar, use [Java's options](#jar-set-loglevel).
 
 ### Set by application.ini <a id="aini-set-loglevel"></a>
 
-Add `-J-Dlogback.stdout.level={LEVEL_OF_LOGGING}` to `application.ini`.
+In the `application.ini` add the following:
+
+```bash
+-J-Dlogback.stdout.level={LEVEL_OF_LOGGING}
+```
 
 ### Set by logback.xml <a id="logback-set-loglevel"></a>
 
-Add
+In the `logback.xml` add the following:
 
 ```xml
 <included>
     <property name="logback.stdout.level={LEVEL_OF_LOGGING}" value="{mainnet|testnet}" />
 </included>
 ```
-
-to `logback.xml`.
 
 ### Set by command line <a id="jar-set-loglevel"></a>
 
@@ -138,7 +142,7 @@ Use Java's option `java -Dlogback.stdout.level={LEVEL_OF_LOGGING} -jar /path/to/
 
 If you are using tools for parsing the JSON, you need to enable logging output in this format.
 
-Add
+In the `logback.xml` add the following:
 
 ```xml
 <included>
@@ -174,8 +178,6 @@ Add
     </root>
 </included>
 ```
-
-to `logback.xml`.
 
 ## Levels of logging <a id="loglevels"></a>
 
