@@ -1,6 +1,6 @@
 # Alternative Method (Install SBT)
 
-This installation method implicates building DEB or JAR package from Waves git source code files, then running the node with your own DEB or JAR package. The method can be useful for a blockchain developer, who wants to customize the node files before installation as well as for the advanced node owners, who want check that the source code files of the running node are 100% safe to run.
+This installation method implicates building DEB or JAR package from Waves git source code files, then running the node from your own DEB or JAR package. The method can be useful for blockchain developers, who want to customize the node files before installation as well as for the advanced node owners, who want check that the source code files of the running node are 100% safe to run.
 
 To build and test your Waves Node, follow the steps:
 
