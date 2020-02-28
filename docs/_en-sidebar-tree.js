@@ -692,9 +692,7 @@ module.exports = {
           title: 'API limitations of the pool of public nodes',
           path: nodePath + 'api-limitations-of-the-pool-of-public-nodes',
 		},
-    },
-
-      ],
+	  ],   
     },
     {
       title: 'Extensions',

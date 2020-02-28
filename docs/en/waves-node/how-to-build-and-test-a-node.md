@@ -1,4 +1,4 @@
-# Alternative Method (Installing SBT)
+# Alternative Method (Install SBT)
 
 The node can be built and installed on any device that supports java. For **Ubuntu**, SBT packageAll ‌produces only DEB package but for other operating systems, ZIP archive or a fat JAR can be used as well.
 To build and test your Waves Node, follow the steps:

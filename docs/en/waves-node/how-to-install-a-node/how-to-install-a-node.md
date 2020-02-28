@@ -27,13 +27,13 @@ For details about configuration file, see [Node Configuration](/en/waves-node/no
 
 ### SBT Package
 
-You can install Waves node on Linux-based system from SBT package. For details, see [Alternative Method (Installing SBT)](/en/waves-node/how-to-build-and-test-a-node.md) article.
+You can install Waves node on Linux-based system from SBT package. For details, see [Alternative Method (Install SBT)](/en/waves-node/how-to-build-and-test-a-node.md) article.
 
 ### Clouds
 
 You can use all of the available methods described in this guide to install Waves node on any cloud-based virtual machine that meets the [system requirements](System-Requirements).
 
-You can also run Waves node in Yandex.Cloud as described in [Running Waves Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
+You can also run Waves node in Yandex.Cloud as described in [Run Node in Yandex.Cloud](/en/waves-node/running-waves-node-in-yandex-cloud) article.
 
 Another option is to run [Waves Node in Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/waves.waves_docker?tab=Overview) cloud platform.
 
