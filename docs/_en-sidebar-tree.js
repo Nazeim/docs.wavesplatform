@@ -622,7 +622,7 @@ module.exports = {
 	  children: [
 	    {
 	      title: 'Activation protocol',
-          path: blockchainPath + 'waves-protocol/activation-protocol',
+          path: nodePath + 'activation-protocol',
         },
 	  ],
     },
