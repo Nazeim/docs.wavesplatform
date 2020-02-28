@@ -78,25 +78,25 @@ Then start console, navigate to the folder with the jar file with the command `c
 
 * add to your ~/.bashrc for increase memory for jvm:
 
-  ```
+  ```bash
   SBT_OPTS="-XX:MaxJavaStackTraceDepth=5000 -Xmx2536M -XX:+CMSClassUnloadingEnabled -Xss2M"
   ```
   
-* Run at console:
+* Run the following command in console:
 
-  ```
+  ```bash
   sudo apt install sbt
   ```
 
 * Clone the repository:
 
-  ```
+  ```bash
   git clone git@github.com:wavesplatform/Waves.git
   ```
 
 * Run SBT at project folder:
 
-  ```
+  ```bash
   cd waves_project
   sbt
   packageAll
@@ -104,13 +104,11 @@ Then start console, navigate to the folder with the jar file with the command `c
 
 * Import project to Intellij Idea
 
-* Download featured plugins for Intellij:
+* Download featured `Scala` plugin for Intellij
 
-  * Scala
+* On import of the project select this checkbox:
 
-* On import project check this point
-
-  ```
+  ```bash
   [x] Use sbt shell for build and import
   ```
 
@@ -128,4 +126,4 @@ Also, you may want to limit the use of these folders only specified users. You c
 
 If you decide to use RPC, you should protect it with embedded in ubuntu `ufw` or any other firewall. You can read about it [here](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server). If your server is public and available to the Internet and you decide to enable and use RPC, then allow only certain methods using [Nginx's proxy\_pass module](http://nginx.org/ru/docs/http/ngx_http_proxy_module.html) and do not forget to set the `apiKeyHash` in waves.conf.
 
-Also, do not forget to install the OS and other software security updates.
+Also, do not forget to update the OS and install software security updates.
