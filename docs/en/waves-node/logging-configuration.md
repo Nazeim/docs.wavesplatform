@@ -116,6 +116,8 @@ If you run node from the package, consider using [application.ini](#aini-set-log
 
 If you run node from jar, use [Java's options](#jar-set-loglevel).
 
+See all the available levels in the [Levels of Logging](#loglevels) section.
+
 ### Set by application.ini <a id="aini-set-loglevel"></a>
 
 In the `application.ini` add the following:
@@ -179,7 +181,7 @@ In the `logback.xml` add the following:
 </included>
 ```
 
-## Levels of logging <a id="loglevels"></a>
+## Levels of Logging <a id="loglevels"></a>
 
 1. `OFF` - logging is disabled. Useful when you want to disable file or STDOUT logs;
 2. `ERROR` - severe errors. Please read these messages;
