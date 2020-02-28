@@ -6,7 +6,7 @@ Each feature has a name and a unique feature ID.
 
 Waves nodes currently support the following features:
 
-| Feature ID |                        Name                       | Description                                                                                                                                                                                              | Blockchain Height | Activation Date |
+| Feature ID |                        Name                       | Description                                                                                                                                                                                              | Blockchain Height* | Activation Date |
 |------------|:-------------------------------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-----------------|
 | 1          | Minimum Generating Balance of 1000 WAVES          | Min generating balance of the mining account has to be 1000 WAVES, for the accout to generate blocks                                                                                                     | 810 000           | Dec 2017        |
 | 2          | NG Protocol                                       | Transition to Waves NG protocol                                                                                                                                                                          | 805 000           | Dec 2017        |
@@ -22,6 +22,8 @@ Waves nodes currently support the following features:
 | 12         | Order Version 3                                   | Ability to set order comission in any token                                                                                                                                                              | 1 610 000         | Jul 2019        |
 | 13         | Reduce NFT fee                                    | If the amount of token in the issuing transaction is 1, the number of decimal places is 0, and the token cannot be reissued, then the commission for such a transaction will be 0.001 WAVES instead of 1 | 1 610 000         | Jul 2019        |
 | 14         | Block Reward and Community Driven Monetary Policy | Introduction of mining reward                                                                                                                                                                            | 1 740 000         | Oct 2019        |
+
+>*Mainnet blockchain height where the feature was activated.
 
 ## Feature Status
 
