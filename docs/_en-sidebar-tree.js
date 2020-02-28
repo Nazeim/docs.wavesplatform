@@ -706,6 +706,10 @@ module.exports = {
         },
       ]
     },
+	{
+      title: 'Troubleshooting',
+      path: nodePath + 'node-troubleshooting',
+	},
   ],
 
   [ridePath]: [
