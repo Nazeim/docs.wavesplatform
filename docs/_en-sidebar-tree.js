@@ -687,12 +687,14 @@ module.exports = {
         {
           title: 'Examples of transactions',
           path: nodePath + 'node-api/example-transactions',
-        }
-      ],
+        },
+	    {
+          title: 'API limitations of the pool of public nodes',
+          path: nodePath + 'api-limitations-of-the-pool-of-public-nodes',
+		},
     },
-    {
-      title: 'API limitations of the pool of public nodes',
-      path: nodePath + 'api-limitations-of-the-pool-of-public-nodes',
+
+      ],
     },
     {
       title: 'Extensions',
