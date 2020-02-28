@@ -63,11 +63,11 @@ It's embedded into the deb package and unpacked to `/usr/share/waves/conf/waves.
 
 There are two types of `deb` packages of waves nodes: with **upstart loader** and **systemd loader**.
 
-### 1. Systemd (Ubuntu &gt;= 15.04):
+### Systemd (Ubuntu &gt;= 15.04)
 
 Users can start the node with `sudo systemctl start waves.service` (`waves-testnet` for testnet) and enable autoload on start with `sudo systemctl enable waves.service`. **Systemd** users can find waves app logs in journald storage like that `journalctl -u waves.service -f`. You can read about journald tips [here](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
 
-### 2. Upstart (Ubuntu &lt; 15.04):
+### Upstart (Ubuntu &lt; 15.04)
 
 Users can start the node with `sudo service waves start` (`waves-testnet` for testnet) and enable autoload on start with `sudo service waves enable`. You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
 
