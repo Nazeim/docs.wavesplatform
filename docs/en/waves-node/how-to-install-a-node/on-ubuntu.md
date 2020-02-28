@@ -81,7 +81,7 @@ Open and edit the config file with your favorite text editor. For details see [N
 
 Then start console, navigate to the folder with the jar file with the command `cd /opt/waves` and start the node with command `java -jar waves.jar waves-config.conf`.
 
-### Installation from Source
+<!-- ### Installation from Source
 
 * add to your ~/.bashrc for increase memory for jvm:
 
@@ -123,7 +123,7 @@ Then start console, navigate to the folder with the jar file with the command `c
 
 * Setup plugin "Scala Fmt"
 
-* Enjoy
+* Enjoy -->
 
 ## Additional Security
 

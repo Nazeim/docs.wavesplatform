@@ -25,7 +25,7 @@ Please follow the SBT installation instructions depending on your operating syst
 ## 2. Obtaining Source Codes
 
 ```bash
-git clone git@github.com:wavesplatform/Waves.git
+git clone https://github.com/wavesplatform/Waves.git
 cd Waves
 ```
 
