@@ -1,6 +1,7 @@
 # Alternative Method (Install SBT)
 
-The node can be built and installed on any device that supports java. For **Ubuntu**, SBT packageAll ‌produces only DEB package but for other operating systems, ZIP archive or a fat JAR can be used as well.
+This installation method implicates building DEB or JAR package from Waves git source code files, then running the node with your own DEB or JAR package. The method can be useful for a blockchain developer, who wants to customize the node files before installation as well as for the advanced node owners, who want check that the source code files of the running node are 100% safe to run.
+
 To build and test your Waves Node, follow the steps:
 
 ## 1. Setup the Environment
@@ -11,6 +12,12 @@ To build and test your Waves Node, follow the steps:
 sudo apt-get update
 sudo apt-get install default-jre default-jdk
 ```
+
+To increase memory of jvm in `~/.bashrc` file add the following:
+
+  ```bash
+  SBT_OPTS="-XX:MaxJavaStackTraceDepth=5000 -Xmx2536M -XX:+CMSClassUnloadingEnabled -Xss2M"
+  ```
 
 ### Installing SBT
 
