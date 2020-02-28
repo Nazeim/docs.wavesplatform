@@ -13,11 +13,10 @@ sudo apt-get update
 sudo apt-get install default-jre default-jdk
 ```
 
-To increase memory of jvm in `~/.bashrc` file add the following:
-
-  ```bash
-  SBT_OPTS="-XX:MaxJavaStackTraceDepth=5000 -Xmx2536M -XX:+CMSClassUnloadingEnabled -Xss2M"
-  ```
+>**Note**: To increase memory of Linux-based JVM (Java Virtual Machine) in the `~/.bashrc` file add the following:
+>  ```bash
+>  SBT_OPTS="-XX:MaxJavaStackTraceDepth=5000 -Xmx2536M -XX:+CMSClassUnloadingEnabled -Xss2M"
+>  ```
 
 ### Installing SBT
 
