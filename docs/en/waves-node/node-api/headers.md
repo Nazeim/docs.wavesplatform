@@ -1,4 +1,4 @@
-# Request headers
+# Request Headers
 
 ## api-key
 
@@ -15,7 +15,7 @@ Sets serialization format for monetary fields. If set, the field will be seriali
 
 ### Example
 
-```
+```bash
 curl -X GET --header 'Accept: application/json; large-significand-format=string' 'https://nodes.wavesnodes.com/blocks/headers/last'
 
 ```
