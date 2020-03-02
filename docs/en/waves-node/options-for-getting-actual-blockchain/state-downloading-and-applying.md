@@ -1,22 +1,22 @@
 # Download the Latest Blockchain
 
 A running node requires up-to-date blockchain database for operation.
-**blockchain_last.tar** database is generated during node operation when the node gets new blocks.
+**blockchain_last.tar** is the archive, containing database that is generated during node operation when the node gets new blocks.
 The default folder of blockchain database is _/var/lib/waves/data_.
 
-Please be aware that database file can contain wrong data or balances, so  download blockchain database only from a trusted source.
+Please be aware that the downloaded archive file can contain wrong data or balances, so please download the blockchain database only from a trusted source.
 
 ## Steps
 
 To download and implement the latest node blockchain database, complete the followiong steps:
 
-1. Download the database (blockchain_last.tar file) from one of the links below.
+1. Download the blockchain_last.tar archive from one of the links below.
 2. Run the checksum with some tool to test files (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
 3. Delete the data folder by running the followong command: `sudo rm -rdf /var/lib/waves/data`.
-4. Unpack the database files in the following folder: `/var/lib/waves/data`.
+4. Unpack the database files in the following folder: `tar -xvf file_name.tar -C /var/lib/waves/data`.
 5. Run the node with the following command: `sudo systemctl start waves`.
 
-Latest up-to date database (the state from nodes.wavesnodes.com) can be obtained via one of the following links:
+## Latest Downloadable Database (the state from nodes.wavesnodes.com)
 
 * MainNet: [http://blockchain.wavesnodes.com/](http://blockchain.wavesnodes.com/)
 * TestNet: [http://blockchain-testnet.wavesnodes.com/](http://blockchain-testnet.wavesnodes.com/)
