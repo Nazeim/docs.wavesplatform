@@ -9,7 +9,7 @@ The methods to install Waves node are explained in this article.
 |[Validating node](/en/blockchain/node/validating-node) | 2 | 4Gb | 60Gb SSD |
 |[Mining node](/en/blockchain/node/mining-node) | 2+ | 4+ Gb | 60+ Gb SSD |
 
-### Docker
+### Docker Container
 
 The easiest way to run Waves node on `macOS`, `Windows` or `Linux` machine is by means of Waves Docker container. You install the Docker app and then use console command to run the node or change the node settings. For details, see [Deploy Node in Docker](/en/waves-node/waves-node-in-docker) article.
 
