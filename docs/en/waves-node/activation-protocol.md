@@ -108,10 +108,10 @@ Fields of returned object:
 
 In version 1.0.0 a new cool feature was introduced. It has ID `123`.
 
-Mining pool `SuperMiners` with a total stake of 40% supports the feature. Administrator of `SuperMiners` updates the node from version 0.9.9 to 1.0.0. And adds `123` to the list of supported features in the configuration file. `SuperMiners` node starts to put ID 123 into each mined block since height 1228765. But no other miners supported the feature but some of them updated their nodes to version 1.0.0.
+Mining pool `SuperMiners` with a total stake of 40% supports the feature. Administrator of `SuperMiners` updates the node from version 0.9.9 to 1.0.0. And adds `123` to the list of supported features in the configuration file. `SuperMiners` node starts to put ID `123` into each mined block since height 1228765. But no other miners supported the feature but some of them updated their nodes to version 1.0.0.
 
-At block number 1230000 the nodes calculated that only 50% of blocks support feature 123. So, the status of feature stays unchanged, the voting was unsuccessful for the period and it continues.
+At block number 1230000 the nodes calculated that only 50% of blocks support the feature `123`. So, the status of feature stays unchanged, the voting was unsuccessful for the period and it continues.
 
 During the next 10000 blocks `SuperMiners` convinced few smaller miners to support the feature. On block 1240000 it turns out that the feature is supported in 9102 of last 10000 blocks. That means 91%. So, the status of the feature changed to approved. At this moment nodes that run on version 0.9.9 and earlier warn their owners about the approval of an unsupported feature.
 
-At block 1250000 the feature number 123 will be activated and nodes version 1.0.0 and above will start to use it. Nodes on earlier versions will stop working.
+At block 1250000 the feature number `123` will be activated and nodes version 1.0.0 and above will start to use it. Nodes on earlier versions will stop working.
