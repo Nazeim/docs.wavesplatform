@@ -553,7 +553,7 @@ module.exports = {
          path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
          children: [
             {
-             title: 'Waves Node in Docker',
+             title: 'Deploy Node in Docker',
              path: nodePath + 'waves-node-in-docker',
             },  
             {

@@ -11,7 +11,7 @@ The methods to install Waves node are explained in this article.
 
 ### Docker
 
-The easiest way to run Waves node on `macOS`, `Windows` or `Linux` machine is by means of Waves Docker container. You install the Docker app and then use console command to run the node or change the node settings. For details, see [Waves Node in Docker](/en/waves-node/waves-node-in-docker) article.
+The easiest way to run Waves node on `macOS`, `Windows` or `Linux` machine is by means of Waves Docker container. You install the Docker app and then use console command to run the node or change the node settings. For details, see [Deploy Node in Docker](/en/waves-node/waves-node-in-docker) article.
 
 ### Jar Package
 
