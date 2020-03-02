@@ -6,16 +6,6 @@ The default folder of blockchain database is _/var/lib/waves/data_.
 
 Please be aware that the downloaded archive file can contain wrong data or balances, so please download the blockchain database only from a trusted source.
 
-## Steps
-
-To download and implement the latest node blockchain database, complete the followiong steps:
-
-1. Download the blockchain_last.tar archive from one of the links below.
-2. Run the checksum with some tool to test files (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
-3. Delete the data folder by running the followong command: `sudo rm -rdf /var/lib/waves/data`.
-4. Unpack the database files in the following folder: `tar -xvf file_name.tar -C /var/lib/waves/data`.
-5. Run the node with the following command: `sudo systemctl start waves`.
-
 ## Latest Downloadable Database (the state from nodes.wavesnodes.com)
 
 * MainNet: [http://blockchain.wavesnodes.com/](http://blockchain.wavesnodes.com/)
@@ -23,7 +13,17 @@ To download and implement the latest node blockchain database, complete the foll
 
 **Note**: The linked files are updated regularly.
 
-## Alternative Unpacking Method
+## Steps (Linux)
+
+To download and implement the latest node blockchain database, complete the followiong steps:
+
+1. Download the `blockchain_last.tar` archive from one of the provided links.
+2. Run the checksum with some tool to test files (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
+3. Empty the existing data folder with the followong command: `sudo rm -rdf /var/lib/waves/data`.
+4. Unpack the database files in the data folder with the following command: `tar -xvf file_name.tar -C /var/lib/waves/data`.
+5. Run the node with the following command: `sudo systemctl start waves`.
+
+## Alternative Unpacking Method (Linux)
 
 Traditional method of downloading and unpacking requires a lot of disc space. In some cases the disc space is only enough for the blockchain itself and very little extra.
 Linux users can save disc space by using one of the following commands to unpack the archive during the downloading, so that the unpacked database files will be saved on disc without storing the archive.
