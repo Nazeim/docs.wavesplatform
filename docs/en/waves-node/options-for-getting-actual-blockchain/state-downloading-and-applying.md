@@ -20,7 +20,7 @@ To download and implement the latest node blockchain database, complete the foll
 1. Download the `blockchain_last.tar` archive from one of the provided links.
 2. Run the checksum with some tool to test files (checksum of the **blockchain_last.tar** file should be the same as inside **blockchain_last.tar.SHA1SUM** file).
 3. Empty the existing data folder with the followong command: `sudo rm -rdf /var/lib/waves/data`.
-4. Unpack the database files in the data folder with the following command: `tar -xvf file_name.tar -C /var/lib/waves/data`.
+4. Unpack the database files in the data folder with the following command: `tar -xvf blockchain_last.tar -C /var/lib/waves/data`.
 5. Run the node with the following command: `sudo systemctl start waves`.
 
 ## Alternative Unpacking Method (Linux)
