@@ -2,21 +2,21 @@
 
 ## Install OpenJDK 8
 
-Install [OpenJDK 8](https://github.com/AdoptOpenJDK/homebrew-openjdk) :
+To install [OpenJDK 8](https://github.com/AdoptOpenJDK/homebrew-openjdk) with the following command:
 
-```
+```bash
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 ```
 
-Now check the JDK version using the terminal:
+Check the JDK version with the following command:
 
-```
+```bash
 java -version
 ```
 
 If you see this result, you can move to the next step:
 
-```
+```bash
 java version "1.8.0_201"
 Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
 Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
@@ -26,17 +26,21 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 ## Download Waves package and configure the application
 
-[Download the latest version](https://github.com/wavesplatform/Waves/releases) of waves.jar and the required .conf configuration file (for mainnet or testnet) to any folder, for example `~/waves`.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file (for mainnet or testnet) to any folder, for example `~/waves`.
 
-Carefully edit the configuration waves.conf file, **it is very important! The safety of your wallet and money depends on this!**
+Carefully edit the configuration file, **it is very important! The safety of your wallet and assets depends on this!**
 
-So, just open it with your favorite text editor, pour a cup of tea and read [the documentation of the configuration file](/en/waves-node/node-configuration).
+Edit the `.conf` file with your favorite text editor. For deatails see [Node configuration](/en/waves-node/node-configuration) article.
 
-Then start Terminal app `Terminal.app`, navigate to the folder with the jar file with the command `cd ~/waves`and start waves node with command `java -jar waves.jar waves.conf`.
+Then start Terminal app `Terminal.app`, navigate to the folder with the jar file with the command `cd ~/waves`and start waves node with the following command:
 
-## Additional security
+```bash
+java -jar waves.jar waves.conf
+```
 
-For added security, it is recommended to store your wallet and configuration applications on an encrypted partition. You can read about it [here](https://support.apple.com/en-us/HT208344).
+## Additional Security
+
+For added security, it is recommended to store your wallet and configuration applications on an encrypted partition. For deatails see the following [article](https://support.apple.com/en-us/HT208344).
 
 Also, you may want to limit the use of these folders to designated users only. You can read about it [here](http://ss64.com/osx/chown.html).
 
