@@ -8,6 +8,8 @@ To build and test your Waves Node, follow the steps:
 
 ### Installing Java
 
+Install Java with the following command:
+
 ```bash
 sudo apt-get update
 sudo apt-get install default-jre default-jdk
