@@ -2,7 +2,7 @@
 
 ## Install OpenJDK 8
 
-To install [OpenJDK 8](https://github.com/AdoptOpenJDK/homebrew-openjdk) with the following command:
+Install [OpenJDK 8](https://github.com/AdoptOpenJDK/homebrew-openjdk) with the following command:
 
 ```bash
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
