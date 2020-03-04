@@ -232,6 +232,8 @@ You can setup your custom blockchain with other services such as:
    docker run -d -e API_NODE_URL=http://localhost:6869 -e NODE_LIST=http://localhost:6869 -p 3000:8080 wavesplatform/explorer
    ```
 
-* [Matcher](https://docs.waves.exchange/en/waves-matcher/)
+* [DEX Extension](https://github.com/wavesplatform/dex): Interface for DEX Server to comunicate with the Node code.
 
-See [Node Configuration](/en/waves-node/node-configuration) for more information.
+<!--* [Matcher](https://docs.waves.exchange/en/waves-matcher/) -->
+
+See [Node Configuration](/en/waves-node/node-configuration) for more information about Waves configuration file.
