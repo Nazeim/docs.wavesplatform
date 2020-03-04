@@ -158,7 +158,7 @@ The `custom` section allows to set parameters of your custom blockchain.
 
 ### Miner Settings
 
-In section `miner` it is possible to configure parameters of the new blocks generator.
+In `miner` section it is possible to configure parameters of the new blocks generator.
 
 | Name                                                 | Description                                                                                   | Default value                                                                                                                                                                                                                                                                                                                     |
 |------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
