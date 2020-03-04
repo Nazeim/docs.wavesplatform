@@ -15,7 +15,7 @@ The easiest way to run Waves node on `macOS`, `Windows` or `Linux` machine is by
 
 ### Jar or Deb Package
 
-The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `.jar` or `.deb` (depending on your OS) package and the required `.conf` configuration file to your machine and run the app with console commands.
+The other way is to [download the latest version](https://github.com/wavesplatform/Waves/releases) of `.jar` or `.deb` package (depending on your OS) and the required `.conf` configuration file to your machine and run the app with console commands.
 
 More specific steps depend on your operating system:
 
