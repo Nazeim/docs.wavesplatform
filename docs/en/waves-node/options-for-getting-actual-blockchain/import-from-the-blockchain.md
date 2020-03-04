@@ -76,6 +76,8 @@ Testnet:
 sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i [binary-file-name]
 ```
 
+**Note**: You can speed up the import by 5-20% at your own risk. To do so, use `-no-verify` Importer option to turn off block and transaction validation. Use with caution and only if you trust your blockchain file.
+
 ## Import Blocks Up to a Certain Height
 
 It is possible to set target height. If the height parameter is not set, all the blocks will be imported. To import, run the following command:
@@ -99,5 +101,3 @@ Testnet:
 ```bash
 sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i /path/to/testnet-1234688
 ```
-
-**Note**: You can speed up the import by 5-20% at your own risk. To do so, use `-no-verify` Importer option to turn off block and transaction validation. Use with caution and only if you trust your blockchain file.
