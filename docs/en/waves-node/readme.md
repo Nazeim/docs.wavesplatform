@@ -31,11 +31,9 @@ Any node may propose new transactions, and these proposed transactions are propa
 
 There are three types of Waves blockchain network:
 
-* [Mainnet](/en/blockchain/blockchain-network/main-network)
-* [Testnet](/en/blockchain/blockchain-network/test-network)
-* [Stagenet](/en/blockchain/blockchain-network/stage-network)
-
-`Mainnet` carries out real transactions within Waves blockchain network, `Testnet` is similar, but the tokens in it have no value. `Stagenet` is Waves blockchain that is used for testing experimental functionality.
+* [Mainnet](/en/blockchain/blockchain-network/main-network) carries out real transactions within Waves blockchain network
+* [Testnet](/en/blockchain/blockchain-network/test-network) is similar to Mainnet, but the tokens in it have no value
+* [Stagenet](/en/blockchain/blockchain-network/stage-network) is Waves blockchain that is used for testing experimental functionality
 
 **Note**: In general, the difference between `Mainnet`, `Testnet` and `Stagenet` node is the config file (.conf) used.
 
