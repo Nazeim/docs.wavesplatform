@@ -19,20 +19,20 @@ Nodes can be used for [mining](/en/blockchain/mining) \(generating new blocks\).
 
 **Note:** You can find the list of the existing nodes at [dev.pywaves.org](http://dev.pywaves.org/generators/).
 
-### Install a Node
+## Install a Node
 
 There are different options to install Waves node. The installation methods are explained in [Install Waves Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
-### Get Actual Blockchain
+## Get Actual Blockchain
 
 A running node, requires blockchain database. Use one of the methods described in [Get Waves Blockchain](/en/waves-node/options-for-getting-actual-blockchain) article to get the lastes blockchain database.
 
-### Upgrade a Node
+## Upgrade a Node
 
 When you own a node, check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates on a regular basis. Releases of new versions of node come with release notes document describing the new features and telling the node owner what actions to take to upgrade, depending on the type of the update.
 For details about upragding see [Upgrade Waves Node](/en/waves-node/upgrading) article.
 
-### Deal With Forks
+## Deal With Forks
 
 Fork is the moment when a blockchain splits in two seperate ones. Forks can happen because of node version difference (for example, when your node is of older version). Also, forks can be caused by malicious attacks or system failure. A forked node continues generating blocks, but it does not communicate with other valid nodes.
 You can check the blockchain height or the last 100 signatures of blocks to understand if your node is on fork or not. Use [chaincmp](https://github.com/wavesplatform/gowaves/releases/tag/v0.1.2) utility to compare blockchains on your node and the reference nodes.

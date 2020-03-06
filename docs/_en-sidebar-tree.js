@@ -547,62 +547,60 @@ module.exports = {
     {
       title: 'Node Owner Guide',
       path: nodePath,
-	  children: [     
-	    {
-         title: 'Install Waves Node',
-         path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
-         children: [
-            {
-             title: 'Deploy Node in Docker',
-             path: nodePath + 'waves-node-in-docker',
-            },  
-            {
-             title: 'Install Node on macOS',
-             path: nodePath + 'how-to-install-a-node/on-mac',
-            },
-            {
-             title: 'Install Node on Windows',
-             path: nodePath + 'how-to-install-a-node/on-windows',
-            },
-            {
-             title: 'Install Node on Ubuntu',
-             path: nodePath + 'how-to-install-a-node/on-ubuntu',
-            },
-            {
-             title: 'Install from Source (Building SBT)',
-             path: nodePath + 'how-to-build-and-test-a-node',
-            },
-	        {
-             title: 'Run Node in Yandex.Cloud',
-             path: nodePath + 'running-waves-node-in-yandex-cloud',
-            },	
-          ],
-        },
-		{
-         title: 'Get Waves Blockchain',
-         path: nodePath + 'options-for-getting-actual-blockchain',
-         children: [
-            {
-             title: 'Export/Import Blockchain',
-             path: nodePath + 'options-for-getting-actual-blockchain/import-from-the-blockchain',
-            },	  
-            {
-             title: 'Download the Latest Blockchain',
-             path: nodePath + 'options-for-getting-actual-blockchain/state-downloading-and-applying',
-            },
-          ],
+	},
+	{
+      title: 'Install Waves Node',
+      path: nodePath + 'how-to-install-a-node/how-to-install-a-node',
+      children: [
+        {
+          title: 'Deploy Node in Docker',
+          path: nodePath + 'waves-node-in-docker',
+        },  
+        {
+          title: 'Install Node on macOS',
+          path: nodePath + 'how-to-install-a-node/on-mac',
         },
         {
-         title: 'Upgrade Waves Node',
-         path: nodePath + 'upgrading',
-		 children: [
-            {
-             title: 'Rollback Waves Node',
-             path: nodePath + 'how-to-rollback-a-node',
-            },
-          ]
+          title: 'Install Node on Windows',
+          path: nodePath + 'how-to-install-a-node/on-windows',
         },
-	  ], 
+        {
+          title: 'Install Node on Ubuntu',
+          path: nodePath + 'how-to-install-a-node/on-ubuntu',
+        },
+        {
+          title: 'Install from Source (Building SBT)',
+          path: nodePath + 'how-to-build-and-test-a-node',
+        },
+        {
+          title: 'Run Node in Yandex.Cloud',
+          path: nodePath + 'running-waves-node-in-yandex-cloud',
+        },	
+      ],
+    },
+	{
+      title: 'Get Waves Blockchain',
+      path: nodePath + 'options-for-getting-actual-blockchain',
+      children: [
+        {
+          title: 'Export/Import Blockchain',
+          path: nodePath + 'options-for-getting-actual-blockchain/import-from-the-blockchain',
+        },	  
+        {
+          title: 'Download the Latest Blockchain',
+          path: nodePath + 'options-for-getting-actual-blockchain/state-downloading-and-applying',
+        },
+      ],
+    },
+    {
+      title: 'Upgrade Waves Node',
+      path: nodePath + 'upgrading',
+	  children: [
+        {
+          title: 'Rollback Waves Node',
+          path: nodePath + 'how-to-rollback-a-node',
+        },
+      ],
     },
     {
       title: 'Node Wallet',
