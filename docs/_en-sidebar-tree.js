@@ -603,10 +603,6 @@ module.exports = {
       ],
     },
     {
-      title: 'Node Wallet',
-      path: nodePath + 'how-to-work-with-node-wallet',
-    },
-    {
       title: 'Node Configuration',
       path: nodePath + 'node-configuration',
     },
@@ -614,6 +610,10 @@ module.exports = {
       title: 'Logging Configuration',
       path: nodePath + 'logging-configuration',
     },
+    {
+      title: 'Node Wallet',
+      path: nodePath + 'how-to-work-with-node-wallet',
+    },	
     {
       title: 'Features',
       path: nodePath + 'features',
