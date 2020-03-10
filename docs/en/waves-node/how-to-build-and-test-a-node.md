@@ -2,6 +2,8 @@
 
 This installation method implicates building DEB or JAR package from Waves git source code files, then running the node from your own DEB or JAR package. The method can be useful for blockchain developers, who want to customize the node files before installation as well as for the advanced node owners, who want check that the source code files of the running node are 100% safe to run.
 
+> :bulb: For OSX - homebrew is preferable choice. You can install java with `brew cask install java` and sbt with `brew install sbt@1`. Build/Test steps are common for any OS (but you should use `\` instead of `/` in Windows).
+
 To build and test your Waves Node, follow the steps:
 
 ## 1. Setup the Environment
@@ -66,5 +68,3 @@ Replace {folder} with actual folder name where the JAR package is located. Repla
 ```bash
 java -jar {folder}/*.jar path/to/config/file
 ```
-
-> :bulb: For OSX - homebrew is preferable choice. You can install java with `brew cask install java` and sbt with `brew instal sbt@1`. Build/Test steps are common for any OS (but you should use `\` instead of `/` in Windows).
