@@ -35,8 +35,10 @@ cd /var/lib/waves
 sudo -u waves bash -c "wget -qO- http://blockchain.wavesnodes.com/blockchain_last.tar --show-progress | tar xf -"
 ```
 
-If the node is running from a **JAR** file, navigate to the folder where the node's database is stored and run the following command:
+If the node is running from a **JAR** file, navigate to the folder where the node's database is stored (default: **{waves.directory}/data**)* and run the following command:
 
 ```bash
 wget -qO- http://blockchain.wavesnodes.com/blockchain_last.tar --show-progress | tar xf -
 ```
+
+***Note**: The folder is sepcified with **directory** parameter in the **.conf** file. For details about configuration file see [Node Configuration](/en/waves-node/node-configuration) article.
