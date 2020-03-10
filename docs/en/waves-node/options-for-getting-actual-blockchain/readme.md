@@ -46,6 +46,6 @@ The time to reach the block 1220000 on different CPUs (number of cores and frequ
 
 | CPU/MEM | Synchronization time | Import time |
 | :--- | :--- | :--- |
-| Intel Xeon Platinum 8175M @ 2.50 GHz \(8 vCPU\)/32 GB | 11:25. | 10:20. |
-| Intel Xeon Platinum 8124M @ 3.00 GHz \(16 vCPU\)/32 GB | 10:45. | 10:05 |
-| Intel i7 8550u @ 1.8 GHz \(up to 4GHz\) \(8 vCPU\)/16 GB | 9:35. | 9:20. |
+| Intel Xeon Platinum 8175M @ 2.50 GHz \(8 vCPU\)/32 GB | 11:25 | 10:20 |
+| Intel Xeon Platinum 8124M @ 3.00 GHz \(16 vCPU\)/32 GB | 10:45 | 10:05 |
+| Intel i7 8550u @ 1.8 GHz \(up to 4GHz\) \(8 vCPU\)/16 GB | 9:35 | 9:20 |
