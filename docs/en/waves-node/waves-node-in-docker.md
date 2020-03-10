@@ -59,9 +59,9 @@ docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL
 Depending on the env values the image generates `local.conf` file and stores it in `/waves/configs` directory.
 The simple rule of how to set a value in the configuration file:
 
-1. Determine the path to variable in configuration file ([complete configuration file](/en/waves-node/node-configuration))
+1. Determine the path to variable in configuration file ([complete configuration file](/en/waves-node/node-configuration)).
 
-2. Join all section names with two underscores(`__`).
+2. Join all section names with two underscores (`__`).
 3. Replace all dashes with one underscore (`_`).
 4. Capitalize the final string.
 
