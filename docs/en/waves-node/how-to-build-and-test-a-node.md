@@ -53,18 +53,18 @@ sbt -Dnetwork=testnet packageAll
 
 ## 5. Installing DEB Package
 
-DEB package located in target folder. You can replace '\*' with actual package name:
+Replace {folder} with actual folder name where the DEB package is located. Replace {*} with actual package name:
 
 ```bash
-sudo dpkg -i target/*.deb
+sudo dpkg -i {folder}/*.deb
 ```
 
 ## 6. Running Fat JAR
 
-You can replace waves-all\*.jar with actual jar name \(it should have "all"-word\):
+Replace {folder} with actual folder name where the JAR package is located. Replace {*} with actual package name \(it should have "all"-word\):
 
 ```bash
-java -jar target/waves-all*.jar path/to/config/file
+java -jar {folder}/*.jar path/to/config/file
 ```
 
 > :bulb: For OSX - homebrew is preferable choice. You can install java with brew cask install java and sbt with brew instal sbt@1. Build/Test steps are common for any OS \(but you should use ‘\' instead of '/' in windows\).
