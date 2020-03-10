@@ -22,7 +22,7 @@ Now check the JDK version with the following command:
 java -version
 ```
 
-If you see the resulting version such as below or higher, you can move to the next step:
+If you see the resulting version is such as below or higher, you can move to the next step:
 
 ```bash
 java version "1.8.0_201"
