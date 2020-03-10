@@ -13,22 +13,20 @@ In this case the following factors affect the duration of obtaining the data via
 * Internet channel width and network latency
 * Number of connected peers
 
-The first one depends on the internet data provider, while the second one can be set with max-outbound-connections parameter. We believe that the default value of 30 is enough. The speed of internet connection (unless, you have a dial-up connection) has little duration effect on the process, compared to the time spent on the verification of the blocks and validation of the signatures.
+The first one depends on the internet data provider, while the second one can be set with `max-outbound-connections` parameter. We believe that the default value of 30 is enough. The speed of internet connection (unless, you have a dial-up connection) has little duration effect on the process, compared to the time spent on the verification of the blocks and validation of the signatures.
 
 ## 2. Importing Blockchain from Binary File
 
 Blockchain database (state) can be imported from a previously exported binary file. For detailed description of the export/import process, see [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain).
 
-If the node is on a fork with a height more than 2000 blocks, update the node version and import the blockchain.
-
-**Warning**: If your node is on a fork, do not export/import your own blockchain but download the recent exported blockchain file (blockchain_last.tar) from one of the links below:
+**Warning**: If your node is on fork with a height more than 2000 blocks, do not export/import your own blockchain but [update](/en/waves-node/upgrading) the node, download and [import](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) the recent blockchain file (blockchain_last.tar) from one of the links below:
 
 * [Mainnet](http://blockchain.wavesnodes.com/)
 * [Testnet](http://blockchain-testnet.wavesnodes.com/)
 
-The speed of block verification and signature verification affects the time of reaching the current state by the import method. These operations are performed on the CPU. The verification of the blocks goes in one stream, therefore, a gain in time will be given by a high-frequency CPU rather than a multicore one. The signature verification operation is multi-threaded, but against the background of block verification, it has an insignificant effect. In other words, there is practically no difference when using 8 or 16 cores CPUs operating at the same frequency. The remaining blocks will be synchronized during normal operation.
+The speed of block verification and signature verification affects the time of reaching the current state by the import method. These operations are performed on the CPU. The verification of the blocks goes in one stream, therefore, a gain in time will be given by a high-frequency CPU rather than a multicore one. The signature verification operation is multi-threaded, but against the background of block verification, it has an insignificant effect. In other words, there is practically no difference when using 8 or 16 cores CPUs operating at the same frequency. The remaining blocks will be synchronized during regular operation.
 
-When synchronizing the state, an active writing to disk exceeds the IOPS values that the HDD gives. In particular, there may be delays when the operating system doesn't have enough physical memory. We recommend keeping at least 30% of the total memory for the needs of the operating system (cache/buffers) and use SSD.
+When synchronizing the blockchain database, an active writing to disk exceeds the IOPS values that the HDD gives. In particular, there may be delays when the operating system doesn't have enough physical memory. We recommend to use SSD and keep at least 30% of the total memory for the needs of the operating system (cache/buffers).
 
 ## 3. Downloading the Latest Blockchain Database
 

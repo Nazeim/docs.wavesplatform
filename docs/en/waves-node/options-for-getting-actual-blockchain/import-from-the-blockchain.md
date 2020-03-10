@@ -9,7 +9,7 @@ This article describes the database exporting and importing process.
 ## Export the Existing Blocks to Binary File
 
 If you have a running Waves node that is synchronized to actual blockchain, you can export the node's blockchain database to a binary file.
-Stop the node before exporting. Exporting is quite a fast operation, but the resulting binary file can take up to 1/3 of the data folder size.
+Stop the node before exporting. Exporting is quite a fast operation, but the resulting binary file can take up to 1/3 of the `data` folder size.
 
 To export the existing blocks to a binary file, run the following command:
 
@@ -43,18 +43,12 @@ A running node requires up-to-date blockchain database for operation. It is poss
 
 Stop the node before importing.
 
-If the data folder of the node contains some files, the import will continue to append new data from the blockchain's binary file.
-It is recommended to delete the existing files to avoid mixing data from different versions that can cause errors.
-
-On Windows, the default folder location is: **%HOMEPATH%\waves\data**
-
-On Linux: **/var/lib/waves[-testnet]/ folder:**
-
-**sudo rm -rdf /var/lib/waves[-testnet]/data**
+If the node `data` folder of contains some files, the import will continue to append new data from the blockchain's binary file.
+It is recommended to delete the existing files prior to impoerting to avoid mixing data from different versions that can cause errors.
 
 **Warning**: Importing is a heavy operation that may take several hours to complete.
 
-To import database, run the followiong command:
+To import database, run the following command:
 
 ### On Windows
 
