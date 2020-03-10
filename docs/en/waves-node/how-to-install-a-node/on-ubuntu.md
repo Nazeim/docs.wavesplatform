@@ -105,7 +105,7 @@ sudo service waves enable
 
 You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
 
-If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`. Default waves directory `/var/lib/waves-testnet/` is set in run systemd start script.
+If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages) you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`. Default waves directory `/var/lib/waves-testnet/` is set in run systemd start script.
 
 ## Installation for Advanced Users
 
