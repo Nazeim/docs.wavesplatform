@@ -72,7 +72,7 @@ There are two types of `deb` packages of waves nodes: with [systemd loader](#Sys
 Start the node with the following command (`waves-testnet` for Testnet):
 
 ```bash
-sudo systemctl start waves.service 
+sudo systemctl start waves.service
 ```
 
 Enable autoload on start with the following command:
@@ -94,7 +94,7 @@ You can read about journald tips [here](https://www.digitalocean.com/community/t
 Start the node with the following command (`waves-testnet` for Testnet):
 
 ```bash
-sudo service waves start` (`waves-testnet` for Testnet) 
+sudo service waves start` (`waves-testnet` for Testnet)
 ```
 
 Enable autoload on start with the following command:
@@ -105,7 +105,7 @@ sudo service waves enable
 
 You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
 
-If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages) you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`. Default waves directory `/var/lib/waves-testnet/` is set in run systemd start script.
+If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages) you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`.
 
 ## Installation for Advanced Users
 
