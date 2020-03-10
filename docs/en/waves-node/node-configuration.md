@@ -5,9 +5,6 @@ sidebarDepth: 2
 # Node Configuration
 
 The **node configuration file** is a settings file of a [node](/en/blockchain/node).
-An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file is available on Github.
-
-> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used. For details, see [Waves Configuration Section](#Waves-Configuration-Section).
 
 The configuration system of Waves Node uses HOCON format. HOCON stands for Human-Optimized Config Object Notation. The complete description of HOCON could be found in the [Official HOCON documentation](https://github.com/typesafehub/config/blob/master/HOCON). The advantages of HOCON are simple syntax and ability to use comments.
 
@@ -15,7 +12,9 @@ The configuration system of Waves Node uses HOCON format. HOCON stands for Human
 
 ### Default Configuration Embedded into JAR
 
-Complete default Waves Node configuration file which is embedded into jar-file can be found here: <https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf>.
+An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file that is embedded into jar-file is available on Github.
+
+> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used. For details, see [Waves Configuration Section](#Waves-Configuration-Section).
 
 ### Overriding Parameters When Running JAR-file
 
