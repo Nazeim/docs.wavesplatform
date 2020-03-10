@@ -69,11 +69,41 @@ There are two types of `deb` packages of waves nodes: with [systemd loader](#Sys
 
 ### Systemd (Ubuntu &gt;= 15.04)
 
-Start the node with `sudo systemctl start waves.service` (`waves-testnet` for Testnet) and enable autoload on start with `sudo systemctl enable waves.service`. **Systemd** users can find waves app logs in journald storage like that `journalctl -u waves.service -f`. You can read about journald tips [here](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
+Start the node with the following command (`waves-testnet` for Testnet):
+
+```bash
+sudo systemctl start waves.service 
+```
+
+Enable autoload on start with the following command:
+
+```bash
+sudo systemctl enable waves.service
+```
+
+**Systemd** users can find waves app logs in journald storage with the following command:
+
+```bash
+journalctl -u waves.service -f
+```
+
+You can read about journald tips [here](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
 
 ### Upstart (Ubuntu &lt; 15.04)
 
-Start the node with `sudo service waves start` (`waves-testnet` for Testnet) and enable autoload on start with `sudo service waves enable`. You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
+Start the node with the following command (`waves-testnet` for Testnet):
+
+```bash
+sudo service waves start` (`waves-testnet` for Testnet) 
+```
+
+Enable autoload on start with the following command:
+
+```bash
+sudo service waves enable
+```
+
+You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
 
 If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`. Default waves directory `/var/lib/waves-testnet/` is set in run systemd start script.
 
