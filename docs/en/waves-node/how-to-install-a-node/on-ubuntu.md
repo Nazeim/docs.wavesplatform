@@ -9,7 +9,7 @@ The alternative methods are described in [Installation from Deb Package on Deb-b
 
 ## Install Java (OpenJDK 8)
 
-**Note.** Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
+**Note**: Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
 
 Install OpenJDK 8 with the following command:
 
@@ -48,7 +48,19 @@ sudo apt update
 sudo apt install waves
 ```
 
-Once the new version of Waves Node is released, you can update the package by running the following commands:
+Start the node with the following command (`waves-testnet` for Testnet):
+
+```bash
+sudo systemctl start waves.service
+```
+
+Enable autoload on start with the following command:
+
+```bash
+sudo systemctl enable waves.service
+```
+
+Once new version of Waves Node is released, you can update the package by running the following commands:
 
 ```bash
 sudo apt update
