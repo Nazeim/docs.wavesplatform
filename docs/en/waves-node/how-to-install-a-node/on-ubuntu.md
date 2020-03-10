@@ -99,7 +99,7 @@ You can read about journald tips [here](https://www.digitalocean.com/community/t
 
 ## Installation for Advanced Users
 
-[Download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required configuration `.conf` file (for Mainnet, Testnet or Stagenet) to any folder, for example `/opt/waves`.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required configuration [.conf](https://github.com/wavesplatform/Waves/tree/master/node) file (for Mainnet, Testnet or Stagenet) to any folder, for example `/opt/waves`.
 
 Open and edit the config file with your favorite text editor. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
