@@ -4,7 +4,7 @@ Nodes are the critical components of Waves ecosystem. By running a node, you can
 
 Reasons to run node:
 
-* **Mining**: earn profit
+* **Mining**: earn profit for generating new blocks and [transaction fees](/en/blockchain/transaction/transaction-fee).
 * **Own project**: get the latest blockchain data from your own node without having to trust third party. Send transactions from your own node.
 Use your node API, to be independent from third party.
 Tweak your own node to setup extended functionality for your project.
