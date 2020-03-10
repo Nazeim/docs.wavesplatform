@@ -53,7 +53,7 @@ sbt -Dnetwork=testnet packageAll
 
 ## 5. Installing DEB Package
 
-Replace {folder} with actual folder name where the DEB package is located. Replace {*} with actual package name:
+Replace {folder} with actual folder name where the DEB package is located. Replace {*} with actual file name:
 
 ```bash
 sudo dpkg -i {folder}/*.deb
@@ -61,7 +61,7 @@ sudo dpkg -i {folder}/*.deb
 
 ## 6. Running Fat JAR
 
-Replace {folder} with actual folder name where the JAR package is located. Replace {*} with actual package name \(it should have "all"-word\):
+Replace {folder} with actual folder name where the JAR package is located. Replace {*} with actual file name \(it should have "all"-word\):
 
 ```bash
 java -jar {folder}/*.jar path/to/config/file
