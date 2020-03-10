@@ -8,7 +8,7 @@ You need to install the latest version of Docker.
 
 Please, follow the installation steps described on the [Docker website](https://docs.docker.com/engine/installation/).
 
-## About the image
+## About the Image
 
 * The Docker image contains scripts and configs to run Waves Node from **Version 0.13.0** for Testnet, Mainnet or custom networks.
 * The image is focused on fast and convenient deployment of Waves Node.
