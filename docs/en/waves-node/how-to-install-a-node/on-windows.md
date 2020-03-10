@@ -2,6 +2,8 @@
 
 ## Install OpenJDK 8
 
+**Note.** Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
+
 Install OpenJDK 8 from [this link](https://access.redhat.com/documentation/en-us/openjdk/8/html/openjdk_8_for_windows_getting_started_guide/getting_started_with_openjdk_for_windows).
 
 Then open Windows Command line and check the JDK version with the following command:
@@ -18,18 +20,16 @@ Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
 Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 ```
 
-**Note.** Do not install OpenJDK 8 If you already have OpenJDK 11 installed. The node Installation is supported in both versions 8 and 11.
-
 ## Download Waves package and configure the application
 
-[Download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required `.conf` configuration file \(for mainnet, testnet or stagenet\) to you machine.
+[Download the latest version](https://github.com/wavesplatform/Waves/releases) of `waves.jar` and the required [.conf](https://github.com/wavesplatform/Waves/tree/master/node) file (for Mainnet, Testnet or Stagenet) to you machine.
 
 Open and carefully edit the config file with your favorite text editor. **This is very important! The safety of your wallet and assets depends on this!**. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
-Then open Windows Command line, navigate to the folder with the `.jar` file and start the node with the following command:
+Then open Windows Command line, navigate to the folder with the `.jar` file and start the node with the following command (replace {*} with actual file name):
 
 ```bash
-java -jar waves.jar waves.conf.
+java -jar {*}.jar {*}.conf
 ```
 
 ## Additional Security
