@@ -63,11 +63,7 @@ sudo apt upgrade
 sudo dpkg -i waves*.deb
 ```
 
-Now it's time to check your waves config! It's embedded into the deb package and unpacked to `/usr/share/waves/conf/waves.conf` (or `waves-testnet` folder for Testnet) and symlinked to `/etc/waves/waves.conf`. Please read the [Node Configuration](/en/waves-node/node-configuration) article and edit the config file with caution.
-
-There are two types of `deb` packages of waves nodes: with [systemd loader](#Systemd) and [upstart loader](#Upstart).
-
-### Systemd (Ubuntu &gt;= 15.04)
+The node configuration file is embedded into the `.deb` package and unpacked to `/usr/share/waves/conf/waves.conf` (or `waves-testnet` folder for Testnet) and symlinked to `/etc/waves/waves.conf`. Edit the configuration file with caution. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
 Start the node with the following command (`waves-testnet` for Testnet):
 
@@ -81,31 +77,13 @@ Enable autoload on start with the following command:
 sudo systemctl enable waves.service
 ```
 
-**Systemd** users can find waves app logs in journald storage with the following command:
+You can find waves app logs in journald storage with the following command:
 
 ```bash
 journalctl -u waves.service -f
 ```
 
 You can read about journald tips [here](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).
-
-### Upstart (Ubuntu &lt; 15.04)
-
-Start the node with the following command (`waves-testnet` for Testnet):
-
-```bash
-sudo service waves start` (`waves-testnet` for Testnet)
-```
-
-Enable autoload on start with the following command:
-
-```bash
-sudo service waves enable
-```
-
-You can find **waves app logs** in `/var/log/waves` folder like that tail `-f /var/log/waves/waves.log`
-
-If you want to change waves directory (for wallet, blockchain and other node files in ubuntu packages) you should change it using `-J-Dwaves.directory=path` in `/etc/waves/application.ini`.
 
 ## Installation for Advanced Users
 
