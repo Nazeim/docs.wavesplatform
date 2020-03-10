@@ -14,7 +14,7 @@ Please, follow the installation steps described on the [Docker website](https://
 * The image is focused on fast and convenient deployment of Waves Node.
 * The container downloads and runs `.jar` file along with configuration files from the [releases section](https://github.com/wavesplatform/Waves/releases).
 
-## Running the image
+## Running the Image
 
 It is highly recommended to read more about [Waves Node configuration](/en/waves-node/node-configuration) before running the container.
 
@@ -56,7 +56,6 @@ docker run -p 6869:6869 -p 6863:6863 -e WAVES_NETWORK=TESTNET -e WAVES_LOG_LEVEL
 
 ## Configuration
 
-The image supports config customization with env variables.
 Depending on the env values the image generates `local.conf` file and stores it in `/waves/configs` directory.
 The simple rule of how to set a value in the configuration file:
 
