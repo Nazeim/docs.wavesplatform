@@ -103,10 +103,10 @@ You can read about journald tips [here](https://www.digitalocean.com/community/t
 
 Open and edit the config file with your favorite text editor. For details see [Node Configuration](/en/waves-node/node-configuration) article.
 
-Then start console, navigate to the folder with the `.jar` file with the command `cd /opt/waves` and start the node with the following command:
+Then start console, navigate to the folder with the `.jar` file with the command `cd /opt/waves` and start the node with the following command (replace {*} with actual package name):
 
 ```bash
-java -jar waves.jar waves-config.conf
+java -jar {*}.jar waves-config.conf
 ```
 
 <!-- ### Installation from Source
