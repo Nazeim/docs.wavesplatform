@@ -33,6 +33,12 @@ Testnet:
 sudo -u waves-testnet waves-testnet export -c /etc/waves-testnet/waves.conf -o [output-file-name] -h [height]
 ```
 
+### On Mac
+
+```bash
+java -cp waves-all-<version>.jar com.wavesplatform.Exporter -c [configuration-file-name] -o [output-file-name] -h [height]
+```
+
 The height parameter allows to specify maximum height of the blocks during exporting. If the parameter is not set, all the blocks will be exported.
 
 The output-file-name parameter is optional ('blockchain' is used by default). The resulting export file with the `<output-file-name>-<height>` name will be created in the `data` folder.
@@ -70,6 +76,12 @@ Testnet:
 sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i [binary-file-name]
 ```
 
+### On Mac
+
+```bash
+java -cp waves-all-<version>.jar com.wavesplatform.Importer -c [configuration-file-name] -i [binary-file-name]
+```
+
 **Note**: You can speed up the import by 5-20% at your own risk. To do so, use `-no-verify` Importer option to turn off block and transaction validation. Use with caution and only if you trust your blockchain file.
 
 ## Import Blocks Up to a Certain Height
@@ -94,4 +106,10 @@ Testnet:
 
 ```bash
 sudo -u waves-testnet waves-testnet import -c /etc/waves-testnet/waves.conf -i /path/to/testnet-1234688
+```
+
+### On Mac
+
+```bash
+java com.wavesplatform.Importer -c <config_file> -i <blockchain_file> -h <height>
 ```
