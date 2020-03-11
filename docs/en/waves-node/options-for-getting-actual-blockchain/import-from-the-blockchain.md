@@ -50,7 +50,7 @@ A running node requires up-to-date blockchain database for operation. It is poss
 Stop the node before importing.
 
 If the node `data` folder of contains some files, the import will continue to append new data from the blockchain's binary file.
-It is recommended to delete the existing files prior to impoerting to avoid mixing data from different versions that can cause errors.
+It is recommended to delete the existing files prior to importing to avoid mixing data from different versions that can cause errors.
 
 **Warning**: Importing is a heavy operation that may take several hours to complete.
 
