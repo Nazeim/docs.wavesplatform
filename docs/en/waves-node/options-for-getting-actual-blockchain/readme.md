@@ -19,7 +19,7 @@ The first one depends on the internet data provider, while the second one can be
 
 Blockchain database (state) can be imported from a previously exported binary file. For detailed description of the export/import process, see [Export/Import Blockchain](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain).
 
-**Warning**: If your node is on [fork](/en/waves-node#deal-with-forks) with a height more than 2000 blocks, do not export/import your own blockchain but [update](/en/waves-node/upgrading) the node, download and [import](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) the recent blockchain file (blockchain_last.tar) from one of the links below:
+**Warning**: If your node is [on fork](/en/waves-node#deal-with-forks) with a height more than 2000 blocks, do not export/import your own blockchain but [update](/en/waves-node/upgrading) the node, download and [import](/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain) the recent blockchain file (blockchain_last.tar) from one of the links below:
 
 * [Mainnet](http://blockchain.wavesnodes.com/)
 * [Testnet](http://blockchain-testnet.wavesnodes.com/)
