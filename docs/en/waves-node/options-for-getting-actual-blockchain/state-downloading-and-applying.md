@@ -2,7 +2,9 @@
 
 A running node requires up-to-date blockchain database for operation.
 **blockchain_last.tar** is the archive, containing database that is generated during node operation when the node gets new blocks.
-The default folder of blockchain database for a node installed from Deb package is _/var/lib/waves/data_.
+
+**Note**: By default the blockchain data is stored in `data` folder that is located in base application directory.
+See the default base application directory for different operating systems in [Default Application Directory](/en/waves-node/node-configuration#default-application-directory) section of the [Node Configuration](/en/waves-node/node-configuration) article.
 
 Please be aware that the downloaded archive file can contain wrong data or balances, so please download the blockchain database only from a trusted source.
 
@@ -13,7 +15,7 @@ Please be aware that the downloaded archive file can contain wrong data or balan
 
 **Note**: The linked files are updated regularly.
 
-## Steps (Linux)
+## Steps (Linux DEB)
 
 To download and implement the latest node blockchain database, complete the followiong steps:
 
@@ -35,10 +37,8 @@ cd /var/lib/waves
 sudo -u waves bash -c "wget -qO- http://blockchain.wavesnodes.com/blockchain_last.tar --show-progress | tar xf -"
 ```
 
-If the node is running from a **JAR** file, navigate to the folder where the node's database is stored (default: **{waves.directory}/data**)* and run the following command:
+If the node is running from a **JAR** file, navigate to the `data` folder where the node's database is stored and run the following command:
 
 ```bash
 wget -qO- http://blockchain.wavesnodes.com/blockchain_last.tar --show-progress | tar xf -
 ```
-
-***Note**: The folder is sepcified with **directory** parameter in the **.conf** file. For details about configuration file see [Node Configuration](/en/waves-node/node-configuration) article.

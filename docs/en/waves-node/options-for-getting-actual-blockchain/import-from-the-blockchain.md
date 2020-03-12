@@ -50,7 +50,7 @@ A running node requires up-to-date blockchain database for operation. It is poss
 Stop the node with `service waves stop` command before importing.
 
 By default the `data` folder is located in base application directory and if it contains files, the import will continue to append new data from the blockchain's binary file. It is recommended to delete the existing files from `data` folder prior to importing to avoid errors caused by mixing data from different versions.
-See the default base application folder location for different operating systems in [Waves Configuration Section](/en/waves-node/node-configuration#waves-configuration-section) of the [Node Configuration](/en/waves-node/node-configuration) article.
+See the default base application directory for different operating systems in [Default Application Directory](/en/waves-node/node-configuration#default-application-directory) section of the [Node Configuration](/en/waves-node/node-configuration) article.
 
 **Warning**: Importing is a heavy operation that may take several hours to complete.
 
