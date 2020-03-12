@@ -8,7 +8,7 @@ Check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for 
 
 The most convenient method to install/upgrade Waves Node on Linux is probably by means of APT repository. The repository provides mainnet, testnet and stagenet packages.
 
-For deatails, see [Installation from APT Repository](/en/waves-node/how-to-install-a-node/on-ubuntu#Installation-from-APT-Repository) section of the node installation article.
+For details, see [Installation from APT Repository](/en/waves-node/how-to-install-a-node/on-ubuntu#Installation-from-APT-Repository) section of the node installation article.
 
 ## Upgraging JAR Node
 

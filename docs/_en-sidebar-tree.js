@@ -590,17 +590,15 @@ module.exports = {
           title: 'Download the Latest Blockchain',
           path: nodePath + 'options-for-getting-actual-blockchain/state-downloading-and-applying',
         },
+		{
+          title: 'Rollback Waves Node',
+          path: nodePath + 'how-to-rollback-a-node',
+        },
       ],
     },
     {
       title: 'Upgrade Waves Node',
       path: nodePath + 'upgrading',
-	  children: [
-        {
-          title: 'Rollback Waves Node',
-          path: nodePath + 'how-to-rollback-a-node',
-        },
-      ],
     },
     {
       title: 'Node Configuration',
