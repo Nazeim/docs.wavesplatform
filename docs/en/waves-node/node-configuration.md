@@ -60,7 +60,18 @@ The `directory` parameter allows to set a path to the base application directory
 
 Make sure the defined directory has a correct owner set: `waves` for mainnet or `waves-testnet` for testnet.
 
-By default, depending on the operating system and the type of blockchain, the following folders are used:
+#### Default Application Directory
+
+For a node installed from DEB package:
+
+| | *nix (DEB package) |
+| :--- | :--- |
+| Mainnet | `/var/lib/waves` |
+| Testnet | `/var/lib/waves-testnet` |
+| Stagenet| `/var/lib/waves-stagenet` |
+|
+
+The following default application directories, depending on the operating system and the type of blockchain, are used for JAR nodes if the `directory` parameter is not set in the node configuration `.conf` file:
 
 | | *nix | macOS | Windows |
 | :--- | :--- | :--- | :--- |
@@ -68,6 +79,7 @@ By default, depending on the operating system and the type of blockchain, the fo
 | Testnet | `$XDG_DATA_HOME/waves-testnet` or `$HOME/.local/share/waves-testnet` | `$HOME/Library/Application Support/waves-testnet` | `%LOCALAPPDATA%/waves-testnet` |
 | Stagenet | `$XDG_DATA_HOME/waves-stagenet` or `$HOME/.local/share/waves-stagenet` | `$HOME/Library/Application Support/waves-stagenet` | `%LOCALAPPDATA%/waves-stagenet` |
 | Custom | `$XDG_DATA_HOME/waves-custom-<character>*` or `$HOME/.local/share/waves-custom-<character>*` | `$HOME/Library/Application Support/waves-custom-<character>*` | `%LOCALAPPDATA%/waves-custom-<character>*` |
+|
 
 \* See the `address-scheme-character` parameter description in [Configuring Custom Blockchain](#section-20ddd805c332b711c4699ea1c9539300) section.
 

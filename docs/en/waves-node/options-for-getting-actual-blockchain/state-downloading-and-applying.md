@@ -2,7 +2,7 @@
 
 A running node requires up-to-date blockchain database for operation.
 **blockchain_last.tar** is the archive, containing database that is generated during node operation when the node gets new blocks.
-The default folder of blockchain database is _/var/lib/waves/data_.
+The default folder of blockchain database for a node installed from Deb package is _/var/lib/waves/data_.
 
 Please be aware that the downloaded archive file can contain wrong data or balances, so please download the blockchain database only from a trusted source.
 
