@@ -14,7 +14,7 @@ The configuration system of Waves Node uses HOCON format. HOCON stands for Human
 
 An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf) of the default node configuration file that is embedded into jar-file is available on Github.
 
-> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used. For details, see [Waves Configuration Section](#Waves-Configuration-Section).
+> After upgrading to version 1.0.2 please note if your `/etc/waves/waves.conf` was originally copied from a template, make sure that waves.directory points to the correct directory. If this option doesn't exist in the config, default directory will be used. For details, see [Waves Configuration Section](#waves-configuration-section).
 
 ### Overriding Parameters When Running JAR-file
 
