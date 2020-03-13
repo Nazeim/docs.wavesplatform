@@ -39,7 +39,7 @@ If you use DEB-packages to install a node, they also contain configuration files
 
 | Section         | Description                                                   |
 |-----------------|---------------------------------------------------------------|
-| [waves](#Waves-Configuration-Section)| Essential node parameters and other configuration subsections |
+| [waves](#waves-configuration-section)| Essential node parameters and other configuration subsections |
 | &nbsp; &nbsp; &nbsp; db              | Blockchain database parameters                                |
 | &nbsp; &nbsp; &nbsp; [network](#network-settings)| Peer to peer network parameters                               |
 | &nbsp; &nbsp; &nbsp; [wallet](#wallet-settings)| Built in node wallet parameters                               |
