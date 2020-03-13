@@ -173,15 +173,15 @@ In `miner` section it is possible to configure parameters of the new blocks gene
 
 ### REST API Settings
 
-The **REST API Section** is a section in the node configuration file with settings of a [node API](/en/waves-node/node-api).
+The **REST API Section** is a section in the node configuration file with settings of [node API](/en/waves-node/node-api).
 
 | Name | Description | Default value |
 | :--- | :--- | :--- |
 | `enable` | Activates REST API. <br>If you want to deactivate REST API, change the default value to `no` | yes |
 | `bind-address` | Sets the network address where the REST API will accept the incoming connections. <br>**Note.** It's not recommended to change the default value. Use [Nginx’s proxy pass module](http://nginx.org/ru/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | `"127.0.0.1"` |
 | `port` | Sets the port number where the REST API will await connections. | 6869 |
-| `api-key-hash` | Sets the hash of the [API key](https://en.wikipedia.org/wiki/Application_programming_interface_key) that is provided by the node owner. For details about generating hash see [To Generate Hash of the API Key](#To-Generate-Hash-of-the-API-Key) section. | "" |
-| `cors` | Enables [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) support that is necessary for [Swagger](https://swagger.io/) and [Exchange](https://waves.exchange).<br>[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) allows to safely resolve queries for other domains outside the one that is running the node.<br> **Note.** If you want to deactivate [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) support, change the default value to `no` | yes |
+| `api-key-hash` | Sets the hash of the [API key](https://en.wikipedia.org/wiki/Application_programming_interface_key). For details about generating hash see [How to Generate Hash of the API Key](#how-to-generate-hash-of-the-api-key) section. | "" |
+| `cors` | This parameter allows to enable/disable sending cross-domain [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) requests to node from JavaScript. | yes |
 
 **Note**: During REST API calls the node owner must provide the API key itself, not the the hashed value.
 
@@ -204,7 +204,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 }' 'http://nodes.wavesnodes.com/transactions/sign'
 ```
 
-#### To Generate Hash of the API Key
+#### How to Generate Hash of the API Key
 
 [API key](https://en.wikipedia.org/wiki/Application_programming_interface_key) of the node owner is highly important just like the [seed](http://confluence.wavesplatform.com/display/WDOCS/Seed+phrase) phrase and the password of the wallet.
 
