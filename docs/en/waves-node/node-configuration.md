@@ -19,9 +19,10 @@ An [example](https://github.com/wavesplatform/Waves/blob/master/node/src/main/re
 ### Overriding Parameters When Running JAR-file
 
 If you run JAR file it is recommended to override default parameters by passing a path to config file as the command line parameter then starting Waves Node application.
+Replace {*} with actual file name:
 
 ```bash
-java -jar waves-all-0.13.3.jar waves.conf
+java -jar {*}.jar {*}.conf
 ```
 
 Typically this file should contain your node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from previous sections (files shipped with DEB packages).
