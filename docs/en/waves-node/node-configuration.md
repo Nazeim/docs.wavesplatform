@@ -141,7 +141,7 @@ In `blockchain` section you can select the blockchain type or create your own bl
 
 #### Configuring Custom Blockchain
 
-The `custom` section allows to set parameters of your custom blockchain.
+The `custom` section allows to set parameters of your [custom blockchain](/en/waves-node/private-waves-network).
 
 | Name                     | Description                                                                                                                                                                                                                                                                                                                                             | Default value |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|

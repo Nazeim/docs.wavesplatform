@@ -623,7 +623,7 @@ module.exports = {
 	  ],
     },
     {
-      title: 'Private Blockchain',
+      title: 'Custom Blockchain',
       path: nodePath + 'private-waves-network',
     },
     {

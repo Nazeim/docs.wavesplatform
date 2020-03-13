@@ -1,10 +1,10 @@
-# Private Blockchain
+# Custom Blockchain
 
-This article explains how to setup private Waves blockchain network that can be used for experimental activities.
+This article explains how to setup custom Waves blockchain network that can be used for experimental activities.
 
-## To Setup Private Blockchain Network
+## To Setup Custom Blockchain Network
 
-Follow the steps below to setup private blockchain network.
+Follow the steps below to setup custom blockchain network.
 
 ### Step 1
 
