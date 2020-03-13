@@ -239,11 +239,12 @@ The `utx` section allows to set unconfirmed transactions pool parameters.
 
 ### Features Settings
 
-The `features` section allows to set features parameters
+The `features` section allows to set [features](/en/waves-node/features/readme) parameters
 
-`auto-shutdown-on-unsupported-feature` If this parameter is turned on, the node will be shut down on activation of a feature that is not implemented by node’s codebase. By default this parameter is set to yes.
-
-`supported` parameter contains the list of features IDs, supported by the node owner. By default, the list is empty.
+| Name                                 | Description                                                                                                                       | Default Value                  |
+|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| `auto-shutdown-on-unsupported-feature` | If this parameter is turned on, the node will be shut down on activation of a feature that is not implemented by node’s codebase. | yes                            |
+| `supported`                            | This parameter contains the list of features IDs, supported by the node owner.                                                    | By default, the list is empty. |
 
 <a id="rewards"></a>
 
