@@ -1,4 +1,15 @@
-# Logging Configuration
+STDOUT # Logging Configuration
+
+## Levels of Logging <a id="loglevels"></a>
+
+1. `OFF` - logging is disabled. Useful when you want to disable file or STDOUT logs;
+2. `ERROR` - severe errors. Please read these messages;
+3. `WARN` - warning messages. The Node can work, but it is better to check the problem;
+4. `INFO` - important messages. System works normally;
+5. `DEBUG` - information for debugging;
+6. `TRACE` - information for debugging, when DEBUG doesn't help \(rare cases\).
+
+Lower levels of logging are included in the higher. For example, `DEBUG` includes itself and all the higher levels: `INFO`, `WARN` and `ERROR`.
 
 ## About the Framework
 
@@ -7,12 +18,12 @@ Waves nodes use [logback](https://logback.qos.ch/documentation.html) framework f
 By [default](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/logback.xml), all the logs are written in human-readable format
 
 * to STDOUT with `INFO` level.
-* to `/var/log/waves.log`. Prior to node version 1.1.6, the default logging level in relation to writing to file was `TRACE`. After the node 1.1.6 version release, the logging level became `DEBUG` which means that UTX-related traces are not included to waves.log by default to reduce the amount of logs the node produces under heavy load. However, writing the UTX-related traces to separate file [can be enabled](#enable-traces). Also waves.log is now rotated when size limit is reached (100 mb by default), in addition to daily rotation.
+* to `/var/log/waves.log` for nodes installed from Deb package or `${waves.directory}/logs/waves.log` for other cases. Prior to node version 1.1.6, the default logging level in relation to writing to file was `TRACE`. After the node 1.1.6 version release, the logging level became `DEBUG` which means that UTX-related traces are not included in waves.log by default to reduce the amount of logs the node produces under heavy load. However, writing the UTX-related traces to separate file [can be enabled](#enable-traces). Also, in addition to daily rotation, waves.log is rotated when size limit is reached (100 mb by default).
 
 The following limitations are set for logging:
 
 * Logs older than 30 days are deleted.
-* If total size of logs are larger than 1Gb, oldest logs are deleted to fit this limit.
+* If total size of logs is more than 1Gb, the oldest logs are deleted to fit this limit.
 
 The following logging parameters can be altered:
 
@@ -52,9 +63,9 @@ To redefine logging settings set up in node's `logback.xml`
 
 If UTX trace logging is activated, the output will be written to `/var/log/utx-trace.log`.
 
-If you run node from the package, consider using [application.ini](#aini-activate-utx) or [logback.xml](#logback-activate-utx).
+If you run node from Deb package, consider using [application.ini](#aini-activate-utx) or [logback.xml](#logback-activate-utx).
 
-If you run node from jar, use [Java's options](#jar-activate-utx).
+If you run node from Jar package, use [Java's options](#jar-activate-utx).
 
 ### Activate by Application.ini <a id="aini-activate-utx"></a>
 
@@ -180,14 +191,3 @@ In the `logback.xml` add the following:
     </root>
 </included>
 ```
-
-## Levels of Logging <a id="loglevels"></a>
-
-1. `OFF` - logging is disabled. Useful when you want to disable file or STDOUT logs;
-2. `ERROR` - severe errors. Please read these messages;
-3. `WARN` - warning messages. The Node can work, but it is better to check the problem;
-4. `INFO` - important messages. System works normally;
-5. `DEBUG` - information for debugging;
-6. `TRACE` - information for debugging, when DEBUG doesn't help \(rare cases\).
-
-Lower levels of logging are included in the higher. For example, `DEBUG` includes itself and all the higher levels: `INFO`, `WARN` and `ERROR`.
