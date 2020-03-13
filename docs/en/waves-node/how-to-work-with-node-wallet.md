@@ -22,6 +22,8 @@ When wallet.dat is created, the node will request in the console a password whic
 
 As a result, the full-featured account capable of signing transactions will be created.
 
+**Warning:** Wallet is a critical part of your node. It is better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to the seed string, he will have access to your funds on all your addresses!
+
 ## Creating Wallet Using Existing Seed <a id="existing-seed"></a>
 
 If you already have a seed, then input the following parameters in the `wallet` section of [node's configuration file](https://github.com/wavesplatform/Waves/blob/master/node/src/main/resources/application.conf):

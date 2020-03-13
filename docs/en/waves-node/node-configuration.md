@@ -25,7 +25,7 @@ Replace {*} with actual file name:
 java -jar {*}.jar {*}.conf
 ```
 
-Typically this file should contain your node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from previous sections (files shipped with DEB packages).
+Typically this file should contain your node's unique characteristics (ip, name, keys, etc...) and network-specific parameters similar to waves-mainnet or waves-testnet configs from the next sections (files shipped with DEB packages).
 
 ### MainNet and TestNet Config in DEB-packages
 
@@ -39,19 +39,20 @@ If you use DEB-packages to install a node, they also contain configuration files
 
 | Section         | Description                                                   |
 |-----------------|---------------------------------------------------------------|
-| [waves](#Waves-Configuration-Section)| essential node parameters and other configuration subsections |
-| db              | blockchain database parameters                                |
-| [network](#Network-Settings)| peer to peer network parameters                               |
-| [wallet](#Wallet-Settings)| built in node wallet parameters                               |
-| [blockchain](#Blockchain-Settings)| blockchain parameters                                         |
-| [miner](#Miner-Settings)| blocks generator parameters                                   |
-| [rest-api](#REST-API-Settings)        | node API parameters                                           |
-| [synchronization](#Synchronization-Settings) | node synchronization parameters                               |
-| [utx](#UTX-Pool-Settings)| unconfirmed transactions pool parameters                      |
-| [features](#Features-Settings)        | features parameters                                           |
-| [rewards](#Rewards-Settings)| rewards parameters                                            |
-| kamon           | performance metrics parameters                                |
-| metrics         | blocks, transactions and other info metrics parameters        |
+| [waves](#Waves-Configuration-Section)| Essential node parameters and other configuration subsections |
+| &nbsp; &nbsp; &nbsp; db              | Blockchain database parameters                                |
+| &nbsp; &nbsp; &nbsp; [network](#network-settings)| Peer to peer network parameters                               |
+| &nbsp; &nbsp; &nbsp; [wallet](#wallet-settings)| Built in node wallet parameters                               |
+| &nbsp; &nbsp; &nbsp; [blockchain](#blockchain-settings)| Blockchain parameters                                         |
+| &nbsp; &nbsp; &nbsp; [miner](#miner-settings)| Blocks generator parameters                                   |
+| &nbsp; &nbsp; &nbsp; [rest-api](#rest-api-settings)        | Node API parameters                                           |
+| &nbsp; &nbsp; &nbsp; [synchronization](#synchronization-settings) | Node synchronization parameters                               |
+| &nbsp; &nbsp; &nbsp; [utx](#utx-pool-settings)| Unconfirmed transactions pool parameters                      |
+| &nbsp; &nbsp; &nbsp; [features](#features-settings)        | Features parameters                                           |
+| &nbsp; &nbsp; &nbsp; [rewards](#rewards-settings)| Rewards parameters                                            |
+| &nbsp; &nbsp; &nbsp; extensions| Extensions parameters                                            |
+| kamon           | Performance metrics parameters                                |
+| metrics         | Blocks, transactions and other info metrics parameters        |
 
 ### Waves Configuration Section
 
@@ -98,7 +99,7 @@ In `network` section P2P network related settings could be set.
 | `port`                        | Sets the network port number to which other Waves nodes will connect. Check that the port is reachable from outside otherwise, your node will connect to P2P network only using outgoing connections. If this the port is taken by other application, your node won’t start. |                                                                                                                                                                                                                       |
 | `node-name`                   | Sets the name of your node visible to other participants of the P2P network. The name transmitted during initial handshake.                                                                                                                                                  | By default, this parameter is commented out, which leads to random name generation                                                                                                                                    |
 | `nonce`                       | This value is sent during a handshake. This value is used to distinguish nodes connected from one IP address.                                                                                                                                                                 | By default, it is not set and generated randomly.                                                                                                                                                                     |
-| `known-peers`                 | This parameter stores the list of bootstrap nodes to which your node will establish outgoing connections while initializing.                                                                                                                                                      | By default it set to Testnet nodes.                                                                                                                                                                                   |
+| `known-peers`                 | This parameter stores the list of bootstrap nodes to which your node will establish outgoing connections while initializing.                                                                                                                                                      |                                                                                                                                                                                   |
 | `peers-data-residence-time`   | Sets the period of time during which the node stores information about external peer since last communication session with it.                                                                                                                       |                                                                                                                                                                                                                       |
 | `black-list-residence-time`   | Sets the period of time for which information about external peer stays in the blacklist.                                                                                                                                                            |                                                                                                                                                                                                                       |
 | `max-inbound-connections`     | Sets the maximum number of simultaneous inbound connections handled by the node.                                                                                                                                                                                             |                                                                                                                                                                                                                       |
@@ -118,7 +119,7 @@ In `network` section P2P network related settings could be set.
 
 ### Wallet Settings
 
-In `wallet` section you can configure parameters of the wallet built in Waves node.
+In `wallet` section you can configure parameters of the [wallet built in Waves node](/en/waves-node/how-to-work-with-node-wallet).
 
 | Name     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Default value                                                                              |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -126,7 +127,7 @@ In `wallet` section you can configure parameters of the wallet built in Waves no
 | `password` | Sets the password string to protect the wallet file.                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                            |
 | `seed`     | This parameter is used to recreate an existing wallet on a new node. Provide the BASE58 string of your seed here. If you don’t have any existing wallet, comment out this parameter and start the node. During the first run, the application will create a new wallet with a random seed for you. In this case, the seed will be displayed in the application log. If you miss it or if you don’t want to check the log files, it will also be available in REST API using the wallet/seed method. |                                                                                            |
 
-**Warning:** The wallet is a critical part of your node. Better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to this seed string, he has the access to all your funds on all your addresses!
+**Warning:** Wallet is a critical part of your node. It is better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to the seed string, he will have access to your funds on all your addresses!
 
 #### Update Wallet's Settings
 
