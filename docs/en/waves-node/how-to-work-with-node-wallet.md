@@ -47,6 +47,18 @@ As a result, the wallet.dat will be generated in the selected directory based on
 
 If you already have the wallet.dat created before, then just put it in the directory listed in the `wallet` section, and specify a password for it with the `password` parameter. Additional actions are not required.
 
+## Updating Wallet's Settings
+
+If you want to run the node with another wallet, use one of the following instuctions:
+
+* Replace `wallet.dat` file with the file which contains SEED phrase of another wallet.
+
+OR
+
+* Delete/move to another location your `wallet.dat` file to empty `/wallet` directory. Then update SEED in config file.
+
+After restarting the node will use another wallet settings.
+
 ## Changing node's account <a id="re-create"></a>
 
 If you need to change node's account, first of all, delete the existing wallet.dat. After that, you can:

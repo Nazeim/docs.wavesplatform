@@ -129,18 +129,6 @@ In `wallet` section you can configure parameters of the [wallet built in Waves n
 
 **Warning:** Wallet is a critical part of your node. It is better to create its file in a safe and protected location. Don’t forget to backup your wallet’s file. It’s recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to the seed string, he will have access to your funds on all your addresses!
 
-#### Update Wallet's Settings
-
-If you want to run the node with another wallet, use one of the following instuctions:
-
-* Replace `wallet.dat` file with the file which contains SEED phrase of another wallet.
-
-OR
-
-* Delete/copy to another location your `wallet.dat` file for making directory `/wallet` empty. Then update SEED in config file.
-
-Restart the node. After restarting the node will use another wallet settings.
-
 ### Blockchain Settings
 
 In `blockchain` section you can select the blockchain type or create your own blockchain.
