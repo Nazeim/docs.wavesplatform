@@ -635,6 +635,10 @@ module.exports = {
           path: nodePath + 'node-api/headers',
         },
         {
+          title: 'Activation',
+          path: nodePath + 'node-api/feature-activation',
+        },	
+        {
           title: 'Address',
           path: nodePath + 'node-api/address',
         },

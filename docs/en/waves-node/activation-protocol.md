@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 ## 1. Features
 
-New versions of Waves software bring new features. Those new features should be activated by many nodes at the same time. Previously the features were activated by timestamps. That put node owners in a tight time frame to update their nodes. Failure to update a node in time led to unintentional forks. The Feature Activation Protocol gives Waves community the ability to apply new features with a suitable pace. Or not apply some of them at all.
+New versions of Waves software bring new features. Those new features should be activated by many nodes at the same time. Previously the features were activated by timestamps. That put node owners in a tight time frame to update their nodes. Failure to update a node in time led to unintentional forks. The Feature Activation Protocol gives Waves community the ability to apply new features with a suitable pace. Or not apply some of them at all. For details about API methods related to Feature Activation Protocol, see [Activation](/en/waves-node/node-api/feature-activation) article of the [Node API](/en/waves-node/node-api) chapter.
 
 ### 1.1 Features Identification
 
@@ -28,68 +28,11 @@ If the node sees that a new feature was approved, but the node does not implemen
 
 Before an approved feature becomes Activated another 10000 blocks have to pass. This period is intended for the update of non-mining nodes to a new version.
 
-If a new feature was activated but the node was not updated to support it, the node will shutdown itself \(default behavior\) and log the error about activation of the unsupported feature.
+If a new feature was activated but the node was not updated to support it, the node will shutdown itself (default behavior) and log the error about activation of the unsupported feature.
 
 > :warning: On the Testnet approval and activation periods are set to 3000 (100 blocks on Stagenet) blocks each. This allows faster activation of new features for testing purposes.
 
-## 4. Changes to REST API
-
-To support the Features Activation Protocol new API method was added to the node/activation route. In response, the JSON that describes the current state of features will be returned.
-
-```js
- {
-   "height": 678929,
-   "approvalInterval": 10000,
-   "approvalThreshold": 8000,
-   "nextCheck": 680000,
-   "features": [
-       {
-           "id": 1,
-           "blockhainStatus": "ACTIVATED",
-           "nodeStatus": "SUPPORTED"
-       },
-       {
-           "id": 2,
-           "blockhainStatus": "APPROVED",
-           "nodeStatus": "SUPPORTED"
-       },
-       {
-           "id": 3,
-           "blockchainStatus": "VOTING",
-           "nodeStatus": "SUPPORTED",
-           "supportBlocks": 7892
-       },
-       {
-           "id": 4,
-           "blockchainStatus": "VOTING",
-           "nodeStatus": "UNSUPPORTED",
-           "supportBlocks": 7892
-       }
-   ]
- }
-```
-
-Fields of returned object:
-
-* `height` - current blockchain height on node
-
-* `approvalInterval` - Approval or Activation periods length in blocks
-
-* `approvalThreshold` - Number of blocks that supports a feature to approve it
-
-* `nextCheck` - Next height to calculate approval or activation statuses of features
-
-* `features` - List of all features
-
-* `id` - Feature ID
-
-* `blockchainStatus` - Current status of the feature on the blockchain, could be DEFINED, VOTING, APPROVED or ACTIVATED
-
-* `nodeStatus` - Node feature status, could be SUPPORTED or UNSUPPORTED
-
-* `supportBlocks` - Number of blocks that contains support for the feature
-
-## 5. Example
+## 3. Example
 
 In version 1.0.0 a new cool feature was introduced. It has ID `123`.
 
