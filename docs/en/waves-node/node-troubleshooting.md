@@ -26,3 +26,7 @@ This article describes known issues of Waves Node and their possible solutions.
    ```
 
 then reboot your machine.
+
+## Other Issues
+
+If you have other node-related issues to report or discuss with Waves community, see [Keep in Touch](/en/keep-in-touch) chapter for contact information.
