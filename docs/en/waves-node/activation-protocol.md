@@ -28,7 +28,7 @@ Before an approved feature becomes Activated another 10000 blocks have to pass. 
 
 If a new feature was activated but the node was not updated to support it, the node will shutdown itself \(default behavior\) and log the error about activation of the unsupported feature.
 
-> :warning: On the Testnet approval and activation periods are set to 3000 blocks each. This allows faster activation of new features for testing purposes.
+> :warning: On the Testnet approval and activation periods are set to 3000 (100 blocks on Stagenet) blocks each. This allows faster activation of new features for testing purposes.
 
 ## 3. Configuration File Changes
 
