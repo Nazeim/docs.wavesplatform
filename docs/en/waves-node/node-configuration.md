@@ -246,6 +246,15 @@ The `features` section allows to set [features](/en/waves-node/features/readme) 
 | `auto-shutdown-on-unsupported-feature` | If this parameter is turned on, the node will be shut down on activation of a feature that is not implemented by node’s codebase. | yes                            |
 | `supported`                            | This parameter contains the list of features IDs, supported by the node owner.                                                    | By default, the list is empty. |
 
+Example:
+
+```bash
+ features {
+   auto-shutdown-on-unsupported-feature = yes
+   supported = []
+ }
+```
+
 <a id="rewards"></a>
 
 ### Rewards Settings
