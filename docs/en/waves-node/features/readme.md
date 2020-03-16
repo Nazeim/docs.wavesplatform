@@ -2,7 +2,7 @@
 
 **Feature** is a functionality added to the [Waves blockchain](/en/blockchain/blockchain) during a new [release](https://github.com/wavesplatform/Waves/releases).
 
-Each feature has a name and a unique feature ID.
+Features have names and unique IDs and can be enabled by setting `supported` parameter in the `features` section of the node configuration file. For details see [Features Settings](/en/waves-node/node-configuration#features-section) section of the [Node Configuration](/en/waves-node/node-configuration) article.
 
 Waves Mainnet nodes currently support the following features:
 

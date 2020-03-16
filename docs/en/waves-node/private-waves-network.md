@@ -2,7 +2,7 @@
 
 This article explains how to setup custom Waves blockchain network that can be used for experimental activities.
 
-## To Setup Custom Blockchain Network
+## Setup Custom Blockchain Network
 
 Follow the steps below to setup custom blockchain network.
 
@@ -72,7 +72,7 @@ genesis {
 }
 ```
 
-If you built a fat JAR, you can generate a genesis block. 
+If you built a fat JAR, you can generate a genesis block.
 
 **Example**:
 
@@ -86,33 +86,20 @@ The output will be the same.
 
 Create `*.conf` file with any name (for example `waves-custom-network.conf`) and open it in a text editor.
 
-You can enable the following features on your node by modifying the `pre-activated-features` parameter in the file.
+See [Node Configuration](/en/waves-node/node-configuration) article for more information about Waves configuration file.
 
-| Features | Name | Status |
-|---|---|---|
-| 1 | Minimum Generating Balance of 1000 WAVES | ACTIVATED |
-| 2 | NG Protocol | ACTIVATED |
-| 3 | Mass Transfer Transaction | ACTIVATED |
-| 4 | Smart Accounts | ACTIVATED |
-| 5 | Data Transaction | ACTIVATED |
-| 6 | Burn Any Tokens | ACTIVATED |
-| 7 | Fee Sponsorship | ACTIVATED |
-| 8 | Fair PoS | ACTIVATED |
-| 9 | Smart Assets | ACTIVATED |
-| 10 | Smart Account Trading | ACTIVATED |
-| 11 | RIDE 4 DAPPS | ACTIVATED |
-| 12 | Order Version 3 | ACTIVATED |
-| 13 | Reduce NFT fee | ACTIVATED |
-| 14 | Block Reward and Community Driven Monetary Policy | ACTIVATED |
+You can enable features on your node by modifying the `pre-activated-features` parameter in the file. The supported features are listed in [Features](/en/waves-node/features) article.
 
-> If the directory parameter was not redefined, the waves folder will be created in:
->| *nix | macOS | Windows |
->| :--- | :--- | :--- |
->| `$XDG_DATA_HOME/waves-custom-<character>*` or `$HOME/.local/share/waves-custom-<character>*` | `$HOME/Library/Application Support/waves-custom-<character>*` | `%LOCALAPPDATA%/waves-custom-<character>*` |
+If the directory parameter was not redefined, the waves folder will be created in:
+| *nix | macOS | Windows |
+| :--- | :--- | :--- |
+| `$XDG_DATA_HOME/waves-custom-<character>*` or `$HOME/.local/share/waves-custom-<character>*` | `$HOME/Library/Application Support/waves-custom-<character>*` | `%LOCALAPPDATA%/waves-custom-<character>*` |
 
 > The `address-scheme-character` parameter value from below must be the same as the `network-type` value from the step 3.
 
-> The contents of the `genesis` section from below is what was generated on the step 4. Instead of pasting this section, you can just write `include "genesis.conf"`, where the `genesis.conf` is a filename from the step 4.
+> The contents of the `genesis` section below is what was generated on the step 4. Instead of pasting this section, you can just write `include "genesis.conf"`, where the `genesis.conf` is a filename from the step 4.
+
+Example:
 
 ```bash
 # Waves node settings
@@ -196,6 +183,10 @@ waves
 
 Pay attention to the parameters `waves.blockchain.custom.address-scheme-character` and `waves.blockchain.custom.genesis`. They were copied from the result and settings of genesis generator tool. Also, look at `waves.wallet.seed` value. This value can be copied from "Seed" value for one of the genesis addresses from the result of genesis generator tool.
 
+`waves.blockchain.custom.functionality` section contains parameters allowing to enable/disable some features in your blockchain system.
+
+**Note**: The developers can add new parameters in `waves.blockchain.custom.functionality` section, which are not present in this example; as an example of a working configuration, see the [waves-devnet.conf file in root folder of repository](https://github.com/wavesplatform/Waves/blob/master/node/waves-devnet.conf).
+
 ### Step 6
 
 Start your custom network node by running:
@@ -204,19 +195,15 @@ Start your custom network node by running:
 
 Also, you can run already built release package (deb or jar) with this configuration file manually.
 
-## Adding Nodes to Your Network
+## Add Nodes to Your Network
 
 You can add more nodes to your network using `waves.network.known-peers` parameter, specify the address and port of the existing node with the same network parameters like "127.0.0.1:6860". If you are making several nodes locally, then do not forget to change for the new nodes the network port `waves.network.port`, the API port `waves.rest-api.port`, folder for the data `waves.directory` and wallet seed `waves.wallet.seed`.
 
-`waves.blockchain.custom.functionality` section contains parameters that allow you to enable and disable some features in your blockchain system.
-
-**Note**: The developers can add new parameters in `waves.blockchain.custom.functionality` section, which are not present in this example; as an example of a working configuration, see the [waves-devnet.conf file in root folder of repository](https://github.com/wavesplatform/Waves/blob/master/node/waves-devnet.conf).
-
-## To Setup Other Services
+## Setup Other Services
 
 You can setup your custom blockchain with other services such as:
 
-* [Data services](/en/building-apps/waves-api-and-sdk/waves-data-service-api) to retrieve data from the blockchain quickly and conveniently via [Testnet](https://api.testnet.wavesplatform.com/v0/docs/) or [Mainnet](https://api.wavesplatform.com/v0/docs/) API. For details, see [deploy examples](https://github.com/wavesplatform/deploy-examples) and [How to Run Data Services](https://wavestalk.ru/t/kak-zapustit-data-services-za-30-minut-iz-korobki/272) article.
+* [Data services](/en/building-apps/waves-api-and-sdk/waves-data-service-api) to retrieve data from the blockchain quickly and conveniently via REST API similar to Mainnet and Testnet described in [Waves Data Service API](/en/building-apps/waves-api-and-sdk/waves-data-service-api) article. For details, see [deploy examples](https://github.com/wavesplatform/deploy-examples) and [How to Run Data Services](https://wavestalk.ru/t/kak-zapustit-data-services-za-30-minut-iz-korobki/272) article (in Russian language).
 
 * [dApps](https://docs.wavesplatform.com/en/blockchain/account/dapp). For details, see [How to Build, Deploy and Test a Waves RIDE dApp](https://blog.wavesplatform.com/how-to-build-deploy-and-test-a-waves-ride-dapp-785311f58c2) article.
 
@@ -231,5 +218,3 @@ You can setup your custom blockchain with other services such as:
 * [DEX Extension](https://github.com/wavesplatform/dex): Interface for DEX Server to comunicate with the Node code.
 
 <!--* [Matcher](https://docs.waves.exchange/en/waves-matcher/) -->
-
-See [Node Configuration](/en/waves-node/node-configuration) for more information about Waves configuration file.
