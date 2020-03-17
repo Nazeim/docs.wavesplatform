@@ -573,8 +573,14 @@ module.exports = {
           path: nodePath + 'how-to-build-and-test-a-node',
         },
         {
-          title: 'Run Node in Yandex.Cloud',
-          path: nodePath + 'running-waves-node-in-yandex-cloud',
+          title: 'Deploy Node in Cloud',
+          path: nodePath + 'how-to-install-a-node/clouds',
+		  children: [
+		    {
+              title: 'Deploy Node in Yandex.Cloud',
+              path: nodePath + 'running-waves-node-in-yandex-cloud',
+            },
+		  ],			
         },	
       ],
     },
@@ -705,7 +711,7 @@ module.exports = {
       ]
     },
 	{
-      title: 'Troubleshooting',
+      title: 'TroubTroubleshooting',
       path: nodePath + 'node-troubleshooting',
 	},
   ],
