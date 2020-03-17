@@ -555,7 +555,11 @@ module.exports = {
         {
           title: 'Deploy Node in Docker',
           path: nodePath + 'waves-node-in-docker',
-        },  
+        },
+        {
+          title: 'Install Node on Ubuntu',
+          path: nodePath + 'how-to-install-a-node/on-ubuntu',
+        },	
         {
           title: 'Install Node on macOS',
           path: nodePath + 'how-to-install-a-node/on-mac',
@@ -563,10 +567,6 @@ module.exports = {
         {
           title: 'Install Node on Windows',
           path: nodePath + 'how-to-install-a-node/on-windows',
-        },
-        {
-          title: 'Install Node on Ubuntu',
-          path: nodePath + 'how-to-install-a-node/on-ubuntu',
         },
         {
           title: 'Install from Source (Building SBT)',
@@ -580,7 +580,7 @@ module.exports = {
               title: 'Deploy Node in Yandex.Cloud',
               path: nodePath + 'running-waves-node-in-yandex-cloud',
             },
-		  ],			
+		  ]			
         },	
       ],
     },
