@@ -1,8 +1,8 @@
 # Upgrade Waves Node
 
-Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (any operating system). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [Install Waves Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
+When you own a node you need to check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates on a regular basis and if there is an update that contains any consensus changes, it is required to upgrade your node. Failing to apply the updates that contain consensus changes may cause your node to stop working. Releases of new versions of node come with release notes document describing the new features and telling the node owner what actions to take to upgrade, depending on the type of the update.
 
-Check the [Releases](https://github.com/wavesplatform/Waves/releases/) page for the latest updates and if there is an update that contains any consensus changes, it is required to upgrade your node.
+Prior to upgrading a Waves Node check the type of installation used. It can be either a **DEB** file (Deb-base GNU/Linux installation) or a **JAR** file (any operating system). Based on the type of installation used, follow one of the procedures below to upgrade the Waves Node. For more details about types of Waves Node installation, see [Install Waves Node](/en/waves-node/how-to-install-a-node/how-to-install-a-node) article.
 
 ## Upgrading Node from APT Repository
 
